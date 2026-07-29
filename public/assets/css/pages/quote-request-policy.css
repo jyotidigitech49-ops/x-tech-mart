@@ -1,0 +1,422 @@
+.quote-policy-banner {
+    position: relative;
+    min-height: 405px;
+    margin-top: -2px;
+    background-image: url("../../images/faq/faq-hero.png");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.quote-policy-banner__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.64);
+}
+
+.quote-policy-banner__content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #ffffff;
+    padding: 40px 15px;
+}
+
+.quote-policy-banner__content h1 {
+    color: #ffffff;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.08;
+    margin: 0 0 23px;
+    letter-spacing: 0;
+}
+
+.quote-policy-banner__breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.quote-policy-banner__breadcrumb a,
+.quote-policy-banner__breadcrumb span {
+    color: #ffffff;
+}
+
+.quote-policy-banner__breadcrumb span:last-child {
+    color: #0b62ff;
+}
+
+.quote-policy-page {
+    background:
+        radial-gradient(circle at 85% 0%, rgba(11, 98, 255, 0.08), transparent 28%),
+        linear-gradient(180deg, #f7f9fd 0%, #ffffff 100%);
+    padding: 90px 0 100px;
+}
+
+.quote-policy-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 30px;
+    align-items: start;
+}
+
+.quote-policy-summary,
+.quote-policy-intro,
+.quote-policy-card {
+    border: 1px solid #e2e8f2;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 18px 38px rgba(23, 37, 68, 0.06);
+}
+
+.quote-policy-summary {
+    position: sticky;
+    top: 24px;
+    padding: 28px 25px;
+}
+
+.quote-policy-kicker {
+    display: inline-flex;
+    min-height: 28px;
+    align-items: center;
+    padding: 0 13px;
+    border-radius: 999px;
+    background: rgba(11, 98, 255, 0.1);
+    color: #0b62ff;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.quote-policy-summary strong {
+    display: block;
+    color: #071a44;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 18px 0 12px;
+}
+
+.quote-policy-summary p,
+.quote-policy-intro p,
+.quote-policy-card p {
+    color: #5d687b;
+    font-size: 16px;
+    line-height: 1.75;
+    margin: 0 0 14px;
+}
+
+.quote-policy-summary p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.quote-policy-summary a,
+.quote-policy-inline-link {
+    display: inline-flex;
+    min-height: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 18px;
+    border-radius: 8px;
+    background: #0b62ff;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.quote-policy-content {
+    display: grid;
+    gap: 22px;
+}
+
+.quote-policy-intro {
+    padding: 34px;
+    border-top: 4px solid #0b62ff;
+}
+
+.quote-policy-intro .quote-policy-kicker {
+    margin-bottom: 18px;
+}
+
+.quote-policy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.quote-policy-card {
+    padding: 30px;
+}
+
+.quote-policy-card--highlight {
+    background: linear-gradient(135deg, #071a44 0%, #0b62ff 100%);
+    border-color: transparent;
+}
+
+.quote-policy-card h2 {
+    color: #071a44;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0 0 16px;
+    letter-spacing: 0;
+}
+
+.quote-policy-card--highlight h2,
+.quote-policy-card--highlight p,
+.quote-policy-card--highlight .quote-policy-list li,
+.quote-policy-card--highlight .quote-policy-note {
+    color: #ffffff !important;
+}
+
+.quote-policy-card p:last-child {
+    margin-bottom: 0;
+}
+
+.quote-policy-list {
+    display: grid;
+    gap: 10px;
+    list-style: none;
+    margin: 18px 0 0;
+    padding: 0;
+}
+
+.quote-policy-list li {
+    position: relative;
+    color: #313b4f;
+    font-size: 15px;
+    line-height: 1.5;
+    padding-left: 24px;
+}
+
+.quote-policy-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #0b62ff;
+    box-shadow: 0 0 0 4px rgba(11, 98, 255, 0.1);
+}
+
+.quote-policy-card--highlight .quote-policy-list li::before {
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.16);
+}
+
+.quote-policy-note {
+    margin-top: 18px !important;
+    padding: 14px 16px;
+    border-left: 3px solid #0b62ff;
+    border-radius: 8px;
+    background: #f3f7ff;
+    color: #3f4b61 !important;
+}
+
+.quote-policy-card--highlight .quote-policy-note {
+    border-left-color: #ffffff;
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.quote-policy-inline-link {
+    margin-top: 6px;
+}
+
+.quote-policy-contact {
+    display: grid;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.quote-policy-contact div {
+    border-radius: 12px;
+    background: #f7f9fd;
+    border: 1px solid #e5ebf5;
+    padding: 17px;
+}
+
+.quote-policy-contact span {
+    display: block;
+    color: #0b62ff;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.quote-policy-contact strong {
+    color: #071a44;
+    font-size: 15px;
+    line-height: 1.45;
+    white-space: pre-line;
+}
+
+@media (max-width: 991px) {
+    .quote-policy-layout,
+    .quote-policy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-policy-summary {
+        position: static;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .quote-policy-banner {
+        min-height: 300px;
+    }
+
+    .quote-policy-banner__content h1 {
+        font-size: 38px;
+    }
+
+    .quote-policy-page {
+        padding: 60px 0 70px;
+    }
+
+    .quote-policy-intro,
+    .quote-policy-card {
+        padding: 25px 20px;
+    }
+
+    .quote-policy-card h2 {
+        font-size: 23px;
+    }
+}
+
+/* Simple policy document layout */
+.quote-document {
+    box-sizing: border-box !important;
+    min-width: 0;
+    padding: 48px 20px 80px;
+    background: #ffffff;
+}
+
+.quote-document__inner {
+    box-sizing: border-box !important;
+    min-width: 0;
+    width: 100%;
+    max-width: 830px;
+    margin: 0 auto;
+}
+
+.quote-document__inner h1,
+.quote-document__inner h2,
+.quote-document__inner p,
+.quote-document__inner li {
+    overflow-wrap: anywhere;
+}
+
+.quote-document h1 {
+    margin: 0 0 40px;
+    color: #171717;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.quote-document__date {
+    margin: 0 0 18px;
+}
+
+.quote-document__section {
+    margin: 0 0 58px;
+}
+
+.quote-document__section h2 {
+    margin: 0 0 18px;
+    color: #111111;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.quote-document p,
+.quote-document li {
+    color: #343434;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.quote-document p {
+    margin: 0 0 20px;
+}
+
+.quote-document ul {
+    margin: 4px 0 22px;
+    padding-left: 22px !important;
+}
+
+.quote-document li {
+    margin-bottom: 7px;
+    padding-left: 4px;
+    list-style: disc;
+}
+
+.quote-document li::marker {
+    color: #6cb4b8;
+}
+
+.quote-document a {
+    color: #0064e0;
+    text-decoration: underline;
+}
+
+.quote-document .policy-nav a {
+    text-decoration: none;
+}
+
+.quote-document__contact {
+    margin-top: 22px;
+}
+
+.quote-document__contact p {
+    margin-bottom: 9px;
+}
+
+.quote-document__contact strong {
+    display: inline-block;
+    margin-right: 6px;
+    color: #111111;
+}
+
+.quote-document__contact span {
+    white-space: pre-line;
+}
+
+@media (max-width: 767px) {
+    .quote-document {
+        padding: 34px 18px 56px;
+    }
+
+    .quote-document h1 {
+        margin-bottom: 28px;
+        font-size: 30px;
+    }
+
+    .quote-document__section {
+        margin-bottom: 42px;
+    }
+
+    .quote-document__section h2 {
+        font-size: 20px;
+    }
+
+    .quote-document p,
+    .quote-document li {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+}

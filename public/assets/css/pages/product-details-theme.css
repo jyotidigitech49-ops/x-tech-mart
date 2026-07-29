@@ -1,0 +1,226 @@
+/* ZeroTechMart product details theme — presentation only */
+.pd-page {
+    --pd-theme-primary: var(--ztm-primary, #3e6b89);
+    --pd-theme-dark: var(--ztm-primary-dark, #294f68);
+    --pd-theme-accent: var(--ztm-accent, #6cb4b8);
+    --pd-theme-soft: var(--ztm-accent-soft, #d9eeee);
+    --pd-theme-highlight: var(--ztm-highlight, #e9f4f1);
+    --pd-theme-text: var(--ztm-text, #22313f);
+    --pd-theme-muted: var(--ztm-muted, #657485);
+    --pd-theme-border: var(--ztm-border, #dce5e8);
+    color: var(--pd-theme-text);
+    background: radial-gradient(circle at 7% 7%, rgba(108, 180, 184, .12), transparent 23%), linear-gradient(180deg, #f7fafb 0%, #ffffff 430px);
+}
+
+.pd-breadcrumb {
+    border-color: var(--pd-theme-border);
+    background: rgba(255, 255, 255, .9);
+}
+
+.pd-breadcrumb-list a { color: var(--pd-theme-muted); }
+.pd-breadcrumb-list a:hover,
+.pd-breadcrumb-list .active { color: var(--pd-theme-dark); }
+
+/* Primary page tabs */
+.pd-sidebar {
+    gap: 7px;
+    padding: 9px;
+    border-color: var(--pd-theme-border);
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 16px 38px rgba(34, 49, 63, .09);
+}
+
+.pd-tab-btn {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    color: var(--pd-theme-muted);
+    font-weight: 600;
+}
+
+.pd-tab-btn i {
+    color: var(--pd-theme-primary);
+    background: var(--pd-theme-soft) !important;
+}
+
+.pd-tab-btn:hover {
+    border-color: #d1e4e5;
+    background: #f3f8f8;
+    color: var(--pd-theme-dark);
+}
+
+.pd-tab-btn.active {
+    border-color: #bdd9da;
+    background: var(--pd-theme-highlight);
+    color: var(--pd-theme-dark);
+    box-shadow: inset 4px 0 0 var(--pd-theme-accent);
+}
+
+/* Product gallery and information */
+.pd-overview-grid {
+    border-color: var(--pd-theme-border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, .94);
+    box-shadow: 0 18px 45px rgba(34, 49, 63, .075);
+}
+
+.pd-thumb,
+.pd-thumb-nav,
+.pd-gallery-main { border-color: var(--pd-theme-border); }
+
+.pd-thumb:hover,
+.pd-thumb.active {
+    border-color: var(--pd-theme-accent);
+    background: #f8fbfb;
+    box-shadow: 0 9px 22px rgba(62, 107, 137, .12);
+}
+
+.pd-gallery-main {
+    background: radial-gradient(circle at 76% 18%, rgba(108, 180, 184, .14), transparent 34%), linear-gradient(150deg, #ffffff, #f0f7f6);
+}
+
+.pd-info {
+    border-color: #c9dfe0 !important;
+    background: radial-gradient(circle at 92% 7%, rgba(108, 180, 184, .2), transparent 30%), linear-gradient(155deg, #ffffff 30%, #edf6f5) !important;
+    box-shadow: 0 20px 45px rgba(41, 79, 104, .11) !important;
+}
+
+.pd-badge,
+.pd-info .pd-badge {
+    border-color: #c6dfe0;
+    background: var(--pd-theme-soft);
+    color: var(--pd-theme-dark);
+}
+
+.pd-title,
+.pd-info .pd-title,
+.pd-price,
+.pd-info .pd-price { color: var(--pd-theme-text); }
+
+.pd-summary,
+.pd-info .pd-summary {
+    border-left-color: var(--pd-theme-accent);
+    color: var(--pd-theme-muted);
+}
+
+.pd-price-box,
+.pd-info .pd-price-box {
+    border-color: var(--pd-theme-border);
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 13px 30px rgba(34, 49, 63, .07);
+}
+
+.pd-quote {
+    background: var(--pd-theme-primary);
+    box-shadow: 0 13px 28px rgba(41, 79, 104, .23);
+}
+
+.pd-quote:hover {
+    background: var(--pd-theme-dark);
+    box-shadow: 0 16px 30px rgba(41, 79, 104, .28);
+}
+
+.pd-feature-grid article,
+.pd-notes,
+.pd-section-note {
+    border-color: var(--pd-theme-border) !important;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 12px 30px rgba(34, 49, 63, .055);
+}
+
+.pd-feature-grid article { transition: border-color .22s ease, box-shadow .22s ease, transform .22s ease; }
+.pd-feature-grid article:hover {
+    border-color: var(--pd-theme-accent) !important;
+    box-shadow: 0 17px 36px rgba(34, 49, 63, .09);
+    transform: translateY(-3px);
+}
+
+.pd-feature-title,
+.pd-notes h3,
+.pd-section-note h3 { color: var(--pd-theme-text); }
+
+/* Data-driven specification tabs */
+.pd-spec-tabs {
+    gap: 8px;
+    margin-bottom: 28px;
+    padding: 8px;
+    overflow-x: auto;
+    border: 1px solid var(--pd-theme-border);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(34, 49, 63, .05);
+}
+
+.pd-spec-tab {
+    min-height: 42px;
+    padding: 9px 17px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    color: var(--pd-theme-muted);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.pd-spec-tab:hover {
+    border-color: #d2e3e4;
+    background: #f3f8f8;
+    color: var(--pd-theme-dark);
+}
+
+.pd-spec-tab.active {
+    border-color: #bdd9da;
+    background: var(--pd-theme-highlight);
+    color: var(--pd-theme-dark);
+    box-shadow: 0 6px 16px rgba(41, 79, 104, .09);
+}
+
+.pd-spec-tab.active::after { display: none; }
+
+.pd-spec-panel {
+    overflow: hidden;
+    border-color: var(--pd-theme-border);
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(34, 49, 63, .06);
+}
+
+.pd-spec-table tr:nth-child(odd) { background: #f5f9f9; }
+.pd-spec-table tr:nth-child(even) { background: #ffffff; }
+.pd-spec-table th { color: var(--pd-theme-dark); }
+.pd-spec-table td { color: var(--pd-theme-muted); }
+.pd-spec-table th,
+.pd-spec-table td { border-color: var(--pd-theme-border); }
+
+/* Related blogs */
+.pd-blog-eyebrow,
+.pd-blog-link { color: var(--pd-theme-primary); }
+.pd-blog-heading h2,
+.pd-blog-title { color: var(--pd-theme-text); }
+.pd-blog-count {
+    border-color: #c6dfe0;
+    background: var(--pd-theme-soft);
+    color: var(--pd-theme-dark);
+}
+.pd-blog-card {
+    border-color: var(--pd-theme-border);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(34, 49, 63, .055);
+}
+.pd-blog-card:hover {
+    border-color: var(--pd-theme-accent);
+    box-shadow: 0 18px 42px rgba(41, 79, 104, .13);
+}
+.pd-blog-image { background: linear-gradient(145deg, #f6faf9, #eaf4f3); }
+.pd-blog-card-number { background: rgba(41, 79, 104, .88); }
+
+@media (max-width: 991px) {
+    .pd-tab-btn.active { box-shadow: inset 0 -3px 0 var(--pd-theme-accent); }
+    .pd-info { background: #ffffff !important; }
+}
+
+@media (max-width: 575px) {
+    .pd-spec-tabs { padding: 6px; }
+    .pd-spec-tab { min-height: 39px; padding: 8px 13px; font-size: 12px; }
+}
