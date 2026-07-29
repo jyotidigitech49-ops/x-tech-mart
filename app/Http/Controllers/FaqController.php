@@ -51,6 +51,6 @@ class FaqController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.faq.index', compact('faqs', 'bannerImage'));
+        return view('faq.index', compact('faqs', 'bannerImage'));
     }
 }

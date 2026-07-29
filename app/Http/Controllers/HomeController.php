@@ -113,7 +113,7 @@ class HomeController extends Controller {
         //     'blogs' => $blogPosts->map(fn (Blog $blog) => $this->blogImageDebugData($blog))->values()->all(),
         // ]);
 
-        return view( 'themes.sarab.home.index', compact(
+        return view( 'home.index', compact(
             'productTabs',
             'suggestedProducts',
             'blogPosts',

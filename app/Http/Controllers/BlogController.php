@@ -40,7 +40,7 @@ class BlogController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.blog.index', compact('blogs', 'bannerImage'));
+        return view('blog.index', compact('blogs', 'bannerImage'));
     }
 
     public function index($url)
@@ -90,7 +90,7 @@ class BlogController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.blog.blogdetails', compact('blogDetails', 'bannerImage'));
+        return view('blog.blogdetails', compact('blogDetails', 'bannerImage'));
     }
 
     private function articleSections(string $content): array

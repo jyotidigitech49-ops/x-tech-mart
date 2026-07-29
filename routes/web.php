@@ -22,7 +22,7 @@ use App\Http\Controllers\WarrantyManufacturerInformationController;
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('/welcome', function () {
-    return view('welcome');
+    return view('old-ui.welcome');
 });
 
 // cache clear route
@@ -66,7 +66,7 @@ Route::get('/product-information-disclaimer', fn () => redirect('/policy/product
 
 // home page route
 // Static Sarab theme preview. The original HomeController and its live-data logic remain preserved.
-Route::view('/', 'themes.sarab.home.index');
+Route::view('/', 'home.index');
 
 // product search page route
 Route::get('/search/{term?}', [ProductSearchController::class, 'index'])->name('product.search');

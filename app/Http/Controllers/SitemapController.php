@@ -52,6 +52,6 @@ class SitemapController extends Controller {
 
         $bannerImage = asset( 'assets/images/common-banner/comm-banner.png' );
 
-        return view( 'themes.sarab.sitemap.index', compact( 'mainPages', 'productCategories', 'policies', 'bannerImage' ) );
+        return view( 'sitemap.index', compact( 'mainPages', 'productCategories', 'policies', 'bannerImage' ) );
     }
 }

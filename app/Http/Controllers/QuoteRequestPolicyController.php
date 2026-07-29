@@ -134,6 +134,6 @@ class QuoteRequestPolicyController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.quote-request', compact('quotePolicy', 'bannerImage'));
+        return view('policy.quote-request', compact('quotePolicy', 'bannerImage'));
     }
 }

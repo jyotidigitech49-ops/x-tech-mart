@@ -220,6 +220,6 @@ class PrivacyPolicyController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.privacy', compact('policy', 'bannerImage'));
+        return view('policy.privacy', compact('policy', 'bannerImage'));
     }
 }

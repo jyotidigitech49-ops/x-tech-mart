@@ -49,7 +49,7 @@ class ProductSearchController extends Controller
         $displaySearch = $searchText ?: 'All Products';
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.products.search_results', compact(
+        return view('products.search_results', compact(
             'categories',
             'products',
             'displaySearch',

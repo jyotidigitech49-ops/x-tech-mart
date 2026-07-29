@@ -34,7 +34,7 @@ class AboutController extends Controller
             'description' => 'XTechMart brings together thoughtfully organized technology collections, making it easier to explore products through detailed information, practical insights, and a streamlined browsing experience.',
         ];
 
-        return view('themes.sarab.about.aboutus', compact(
+        return view('about.aboutus', compact(
             'features',
             'collection',
             'whyChoose'

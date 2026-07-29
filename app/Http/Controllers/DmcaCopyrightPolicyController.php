@@ -141,6 +141,6 @@ class DmcaCopyrightPolicyController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.dmca-copyright-policy', compact('dmcaPolicy', 'bannerImage'));
+        return view('policy.dmca-copyright-policy', compact('dmcaPolicy', 'bannerImage'));
     }
 }

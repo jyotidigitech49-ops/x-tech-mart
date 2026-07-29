@@ -24,7 +24,7 @@ class ProductEnquiryController extends Controller
 
         // dd($enquiryData);
 
-        return view('themes.sarab.products.product_enquiry', compact('enquiryData'));
+        return view('products.product_enquiry', compact('enquiryData'));
     }
 
     public function store(Request $request, string $url)

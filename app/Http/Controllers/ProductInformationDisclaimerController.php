@@ -142,6 +142,6 @@ class ProductInformationDisclaimerController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.product-information-disclaimer', compact('productDisclaimer', 'bannerImage'));
+        return view('policy.product-information-disclaimer', compact('productDisclaimer', 'bannerImage'));
     }
 }

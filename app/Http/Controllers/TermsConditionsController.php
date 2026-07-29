@@ -230,6 +230,6 @@ class TermsConditionsController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.terms', compact('terms', 'bannerImage'));
+        return view('policy.terms', compact('terms', 'bannerImage'));
     }
 }

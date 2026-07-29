@@ -12,7 +12,7 @@ class ContactUsController extends Controller
     {
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.contactus.contact', compact('bannerImage'));
+        return view('contactus.contact', compact('bannerImage'));
     }
 
     public function store(Request $request)

@@ -53,7 +53,7 @@ class ProductPrinterController extends Controller {
         $isAllProductsPage = true;
         $heroBanners = $this->productHeroBanners( $productType->url ?? 'all' );
 
-        return view( 'themes.sarab.products.products_printer', compact(
+        return view( 'products.products_printer', compact(
             'printerCategories',
             'products',
             'productType',
@@ -103,7 +103,7 @@ class ProductPrinterController extends Controller {
 
         $heroBanners = $this->productHeroBanners( $productType->url );
 
-        return view( 'themes.sarab.products.products_printer', compact(
+        return view( 'products.products_printer', compact(
             'printerCategories',
             'products',
             'productType',
@@ -162,7 +162,7 @@ class ProductPrinterController extends Controller {
 
         $heroBanners = $this->productHeroBanners( $productType->url, url( "products/{$type}", $url ), $printerCategories->url );
 
-        return view( 'themes.sarab.products.printer_category_products', compact(
+        return view( 'products.printer_category_products', compact(
             'printerCategoriesAll',
             'products',
             'printerCategories',
@@ -411,7 +411,7 @@ class ProductPrinterController extends Controller {
         //     })->values()->all(),
         // ]);
 
-        return view( 'themes.sarab.products.product_details', compact( 'detailsData' ) );
+        return view( 'products.product_details', compact( 'detailsData' ) );
     }
 
 

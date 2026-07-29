@@ -144,6 +144,6 @@ class CookiePolicyController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.cookie', compact('cookiePolicy', 'bannerImage'));
+        return view('policy.cookie', compact('cookiePolicy', 'bannerImage'));
     }
 }

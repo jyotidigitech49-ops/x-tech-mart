@@ -134,6 +134,6 @@ class WarrantyManufacturerInformationController extends Controller
 
         $bannerImage = asset('assets/images/common-banner/comm-banner.png');
 
-        return view('themes.sarab.policy.warranty-manufacturer-information', compact('warrantyPolicy', 'bannerImage'));
+        return view('policy.warranty-manufacturer-information', compact('warrantyPolicy', 'bannerImage'));
     }
 }
