@@ -152,6 +152,7 @@ document.querySelectorAll('.filtbtn').forEach(function(btn) {
 document.querySelectorAll('.catcard').forEach(function(card) {
     card.addEventListener('click', function() {
         var f = this.getAttribute('data-filter');
+        if (!f) return;
         window.scrollTo({
             top: document.getElementById('menu').offsetTop - 80,
             behavior: 'smooth'
@@ -290,21 +291,27 @@ document.getElementById('resBtn').addEventListener('click', function() {
 });
 
 
-document.getElementById('ctcBtn').addEventListener('click', function() {
-    var btn = this;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    btn.disabled = true;
-    setTimeout(function() {
-        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
-        btn.disabled = false;
-        var ok = document.getElementById('ctcOk');
-        ok.style.display = 'block';
-        ok.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest'
-        });
-    }, 1500);
-});
+var contactDemoBtn = document.getElementById('ctcBtn');
+
+if (contactDemoBtn && !contactDemoBtn.closest('#contact-form')) {
+    contactDemoBtn.addEventListener('click', function() {
+        var btn = this;
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+        setTimeout(function() {
+            btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            btn.disabled = false;
+            var ok = document.getElementById('ctcOk');
+            if (ok) {
+                ok.style.display = 'block';
+                ok.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest'
+                });
+            }
+        }, 1500);
+    });
+}
 
 
 var galPop = document.getElementById('galPop');

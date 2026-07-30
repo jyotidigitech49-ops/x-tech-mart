@@ -1,107 +1,106 @@
-      <!-- ============================================================
-         TOP BAR
-         ============================================================ -->
-      <div id="topbar">
-         <div class="container">
-            <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-               <div class="top-contact d-flex flex-wrap">
-                  <span><i class="fas fa-phone-alt"></i>+1 (800) 123-4567</span>
-                  <span><i class="fas fa-envelope"></i>hello@sarabfood.com</span>
-                  <span><i class="fas fa-map-marker-alt"></i>42 Flavor Street, NY</span>
-               </div>
-               <div class="d-flex align-items-center gap-3">
-                  <span class="ttag"><i class="fas fa-fire me-1"></i>Free Delivery Today!</span>
-                  <div class="tsoc">
-                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                     <a href="#"><i class="fab fa-instagram"></i></a>
-                     <a href="#"><i class="fab fa-tiktok"></i></a>
-                     <a href="#"><i class="fab fa-youtube"></i></a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- ============================================================
-         NAVBAR
-         ============================================================ -->
-      <nav class="navbar navbar-expand-lg" id="nav">
-         <div class="container">
-            <a class="navbar-brand" href="#">
-               <div class="blogo">
-                  <div class="bico"><i class="fas fa-utensils"></i></div>
-                  <div>
-                     <div class="bname">Sar<span>ab</span></div>
-                     <div class="bsub">Fast Food & Restaurant</div>
-                  </div>
-               </div>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
+<nav class="navbar navbar-expand-lg xtech-header" id="nav" aria-label="Primary navigation">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}" aria-label="XTechMart home">
+            <img class="xtech-header__logo" src="{{ asset('assets/images/ztm-logo.png') }}"
+                width="207" height="46" alt="XTechMart">
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item dropdown xtech-header__dropdown">
+                    <div class="xtech-header__dropdown-row">
+                        <a class="nav-link {{ request()->is('products/printer*') ? 'active' : '' }}"
+                            href="{{ url('/products/printer') }}">
+                        Printers
+                        </a>
+                        <button class="xtech-header__dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" aria-label="Toggle printer categories">
+                            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ url('/products/printer') }}">All Printers</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/products/printer/officejet-printer') }}">Officejet Printer</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/products/printer/laserjet-printer') }}">Laser Printer</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/products/printer/inkjet-printer') }}">Inkjet Printer</a></li>
+                            <li><a class="dropdown-item" href="{{ url('/products/printer/deskjet-printer') }}">Deskjet Printer</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('products/desktops*') ? 'active' : '' }}"
+                        href="{{ url('/products/desktops') }}">Desktops</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('products/thin-client*') ? 'active' : '' }}"
+                        href="{{ url('/products/thin-client') }}">Thin Client</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('products/scanner*') ? 'active' : '' }}"
+                        href="{{ url('/products/scanner') }}">Scanners</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('blogs*') || request()->is('blog*') ? 'active' : '' }}"
+                        href="{{ url('/blogs') }}">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->is('contact-us') ? 'active' : '' }}"
+                        href="{{ url('/contact-us') }}">Contact Us</a>
+                </li>
+            </ul>
+
+            <button id="navSearchBtn" type="button" title="Search products" aria-label="Search products">
+                <i class="fas fa-search"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navmenu">
-               <ul class="navbar-nav mx-auto">
-                  <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#chefs">Chefs</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#reservation">Reservation</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
-               </ul>
-               <div class="d-flex align-items-center gap-1">
-                  <!-- FIX 1: Search button -->
-                  <button id="navSearchBtn" title="Search"><i class="fas fa-search"></i></button>
-                  <a href="#menu" class="nav-link nav-cta"><i class="fas fa-shopping-bag me-1"></i>Order Now</a>
-               </div>
-            </div>
-         </div>
-      </nav>
-      <!-- ============================================================
-         FIX 1 � SEARCH OVERLAY POPUP
-         ============================================================ -->
-      <div id="searchOv">
-         <button class="sovclose" id="searchClose"><i class="fas fa-times"></i></button>
-         <div class="sovbox">
-            <h4>What are you craving today?</h4>
-            <div class="sovinput">
-               <input type="text" id="searchInput" placeholder="Search burgers, pizza, chicken..." autocomplete="off"/>
-               <button><i class="fas fa-search"></i></button>
-            </div>
-            <!-- Categories inside search box -->
-            <div class="sovcats">
-               <div class="sovcat active" data-cat="all">
-                  <img src="{{ asset('themes/sarab/img/menu/1.jpg') }}" alt=""/>All Items
-               </div>
-               <div class="sovcat" data-cat="burgers">
-                  <img src="{{ asset('themes/sarab/img/menu/1.jpg') }}" alt=""/>Burgers
-               </div>
-               <div class="sovcat" data-cat="pizza">
-                  <img src="{{ asset('themes/sarab/img/menu/2.jpg') }}" alt=""/>Pizza
-               </div>
-               <div class="sovcat" data-cat="chicken">
-                  <img src="{{ asset('themes/sarab/img/menu/3.jpg') }}" alt=""/>Chicken
-               </div>
-               <div class="sovcat" data-cat="wraps">
-                  <img src="{{ asset('themes/sarab/img/menu/4.jpg') }}" alt=""/>Wraps
-               </div>
-               <div class="sovcat" data-cat="pasta">
-                  <img src="{{ asset('themes/sarab/img/menu/5.jpg') }}" alt=""/>Pasta
-               </div>
-               <div class="sovcat" data-cat="desserts">
-                  <img src="{{ asset('themes/sarab/img/menu/6.jpg') }}" alt=""/>Desserts
-               </div>
-            </div>
-            <div class="sovtrend">
-               <p><i class="fas fa-fire me-1" style="color:var(--secondary);"></i>Trending Searches</p>
-               <span class="ttag">Smash Burger</span>
-               <span class="ttag">Nashville Chicken</span>
-               <span class="ttag">Truffle Pizza</span>
-               <span class="ttag">Lava Cake</span>
-               <span class="ttag">Loaded Fries</span>
-               <span class="ttag">Mango Shake</span>
-            </div>
-         </div>
-      </div>
-      <!-- ============================================================
-         HERO
-         ============================================================ -->
+        </div>
+    </div>
+</nav>
+
+<div id="searchOv" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+    <button class="sovclose" id="searchClose" type="button" aria-label="Close search">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="sovbox">
+        <h4 id="searchTitle">What product are you looking for?</h4>
+        <form class="sovinput" action="{{ url('/search') }}" method="GET">
+            <input type="text" id="searchInput" name="q"
+                placeholder="Search printers, desktops, scanners..." autocomplete="off"
+                list="global-search-products">
+            <button type="submit" aria-label="Submit search"><i class="fas fa-search"></i></button>
+        </form>
+
+        <datalist id="global-search-products">
+            <option value="Printer">
+            <option value="Officejet Printer">
+            <option value="Laser Printer">
+            <option value="Inkjet Printer">
+            <option value="Deskjet Printer">
+            <option value="Desktops">
+            <option value="Thin Client">
+            <option value="Scanner">
+        </datalist>
+
+        <div class="sovcats" aria-label="Product categories">
+            <a class="xtech-search-category active" href="{{ url('/products') }}">All Products</a>
+            <a class="xtech-search-category" href="{{ url('/products/printer') }}">Printers</a>
+            <a class="xtech-search-category" href="{{ url('/products/desktops') }}">Desktops</a>
+            <a class="xtech-search-category" href="{{ url('/products/thin-client') }}">Thin Client</a>
+            <a class="xtech-search-category" href="{{ url('/products/scanner') }}">Scanners</a>
+        </div>
+
+        <div class="sovtrend">
+            <p><i class="fas fa-fire me-1"></i>Popular Searches</p>
+            <button class="ttag" type="button">Officejet Printer</button>
+            <button class="ttag" type="button">Laser Printer</button>
+            <button class="ttag" type="button">Inkjet Printer</button>
+            <button class="ttag" type="button">Deskjet Printer</button>
+            <button class="ttag" type="button">Thin Client</button>
+            <button class="ttag" type="button">Scanner</button>
+        </div>
+    </div>
+</div>

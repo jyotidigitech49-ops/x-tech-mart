@@ -13,7 +13,9 @@
     <link href="{{ asset('themes/sarab/css/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('themes/sarab/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('themes/sarab/css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('themes/sarab/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('themes/sarab/css/style.css') }}?v=20260730-7" rel="stylesheet">
+    <link href="{{ asset('themes/sarab/css/header.css') }}?v=20260730-1" rel="stylesheet">
+    @stack('styles')
 </head>
 <body>
     @include('partials.header')
@@ -28,5 +30,6 @@
     <script src="{{ asset('themes/sarab/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('themes/sarab/js/jquery.magnific-popup.min.js') }}"></script>
     <script src="{{ asset('themes/sarab/js/main.js') }}"></script>
+    @stack('scripts')
 </body>
 </html>

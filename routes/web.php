@@ -65,8 +65,7 @@ Route::get('/product-information-disclaimer', fn () => redirect('/policy/product
 // all-dynamics pages route-------------------------------------------
 
 // home page route
-// Static Sarab theme preview. The original HomeController and its live-data logic remain preserved.
-Route::view('/', 'home.index');
+Route::get('/', [HomeController::class, 'index']);
 
 // product search page route
 Route::get('/search/{term?}', [ProductSearchController::class, 'index'])->name('product.search');

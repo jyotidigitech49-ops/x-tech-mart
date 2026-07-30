@@ -1,72 +1,135 @@
-      <!-- FOOTER -->
-      <footer>
-         <div class="container">
-            <div class="row g-5">
-               <div class="col-lg-4">
-                  <div class="fnm">Sar<span>ab</span></div>
-                  <p class="fdesc">We bring the world's finest flavors together in a fast, friendly, and affordable experience. Every meal crafted with love.</p>
-                  <div class="fsoc">
-                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                     <a href="#"><i class="fab fa-instagram"></i></a>
-                     <a href="#"><i class="fab fa-twitter"></i></a>
-                     <a href="#"><i class="fab fa-youtube"></i></a>
-                     <a href="#"><i class="fab fa-tiktok"></i></a>
-                  </div>
-               </div>
-               <div class="col-sm-6 col-lg-2">
-                  <div class="ftit">Quick Links</div>
-                  <ul class="flinks ps-0">
-                     <li><a href="#hero"><i class="fas fa-chevron-right"></i>Home</a></li>
-                     <li><a href="#about"><i class="fas fa-chevron-right"></i>About Us</a></li>
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Our Menu</a></li>
-                     <li><a href="#reservation"><i class="fas fa-chevron-right"></i>Reservation</a></li>
-                     <li><a href="#blog"><i class="fas fa-chevron-right"></i>Blog</a></li>
-                     <li><a href="#contact-section"><i class="fas fa-chevron-right"></i>Contact</a></li>
-                  </ul>
-               </div>
-               <div class="col-sm-6 col-lg-2">
-                  <div class="ftit">Our Menu</div>
-                  <ul class="flinks ps-0">
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Burgers</a></li>
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Pizza</a></li>
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Fried Chicken</a></li>
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Wraps &amp; Rolls</a></li>
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Pasta</a></li>
-                     <li><a href="#menu"><i class="fas fa-chevron-right"></i>Desserts</a></li>
-                  </ul>
-               </div>
-               <div class="col-lg-4">
-                  <div class="ftit">Get In Touch</div>
-                  <div class="fci">
-                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
-                     <div class="fciinfo"><strong>Address</strong>42 Flavor Street, Manhattan, NY 10001</div>
-                  </div>
-                  <div class="fci">
-                     <div class="fciico"><i class="fas fa-phone-alt"></i></div>
-                     <div class="fciinfo"><strong>Phone</strong>+1 (800) 123-4567</div>
-                  </div>
-                  <div class="fci">
-                     <div class="fciico"><i class="fas fa-envelope"></i></div>
-                     <div class="fciinfo"><strong>Email</strong>hello@sarabfood.com</div>
-                  </div>
-                  <div class="fci">
-                     <div class="fciico"><i class="fas fa-clock"></i></div>
-                     <div class="fciinfo"><strong>Hours</strong>Wed - Sun: 09 AM - 11 PM</div>
-                  </div>
-               </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <a class="footer-brand-logo" href="{{ url('/') }}" aria-label="XTechMart home">
+                    <img src="{{ asset('assets/images/ztm-logo.png') }}" width="207" height="46" alt="XTechMart">
+                </a>
+                <p class="fdesc">
+                    Connecting businesses with reliable technology solutions through expert guidance and product
+                    discovery.
+                </p>
+                <div class="footer-trust-badges" aria-label="Website security badges">
+                    <button type="button" onclick="openCenteredPopup()" aria-label="Check Google Safe Browsing status">
+                        <img src="{{ asset('assets/images/trust-badges/google-safe-browsing.png') }}"
+                            alt="Google Safe Browsing" loading="lazy">
+                    </button>
+                    <button type="button" onclick="redirectToCertificate()" aria-label="Check Sectigo SSL certificate">
+                        <img src="{{ asset('assets/images/trust-badges/sectigo-secured.png') }}"
+                            alt="Secured by Sectigo" loading="lazy">
+                    </button>
+                </div>
             </div>
-         </div>
-         <div class="fbot">
-            <div class="container">
-               <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                  <p>&copy 2026 <span>Sarab Restaurant</span>. All Rights Reserved by <a target="_blank" class="mx-0 fw-bold text-success" href="https://bestwpware.com/">Bestwpware</a>. Made with <span><i class="fas fa-heart"></i></span>  <br>Distributed by <a target="_blank" class="mx-0 fw-bold text-success" href="https://themewagon.com">ThemeWagon</a></p>
-                  <div><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
-               </div>
+
+            <div class="col-lg-2 col-md-6">
+                <div class="ftit">Quick Links</div>
+                <ul class="flinks ps-0">
+                    <li><a href="{{ url('/about-us') }}"><i class="fas fa-chevron-right"></i>About Us</a></li>
+                    <li><a href="{{ url('/contact-us') }}"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+                    <li><a href="{{ url('/products') }}"><i class="fas fa-chevron-right"></i>Products</a></li>
+                    <li><a href="{{ url('/blogs') }}"><i class="fas fa-chevron-right"></i>Blogs</a></li>
+                    <li><a href="{{ url('/faqs') }}"><i class="fas fa-chevron-right"></i>FAQs</a></li>
+                    <li><a href="{{ url('/sitemap') }}"><i class="fas fa-chevron-right"></i>Sitemap</a></li>
+                </ul>
             </div>
-         </div>
-      </footer>
-      <!-- Floating cart -->
-      <!-- <div class="cartfl"><i class="fas fa-shopping-cart"></i><span>My Cart</span><div class="ccount" id="cartCount">0</div></div> -->
-      <!-- Back to top -->
-      <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
-    
+
+            <div class="col-lg-4 col-md-6">
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <div class="ftit">Important Links</div>
+                        <ul class="flinks ps-0">
+                            <li><a href="{{ url('/privacy-policy') }}"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
+                            <li><a href="{{ url('/policy/terms-conditions') }}"><i class="fas fa-chevron-right"></i>Terms &amp; Conditions</a></li>
+                            <li><a href="{{ url('/policy/disclaimer') }}"><i class="fas fa-chevron-right"></i>Disclaimer</a></li>
+                            <li><a href="{{ url('/policy/trademark-disclaimer') }}"><i class="fas fa-chevron-right"></i>Trademark Disclaimer</a></li>
+                            <li><a href="{{ url('/policy/cookie-policy') }}"><i class="fas fa-chevron-right"></i>Cookie Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="ftit">Policy Links</div>
+                        <ul class="flinks ps-0">
+                            <li><a href="{{ url('/policy/quote-request-policy') }}"><i class="fas fa-chevron-right"></i>Quote Request Policy</a></li>
+                            <li><a href="{{ url('/policy/product-information-disclaimer') }}"><i class="fas fa-chevron-right"></i>Product Information Disclaimer</a></li>
+                            <li><a href="{{ url('/policy/dmca-copyright-policy') }}"><i class="fas fa-chevron-right"></i>DMCA Copyright Policy</a></li>
+                            <li><a href="{{ url('/policy/warranty-manufacturer-responsibility') }}"><i class="fas fa-chevron-right"></i>Warranty and Manufacturer Responsibility</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="ftit">Contact Info</div>
+                <div class="fci">
+                    <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="fciinfo"><strong>Address</strong>9655 Ensworth St 216, Las Vegas, NV 89123</div>
+                </div>
+                <div class="fci">
+                    <div class="fciico"><i class="fas fa-envelope"></i></div>
+                    <div class="fciinfo">
+                        <strong>Email</strong>
+                        <a href="mailto:info@zerotechmart.com">info@zerotechmart.com</a>
+                    </div>
+                </div>
+                <div class="fci">
+                    <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                    <div class="fciinfo">
+                        <strong>Contact Number</strong>
+                        <a href="tel:+18887154577">+1 (888)-715-4577</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-note-new">
+            XTechMart is an independent technology information and product discovery platform. We do not manufacture
+            or directly sell the products featured on this website. All product names, trademarks, logos, and brand
+            names remain the property of their respective owners and are used only for identification and
+            informational purposes. Product specifications, features, and availability may change without notice.
+            Users are encouraged to request a personalized quote for the latest product information, pricing, and
+            availability.
+        </p>
+    </div>
+
+    <div class="fbot">
+        <div class="container">
+            <p class="text-center">
+                &copy; 2026 <a class="footer-copyright-brand" href="{{ url('/') }}">XTechMart</a>. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to top -->
+<button id="btt" type="button" aria-label="Back to top"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+@push('scripts')
+    <script>
+        function redirectToCertificate() {
+            window.open(
+                'https://decoder.link/sslchecker/zerotechmart.com/443',
+                '_blank',
+                'noopener,noreferrer'
+            );
+        }
+
+        function openCenteredPopup() {
+            const url =
+                'https://transparencyreport.google.com/safe-browsing/search?url=https%3A%2F%2Fzerotechmart.com%2F&hl=en';
+            const popupWidth = 800;
+            const popupHeight = 600;
+            const left = (window.screen.width - popupWidth) / 2;
+            const top = (window.screen.height - popupHeight) / 2;
+            const features =
+                `width=${popupWidth},height=${popupHeight},left=${left},top=${top},resizable=yes,scrollbars=yes`;
+            const popup = window.open(url, '_blank', features);
+
+            if (popup) {
+                popup.focus();
+            }
+        }
+    </script>
+@endpush
