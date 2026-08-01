@@ -61,11 +61,13 @@
     <section id="category">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="slbl">What We Offer</span>
-                <h2 class="stitle">Browse by <span>Category</span></h2>
+                <span class="slbl">CURATED FOR MODERN WORK
+                </span>
+                <h2 class="stitle">Explore Technology Categories</h2>
                 <div class="sline"></div>
-                <p class="sdesc mx-auto" style="max-width:520px;">Explore thoughtfully curated technology categories
-                    designed to simplify product discovery.</p>
+                <p class="sdesc mx-auto" style="max-width:520px;">Navigate focused collections of printers, thin clients,
+                    desktops, and scanners selected for evolving workplace needs.
+                </p>
             </div>
             <div class="row g-4 justify-content-center category-grid">
                 @forelse ($homeCategories as $category)
@@ -75,8 +77,7 @@
                     <div class="col-6 col-sm-4 col-md-3 col-lg-3" data-aos="fade-up"
                         data-aos-delay="{{ min($loop->index * 70, 280) }}">
                         <article class="catcard">
-                            <a class="catcard-main" href="{{ $categoryUrl }}"
-                                aria-label="Explore {{ $category->name }}">
+                            <a class="catcard-main" href="{{ $categoryUrl }}" aria-label="Explore {{ $category->name }}">
                                 @if ($category->category_image_url)
                                     <span class="catimg-circle">
                                         <img class="catimg" src="{{ $category->category_image_url }}"
@@ -110,24 +111,27 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="astack">
-                        <div class="aexp"><span class="anum">12+</span><small>Years of<br />Excellence</small></div>
                         <div class="amain"><img src="{{ asset('themes/sarab/img/about1.jpg') }}" alt="Restaurant" />
                         </div>
                         <div class="asm"><img src="{{ asset('themes/sarab/img/about2.jpg') }}" alt="" /></div>
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
-                    <span class="slbl">Our Story</span>
-                    <h2 class="stitle text-start">We Invite You to Visit<br />Our <span>Food Restaurant</span></h2>
+                    <span class="slbl">OUR STORY
+                    </span>
+                    <h2 class="stitle text-start">Technology Exploration
+                        with Greater Perspective
+                    </h2>
                     <div class="sline lft"></div>
-                    <p class="sdesc mb-4">Founded in 2012, Sarab began as a small corner joint with a big dream - to serve
-                        food that brings people together. Today we're proud to serve thousands of happy customers every week
-                        with the same passion that started it all.</p>
+                    <p class="sdesc mb-4">XTech Mart brings printers, scanners, desktops, and thin clients into one
+                        thoughtfully organized platform. Clear product information and structured categories help
+                        individuals and businesses explore suitable technology without navigating a direct-purchase process.
+                    </p>
                     <div class="mb-4">
                         <div class="fti">
                             <div class="ftico r"><i class="fas fa-leaf"></i></div>
                             <div>
-                                <h6>100% Fresh Ingredients</h6>
+                                <h6>Focused Product Range</h6>
                                 <p>We source locally and sustainably. Every ingredient is hand-picked daily for maximum
                                     freshness.</p>
                             </div>
@@ -135,42 +139,41 @@
                         <div class="fti">
                             <div class="ftico y"><i class="fas fa-award"></i></div>
                             <div>
-                                <h6>Award-Winning Recipes</h6>
-                                <p>Our signature recipes have won national culinary awards 5 years in a row.</p>
+                                <h6>Clearer Product Insight</h6>
+                                <p>Relevant features and specifications arranged for easier research and comparison.</p>
                             </div>
                         </div>
                         <div class="fti">
                             <div class="ftico g"><i class="fas fa-shipping-fast"></i></div>
                             <div>
-                                <h6>Lightning-Fast Delivery</h6>
-                                <p>Order online and get hot, fresh food at your door in under 25 minutes, guaranteed.</p>
+                                <h6>Personalized Quote Access</h6>
+                                <p>A direct way to request pricing, availability, and additional product details.</p>
                             </div>
                         </div>
                     </div>
-                    <a href="#menu" class="btn-theme-primary"><i class="fas fa-book-open"></i>View Full Menu</a>
+                    <a href="{{ url('/products') }}" class="btn-theme-primary"><i class=""></i>Explore
+                        Products</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ============================================================
-                                                                                                                                                                                         MENU � FIX 3 (filter works) + FIX 4 (plus opens popup)
-                                                                                                                                                                                         ============================================================ -->
+
+    {{-- tab filter procduct section --}}
+
     <section id="menu">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="slbl">What's Cooking</span>
-                <h2 class="stitle">Our Delicious <span>Menu</span></h2>
+                <span class="slbl">SELECTED WITH PURPOSE</span>
+                <h2 class="stitle">Technology Shaped for the Work Ahead</h2>
                 <div class="sline"></div>
             </div>
             <!-- FIX 3 � filter buttons -->
             <div class="text-center mb-4" data-aos="fade-up">
-                <button class="filtbtn active" data-f="all">All</button>
-                <button class="filtbtn" data-f="burgers">Burgers</button>
-                <button class="filtbtn" data-f="pizza">Pizza</button>
-                <button class="filtbtn" data-f="chicken">Chicken</button>
-                <button class="filtbtn" data-f="wraps">Wraps</button>
-                <button class="filtbtn" data-f="desserts">Desserts</button>
-                <button class="filtbtn" data-f="pasta">Pasta</button>
+                <button class="filtbtn active" data-f="all">All Products</button>
+                <button class="filtbtn" data-f="burgers">Printers</button>
+                <button class="filtbtn" data-f="pizza">Thin Clients</button>
+                <button class="filtbtn" data-f="chicken"> Desktops</button>
+                <button class="filtbtn" data-f="wraps"> Scanners</button>
             </div>
             <div class="row g-4" id="mgrid">
                 <!-- CARD 1: Burgers -->
@@ -182,8 +185,7 @@
                         data-tags="Spicy,Bestseller,Beef">
                         <div class="mimg">
                             <img src="{{ asset('themes/sarab/img/menu/1.jpg') }}" alt="Smash Burger" />
-                            <div class="mbdg hot"><i class="fas fa-star"></i> Hot</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
+
                         </div>
                         <div class="mbody">
                             <div class="mcat">Burgers</div>
@@ -192,165 +194,25 @@
                                 sauce</div>
                             <div class="mfoot">
                                 <div>
-                                    <div class="mprice">$14.99 <small>$18.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span
-                                            style="color:#bbb;font-size:.7rem;">(128)</span></div>
+                                    <div class="mprice">$14.99</div>
                                 </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- CARD 2: Pizza -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="pizza" data-aos="fade-up" data-aos-delay="80">
-                    <div class="mcard" data-img="img/menu/2.jpg" data-title="Margherita Royale" data-cat="Pizza"
-                        data-price="$19.99" data-old="$24.99" data-rating="4.8" data-reviews="95" data-cal="480"
-                        data-time="18"
-                        data-desc="San Marzano tomatoes, fresh buffalo mozzarella, fragrant basil leaves, drizzled with Italian truffle oil on a hand-stretched sourdough base."
-                        data-tags="Vegetarian,New,Italian">
-                        <div class="mimg">
-                            <img src="{{ asset('themes/sarab/img/menu/2.jpg') }}" alt="Pizza" />
-                            <div class="mbdg new"><i class="fas fa-star"></i> New</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Pizza</div>
-                            <div class="mtit">Margherita Royale</div>
-                            <div class="mdesc">San Marzano tomatoes, buffalo mozzarella, basil &amp; truffle oil on
-                                sourdough</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$19.99 <small>$24.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span
-                                            style="color:#bbb;font-size:.7rem;">(95)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 3: Chicken -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="chicken" data-aos="fade-up" data-aos-delay="160">
-                    <div class="mcard" data-img="img/menu/3.jpg" data-title="Nashville Hot Chicken" data-cat="Chicken"
-                        data-price="$12.99" data-old="$16.99" data-rating="5.0" data-reviews="210" data-cal="710"
-                        data-time="15"
-                        data-desc="Extra-crispy fried chicken tossed in our signature fiery Nashville spice blend, served with honey drizzle and house pickles on a toasted brioche bun."
-                        data-tags="Spicy,Bestseller,Crispy">
-                        <div class="mimg">
-                            <img src="{{ asset('themes/sarab/img/menu/3.jpg') }}" alt="Chicken" />
-                            <div class="mbdg"><i class="fas fa-star"></i> Best Seller</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Chicken</div>
-                            <div class="mtit">Nashville Hot Chicken</div>
-                            <div class="mdesc">Crispy fried chicken in fiery Nashville spice blend with honey drizzle
-                            </div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$12.99 <small>$16.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span
-                                            style="color:#bbb;font-size:.7rem;">(210)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 4: Wraps -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="wraps" data-aos="fade-up">
-                    <div class="mcard" data-img="img/menu/4.jpg" data-title="Loaded Fajita Wrap" data-cat="Wraps"
-                        data-price="$10.99" data-old="" data-rating="4.5" data-reviews="74" data-cal="520"
-                        data-time="10"
-                        data-desc="Grilled chicken strips, saut�ed bell peppers and onions, sour cream, fresh guacamole and salsa wrapped in a warm flour tortilla with melted cheddar."
-                        data-tags="Grilled,Fresh,Mexican">
-                        <div class="mimg">
-                            <img src="{{ asset('themes/sarab/img/menu/4.jpg') }}" alt="Wrap" />
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Wraps</div>
-                            <div class="mtit">Loaded Fajita Wrap</div>
-                            <div class="mdesc">Grilled chicken, peppers, sour cream &amp; guacamole in a warm tortilla
-                            </div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$10.99</div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span
-                                            style="color:#bbb;font-size:.7rem;">(74)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 5: Desserts -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="desserts" data-aos="fade-up" data-aos-delay="80">
-                    <div class="mcard" data-img="img/menu/5.jpg" data-title="Nutella Lava Cake" data-cat="Desserts"
-                        data-price="$8.99" data-old="$11.99" data-rating="4.9" data-reviews="56" data-cal="390"
-                        data-time="8"
-                        data-desc="Warm molten chocolate cake with a gooey Nutella center, served alongside Madagascar vanilla bean ice cream with salted caramel drizzle and fresh berries."
-                        data-tags="Sweet,New,Chocolate">
-                        <div class="mimg">
-                            <img src="{{ asset('themes/sarab/img/menu/5.jpg') }}" alt="Lava Cake" />
-                            <div class="mbdg new"><i class="fas fa-star"></i> New</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Desserts</div>
-                            <div class="mtit">Nutella Lava Cake</div>
-                            <div class="mdesc">Molten chocolate cake with Nutella center, vanilla ice cream &amp; caramel
-                            </div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$8.99 <small>$11.99</small></div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span
-                                            style="color:#bbb;font-size:.7rem;">(56)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- CARD 6: Pasta -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="pasta" data-aos="fade-up" data-aos-delay="160">
-                    <div class="mcard" data-img="img/menu/6.jpg" data-title="Truffle Mushroom Pasta" data-cat="Pasta"
-                        data-price="$16.99" data-old="" data-rating="4.9" data-reviews="88" data-cal="560"
-                        data-time="20"
-                        data-desc="Al dente tagliatelle tossed with mixed wild mushrooms, freshly shaved black truffle, aged parmesan, fresh thyme and a touch of cream in garlic butter."
-                        data-tags="Vegetarian,Chef's Pick,Italian">
-                        <div class="mimg">
-                            <img src="{{ asset('themes/sarab/img/menu/6.jpg') }}" alt="Pasta" />
-                            <div class="mbdg hot">Chef's Pick</div>
-                            <div class="mhrt"><i class="far fa-heart"></i></div>
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Pasta</div>
-                            <div class="mtit">Truffle Mushroom Pasta</div>
-                            <div class="mdesc">Al dente tagliatelle, wild mushrooms, black truffle, parmesan &amp; thyme
-                            </div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$16.99</div>
-                                    <div class="mstars"><i class="fas fa-star"></i> <span
-                                            style="color:#bbb;font-size:.7rem;">(88)</span></div>
-                                </div>
-                                <button class="madd" title="View Details"><i class="fas fa-plus"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <!-- end #mgrid -->
-            <div class="text-center mt-5"><a href="#" class="btn-theme-primary"><i
-                        class="fas fa-th-large"></i>View Full Menu</a></div>
+            <div class="text-center mt-5"><a href="#" class="btn-theme-primary"><i class=""></i>View All
+                    Items</a></div>
         </div>
     </section>
 
 
     <!-- ============================================================
-                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
-                                                                                                                                                                                         ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
     <div id="menuPop">
         <div class="mpbox">
             <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
@@ -406,13 +268,14 @@
 
 
     <!-- ============================================================
-                                                                                                                                                                                         GALLERY � FIX 7 (click opens detail popup)
-                                                                                                                                                                                         ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         GALLERY � FIX 7 (click opens detail popup)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
     <section id="gallery">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="slbl">Food Showcase</span>
-                <h2 class="stitle">Let's See Our <span>Fast Food</span></h2>
+                <span class="slbl">PRODUCT SPOTLIGHT
+                </span>
+                <h2 class="stitle">See Every Product in Focus</h2>
                 <div class="sline"></div>
             </div>
             <div class="ggrid" data-aos="fade-up">
@@ -466,8 +329,8 @@
     <section id="chefs">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="slbl">The Culinary Team</span>
-                <h2 class="stitle">Meet Our Expert <span>Chefs</span></h2>
+                <span class="slbl">FEATURED COLLECTION </span>
+                <h2 class="stitle">Browse Our Product Highlights</h2>
                 <div class="sline"></div>
             </div>
             <div class="row g-4 mb-5">
@@ -475,9 +338,7 @@
                     <div class="chcard">
                         <div class="chimg">
                             <img src="{{ asset('themes/sarab/img/chefs/1.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
+
                         </div>
                         <div class="chbody">
                             <div class="chnm">Alice Mortal</div>
@@ -668,8 +529,10 @@
     <section id="blog">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
-                <span class="slbl">News &amp; Updates</span>
-                <h2 class="stitle">Our Latest <span>Blog</span> Posts</h2>
+                <span class="slbl">INSIGHTS & UPDATES
+                </span>
+                <h2 class="stitle">Explore Our Technology Blogs
+                </h2>
                 <div class="sline"></div>
             </div>
             <div class="row g-4">
@@ -677,13 +540,11 @@
                     <div class="blcard">
                         <div class="blimg">
                             <img src="{{ asset('themes/sarab/img/blog/1.jpg') }}" alt="" />
-                            <div class="bldatebdg"><span class="bd">14</span><span class="bm">Mar</span></div>
                         </div>
                         <div class="blbody">
                             <div class="bltag">Food &amp; Health</div>
                             <div class="bltit"><a href="#">Healthy Fast Food: A Myth or Beautiful Reality</a></div>
-                            <div class="blmeta"><span><i class="fas fa-user"></i>James Writer</span><span><i
-                                        class="fas fa-comment"></i>24 Comments</span></div>
+                            <div class="blmeta"><span>Sarah Grain</span></div>
                             <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>

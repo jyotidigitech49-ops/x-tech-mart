@@ -553,9 +553,14 @@ section {
   margin-right: auto;
   margin-left: auto;
 }
+.category-grid > [class*="col-"] {
+  min-width: 0;
+}
 .catcard {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-width: 0;
   background: #fff;
   min-height: 320px;
   border-radius: 18px;
@@ -569,6 +574,7 @@ section {
 .catcard-main {
   display: block;
   flex: 1;
+  min-width: 0;
   color: #000;
 }
 .catcard:hover,
@@ -582,6 +588,8 @@ section {
   align-items: center;
   justify-content: center;
   width: 190px;
+  max-width: 100%;
+  aspect-ratio: 1;
   height: 190px;
   border-radius: 50%;
   margin: 0 auto 18px;
@@ -676,18 +684,31 @@ section {
 }
 
 @media (max-width: 399.98px) {
+  .category-grid {
+    --bs-gutter-x: 0.75rem;
+    --bs-gutter-y: 0.9rem;
+  }
   .catcard {
     min-height: 284px;
-    padding: 21px 12px;
+    padding: 18px 9px;
   }
   .catimg-circle {
-    width: 130px;
-    height: 130px;
+    width: min(100%, 130px);
+    height: auto;
+    margin-bottom: 14px;
+  }
+  .catnm {
+    overflow-wrap: anywhere;
+  }
+  .catct {
+    font-size: 0.72rem;
   }
   .catsoftbtn {
     min-height: 40px;
-    padding: 7px 6px;
-    font-size: 0.7rem;
+    gap: 5px;
+    padding: 7px 4px;
+    font-size: 0.68rem;
+    overflow-wrap: anywhere;
   }
   .category-all-products {
     margin-top: 30px;

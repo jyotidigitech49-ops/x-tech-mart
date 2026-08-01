@@ -7,8 +7,8 @@
                     <img src="{{ asset('assets/images/ztm-logo.png') }}" width="207" height="46" alt="XTechMart">
                 </a>
                 <p class="fdesc">
-                    Connecting businesses with reliable technology solutions through expert guidance and product
-                    discovery.
+                    XTech Mart simplifies product discovery through clear information, organized technology categories,
+                    and personalized quote assistance for home and business needs.
                 </p>
                 <div class="footer-trust-badges" aria-label="Website security badges">
                     <button type="button" onclick="openCenteredPopup()" aria-label="Check Google Safe Browsing status">
@@ -39,20 +39,30 @@
                     <div class="col-sm-6">
                         <div class="ftit">Important Links</div>
                         <ul class="flinks ps-0">
-                            <li><a href="{{ url('/privacy-policy') }}"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
-                            <li><a href="{{ url('/policy/terms-conditions') }}"><i class="fas fa-chevron-right"></i>Terms &amp; Conditions</a></li>
-                            <li><a href="{{ url('/policy/disclaimer') }}"><i class="fas fa-chevron-right"></i>Disclaimer</a></li>
-                            <li><a href="{{ url('/policy/trademark-disclaimer') }}"><i class="fas fa-chevron-right"></i>Trademark Disclaimer</a></li>
-                            <li><a href="{{ url('/policy/cookie-policy') }}"><i class="fas fa-chevron-right"></i>Cookie Policy</a></li>
+                            <li><a href="{{ url('/privacy-policy') }}"><i class="fas fa-chevron-right"></i>Privacy
+                                    Policy</a></li>
+                            <li><a href="{{ url('/policy/terms-conditions') }}"><i
+                                        class="fas fa-chevron-right"></i>Terms &amp; Conditions</a></li>
+                            <li><a href="{{ url('/policy/disclaimer') }}"><i
+                                        class="fas fa-chevron-right"></i>Disclaimer</a></li>
+                            <li><a href="{{ url('/policy/trademark-disclaimer') }}"><i
+                                        class="fas fa-chevron-right"></i>Trademark Disclaimer</a></li>
+                            <li><a href="{{ url('/policy/cookie-policy') }}"><i class="fas fa-chevron-right"></i>Cookie
+                                    Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6">
                         <div class="ftit">Policy Links</div>
                         <ul class="flinks ps-0">
-                            <li><a href="{{ url('/policy/quote-request-policy') }}"><i class="fas fa-chevron-right"></i>Quote Request Policy</a></li>
-                            <li><a href="{{ url('/policy/product-information-disclaimer') }}"><i class="fas fa-chevron-right"></i>Product Information Disclaimer</a></li>
-                            <li><a href="{{ url('/policy/dmca-copyright-policy') }}"><i class="fas fa-chevron-right"></i>DMCA Copyright Policy</a></li>
-                            <li><a href="{{ url('/policy/warranty-manufacturer-responsibility') }}"><i class="fas fa-chevron-right"></i>Warranty and Manufacturer Responsibility</a></li>
+                            <li><a href="{{ url('/policy/quote-request-policy') }}"><i
+                                        class="fas fa-chevron-right"></i>Quote Request Policy</a></li>
+                            <li><a href="{{ url('/policy/product-information-disclaimer') }}"><i
+                                        class="fas fa-chevron-right"></i>Product Information Disclaimer</a></li>
+                            <li><a href="{{ url('/policy/dmca-copyright-policy') }}"><i
+                                        class="fas fa-chevron-right"></i>DMCA Copyright Policy</a></li>
+                            <li><a href="{{ url('/policy/warranty-manufacturer-responsibility') }}"><i
+                                        class="fas fa-chevron-right"></i>Warranty and Manufacturer Responsibility</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -82,27 +92,26 @@
         </div>
 
         <p class="footer-note-new">
-            XTechMart is an independent technology information and product discovery platform. We do not manufacture
-            or directly sell the products featured on this website. All product names, trademarks, logos, and brand
-            names remain the property of their respective owners and are used only for identification and
-            informational purposes. Product specifications, features, and availability may change without notice.
-            Users are encouraged to request a personalized quote for the latest product information, pricing, and
-            availability.
+            XTech Mart is an independent technology information and product discovery platform. Product names,
+            trademarks, logos, and images belong to their respective owners and are used only for identification and
+            informational purposes. Product specifications, pricing, and availability may change without notice. XTech
+            Mart does not manufacture products or provide manufacturer warranties. Visitors should verify current
+            details and request a quote before making any product-related decision.
         </p>
     </div>
 
     <div class="fbot">
         <div class="container">
             <p class="text-center">
-                &copy; 2026 <a class="footer-copyright-brand" href="{{ url('/') }}">XTechMart</a>. All rights reserved.
+                &copy; 2026 <a class="footer-copyright-brand" href="{{ url('/') }}">XTechMart</a>. All rights
+                reserved.
             </p>
         </div>
     </div>
 </footer>
 
 <!-- Back to top -->
-<button id="btt" type="button" aria-label="Back to top"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<button id="btt" type="button" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
     <i class="fas fa-chevron-up"></i>
 </button>
 

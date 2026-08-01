@@ -13,7 +13,7 @@
     <link href="{{ asset('themes/sarab/css/swiper-bundle.min.css') }}" rel="stylesheet">
     <link href="{{ asset('themes/sarab/css/all.min.css') }}" rel="stylesheet">
     <link href="{{ asset('themes/sarab/css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('themes/sarab/css/style.css') }}?v=20260730-7" rel="stylesheet">
+    <link href="{{ asset('themes/sarab/css/style.css') }}?v=20260801-1" rel="stylesheet">
     <link href="{{ asset('themes/sarab/css/header.css') }}?v=20260730-1" rel="stylesheet">
     @stack('styles')
 </head>
