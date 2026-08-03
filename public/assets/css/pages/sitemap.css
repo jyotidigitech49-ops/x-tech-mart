@@ -1,5 +1,19 @@
 /* Sitemap — refreshed to match the current ZeroTechMart theme */
-.sitemap-hero{position:relative;display:flex;min-height:360px;margin-top:-2px;align-items:center;justify-content:center;overflow:hidden;background-color:var(--ztm-accent,#6cb4b8);background-position:center;background-repeat:no-repeat;background-size:contain}
+.sitemap-hero,
+.sitemap-page {
+    --ztm-primary: #0064e0;
+    --ztm-primary-dark: #071a44;
+    --ztm-accent: #8ec5ff;
+    --ztm-accent-soft: #eaf3ff;
+    --ztm-highlight: #f4f8fd;
+    --ztm-text: #071a44;
+    --ztm-muted: #687386;
+    --ztm-border: #dfe7f3;
+    --ztm-surface: #ffffff;
+    --ztm-shadow: 0 16px 42px rgba(7, 26, 68, 0.09);
+}
+
+.sitemap-hero{position:relative;display:flex;min-height:360px;margin-top:-2px;align-items:center;justify-content:center;overflow:hidden;background-color:var(--ztm-primary,#0064e0);background-position:center;background-repeat:no-repeat;background-size:contain}
 .sitemap-hero__overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,35,45,.78),rgba(41,79,104,.55))}
 .sitemap-hero__glow{position:absolute;right:8%;bottom:-155px;width:310px;height:310px;border:54px solid rgba(108,180,184,.15);border-radius:50%}
 .sitemap-hero__content{position:relative;z-index:1;width:min(760px,calc(100% - 30px));padding:45px 15px;color:#fff;text-align:center}
@@ -250,4 +264,111 @@
     .sitemap-overview { gap: 0; }
     .sitemap-overview__intro { padding: 23px 21px; }
     .sitemap-stat { min-height: 88px; }
+}
+
+/* Home theme color alignment */
+.sitemap-hero__overlay {
+    background: linear-gradient(110deg, rgba(7, 26, 68, 0.82), rgba(0, 100, 224, 0.58));
+}
+
+.sitemap-hero__glow {
+    border-color: rgba(142, 197, 255, 0.18);
+}
+
+.sitemap-hero__eyebrow {
+    color: #b9dcff;
+}
+
+.sitemap-hero__breadcrumb a:hover,
+.sitemap-hero__breadcrumb span:last-child {
+    color: #8ec5ff;
+}
+
+.sitemap-page {
+    background:
+        radial-gradient(circle at 7% 9%, rgba(0, 100, 224, 0.1), transparent 23%),
+        linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%);
+}
+
+.sitemap-toolbar {
+    border-color: #dfe7f3;
+    box-shadow: 0 18px 45px rgba(7, 26, 68, 0.13);
+}
+
+.sitemap-search input {
+    border-color: #cfe0f5;
+    background: #ffffff;
+    box-shadow: inset 0 0 0 1px rgba(0, 100, 224, 0.06), 0 5px 15px rgba(7, 26, 68, 0.05);
+}
+
+.sitemap-search input:focus {
+    border-color: #0064e0;
+    box-shadow: 0 0 0 4px rgba(0, 100, 224, 0.13);
+}
+
+.sitemap-search kbd {
+    border-color: #cfe0f5;
+}
+
+.sitemap-overview {
+    background: linear-gradient(135deg, #071a44, #0064e0);
+    box-shadow: 0 16px 38px rgba(7, 26, 68, 0.2);
+}
+
+.sitemap-kicker {
+    color: #b9dcff;
+}
+
+.sitemap-card {
+    border-color: #dfe7f3;
+    box-shadow: 0 12px 32px rgba(7, 26, 68, 0.07);
+}
+
+.sitemap-card:hover {
+    border-color: #cfe0f5;
+    box-shadow: 0 17px 38px rgba(7, 26, 68, 0.1);
+}
+
+.sitemap-card::before {
+    background: linear-gradient(90deg, #0064e0, #8ec5ff);
+}
+
+.sitemap-card::after {
+    border-color: rgba(0, 100, 224, 0.07);
+}
+
+.sitemap-card--products {
+    background: linear-gradient(145deg, #ffffff 55%, #f4f8fd 100%);
+}
+
+.sitemap-card__mark {
+    background: #eaf3ff;
+    box-shadow: 7px 7px 0 rgba(0, 100, 224, 0.07);
+}
+
+.sitemap-card__mark::before,
+.sitemap-card__mark::after {
+    background-color: #0064e0;
+}
+
+.sitemap-card--products .sitemap-entry,
+.sitemap-card--pages .sitemap-link,
+.sitemap-card--policies .sitemap-doc {
+    border-color: #e3ebf5;
+    background: #f8fbff;
+}
+
+.sitemap-link:hover,
+.sitemap-group:hover,
+.sitemap-doc:hover,
+.sitemap-card--pages .sitemap-link:hover,
+.sitemap-card--policies .sitemap-doc:hover {
+    border-color: #cfe0f5;
+    background: #eaf3ff;
+    color: #0064e0;
+}
+
+.sitemap-sublist::before,
+.sitemap-empty {
+    border-color: #bfd5ef;
 }

@@ -30,8 +30,10 @@ class AboutController extends Controller
         ];
 
         $whyChoose = [
-            'title' => 'Why Choose XTechMart',
-            'description' => 'XTechMart brings together thoughtfully organized technology collections, making it easier to explore products through detailed information, practical insights, and a streamlined browsing experience.',
+            'title' => 'Turning Product Information into Confident Direction',
+            'description' => 'XTech Mart presents printers, scanners, desktops, and thin clients through organized categories, clear specifications, and practical product information. The platform helps individuals and businesses research suitable technology without navigating a direct-purchase process.
+
+              Every listing is structured to make comparisons more focused, while quote assistance provides a direct path to current pricing, availability, and additional product details.',
         ];
 
         return view('about.aboutus', compact(

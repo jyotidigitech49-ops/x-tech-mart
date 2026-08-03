@@ -10,7 +10,7 @@ class CookiePolicyController extends Controller
             'title' => 'Cookie Policy',
             'date' => 'July, 2026',
             'intro' => [
-                'This Cookie Policy explains how Zero Tech Mart ("we," "our," or "us") uses cookies and similar technologies when you access and use our website.',
+                'This Cookie Policy explains how XTech Mart ("we," "our," or "us") uses cookies and similar technologies when you access and use our website.',
                 'This Policy is intended to help visitors understand what cookies are, why they are used, what information may be collected through them, and how users can manage their cookie preferences.',
                 'By continuing to use our website, you acknowledge that cookies and similar technologies may be used as described in this Cookie Policy, subject to your browser settings and applicable laws.',
             ],
@@ -25,7 +25,7 @@ class CookiePolicyController extends Controller
                 ],
                 [
                     'title' => 'Why We Use Cookies',
-                    'body' => ['Zero Tech Mart may use cookies and similar technologies to:'],
+                    'body' => ['XTech Mart may use cookies and similar technologies to:'],
                     'items' => ['Improve Website Functionality', 'Enhance User Experience', 'Remember User Preferences', 'Maintain Website Security', 'Analyze Website Performance', 'Understand Visitor Behavior', 'Improve Website Navigation', 'Monitor Technical Performance', 'Support Website Administration', 'Provide Relevant Content'],
                     'note' => 'Cookies help us understand how visitors use the website so that we can continue improving our content and services.',
                 ],
@@ -34,25 +34,25 @@ class CookiePolicyController extends Controller
                     'groups' => [
                         [
                             'title' => 'Essential Cookies',
-                            'description' => 'Essential cookies are necessary for the website to function properly.',
+                            'description' => 'Essential cookies are necessary for the website to function properly. These cookies may support:',
                             'items' => ['Website Navigation', 'Security Functions', 'Form Submissions', 'Session Management', 'Page Functionality', 'Access To Website Features'],
                             'note' => 'Without these cookies, certain parts of the website may not operate correctly.',
                         ],
                         [
                             'title' => 'Performance And Analytics Cookies',
-                            'description' => 'Performance cookies help us understand how visitors interact with the website.',
+                            'description' => 'Performance cookies help us understand how visitors interact with the website. These cookies may collect information regarding:',
                             'items' => ['Pages Visited', 'Time Spent On Pages', 'Visitor Navigation Patterns', 'Website Traffic Sources', 'Device Information', 'Browser Information', 'Technical Performance Metrics'],
                             'note' => 'Information collected through these cookies is generally aggregated and used to improve website performance and usability.',
                         ],
                         [
                             'title' => 'Functional Cookies',
-                            'description' => 'Functional cookies allow the website to remember user preferences and settings.',
+                            'description' => 'Functional cookies allow the website to remember user preferences and settings. These cookies may store:',
                             'items' => ['Language Preferences', 'Region Selection', 'Display Preferences', 'User Interface Settings', 'Previously Submitted Preferences'],
                             'note' => 'The purpose of these cookies is to improve the overall user experience.',
                         ],
                         [
                             'title' => 'Security Cookies',
-                            'description' => 'Security cookies may be used to help identify and prevent malicious activity.',
+                            'description' => 'Security cookies may be used to help identify and prevent malicious activity. These cookies may assist with:',
                             'items' => ['Fraud Prevention', 'Website Security', 'Abuse Detection', 'Unauthorized Access Prevention', 'Session Protection'],
                             'note' => 'These cookies help maintain the integrity and security of the website.',
                         ],
@@ -61,13 +61,13 @@ class CookiePolicyController extends Controller
                 [
                     'title' => 'Third-Party Cookies',
                     'body' => [
-                        'The website may utilize services provided by third parties that place cookies on users\' devices.',
+                        'The website may use third-party services that place cookies on users\' devices.',
                         'These third parties may include:',
                     ],
                     'items' => ['Analytics Providers', 'Website Performance Services', 'Security Services', 'Marketing Service Providers', 'Embedded Content Providers'],
                     'notes' => [
-                        'Third-party cookies are governed by the privacy and cookie policies of the respective third-party providers.',
-                        'Zero Tech Mart does not control how third parties collect or process information through their cookies.',
+                        'The privacy and cookie policies of the respective third-party providers govern third-party cookies.',
+                        'XTech Mart does not control how third parties collect or process information through their cookies.',
                         'Users are encouraged to review the privacy policies of any third-party services used on the website.',
                     ],
                 ],
@@ -106,7 +106,7 @@ class CookiePolicyController extends Controller
                     'body' => [
                         'Some browsers offer "Do Not Track" features.',
                         'Because there is currently no universally accepted standard for Do Not Track signals, the website may not respond to all such requests uniformly.',
-                        'Users may manage cookies directly through browser settings if they wish to limit tracking activities.',
+                        'Users may manage cookies directly through their browser settings if they wish to limit tracking.',
                     ],
                 ],
                 [
@@ -114,13 +114,13 @@ class CookiePolicyController extends Controller
                     'body' => [
                         'Cookies may remain on a user\'s device for varying periods of time depending on their purpose.',
                         'Some cookies are removed automatically when a browser session ends, while others may remain stored until deleted or until they expire.',
-                        'Cookie retention periods may vary according to browser settings and the specific cookie involved.',
+                        'Cookie retention periods may vary depending on browser settings and the specific cookie in question.',
                     ],
                 ],
                 [
                     'title' => 'Changes To This Cookie Policy',
                     'body' => [
-                        'Zero Tech Mart may update this Cookie Policy periodically to reflect operational, legal, technical, or business changes.',
+                        'XTech Mart may update this Cookie Policy periodically to reflect operational, legal, technical, or business changes.',
                         'Any modifications become effective upon publication on the website.',
                         'Users are encouraged to review this Policy periodically to remain informed about our use of cookies and similar technologies.',
                     ],
@@ -129,10 +129,10 @@ class CookiePolicyController extends Controller
                     'title' => 'Contact Information',
                     'body' => ['If you have questions regarding this Cookie Policy or our use of cookies and related technologies, please contact us using the information below.'],
                     'contact' => [
-                        'Business Name:' => 'Zero Tech Mart',
-                        'Email:' => 'info@zerotechmart.com',
-                        'Address:' => '9655 Ensworth St 216, Las Vegas, NV 89123',
-                        'Contact No:' => '+1 (888)-715-4577',
+                        'Business Name:' => 'XTech Mart',
+                        'Email:' => 'info@xtechmart.com',
+                        'Address:' => '',
+                        'Contact No:' => '',
                     ],
                 ],
                 [

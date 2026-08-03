@@ -1,5 +1,10 @@
 @extends('layouts.app')
 @section('title', 'Sarab - Fast Food & Restaurant')
+
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/home-dynamic-products.css') }}?v=20260803-5">
+@endpush
+
 @section('content')
 
     {{-- hero-section --}}
@@ -160,7 +165,7 @@
 
     {{-- tab filter procduct section --}}
 
-    <section id="menu">
+    <section id="menu" class="home-products-section">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="slbl">SELECTED WITH PURPOSE</span>
@@ -168,51 +173,97 @@
                 <div class="sline"></div>
             </div>
             <!-- FIX 3 � filter buttons -->
-            <div class="text-center mb-4" data-aos="fade-up">
-                <button class="filtbtn active" data-f="all">All Products</button>
-                <button class="filtbtn" data-f="burgers">Printers</button>
-                <button class="filtbtn" data-f="pizza">Thin Clients</button>
-                <button class="filtbtn" data-f="chicken"> Desktops</button>
-                <button class="filtbtn" data-f="wraps"> Scanners</button>
-            </div>
-            <div class="row g-4" id="mgrid">
-                <!-- CARD 1: Burgers -->
-                <div class="col-sm-6 col-lg-4 mwrap" data-c="burgers" data-aos="fade-up">
-                    <div class="mcard" data-img="img/menu/1.jpg" data-title="Classic Smash Burger" data-cat="Burgers"
-                        data-price="$14.99" data-old="$18.99" data-rating="4.9" data-reviews="128" data-cal="620"
-                        data-time="12"
-                        data-desc="Double smashed patty, cheddar cheese, caramelized onions, house pickles and our legendary special sauce. Made fresh to order on a toasted brioche bun."
-                        data-tags="Spicy,Bestseller,Beef">
-                        <div class="mimg">
-                            <img src="{{ asset('themes/sarab/img/menu/1.jpg') }}" alt="Smash Burger" />
+            @php
+                $activeProductTab = array_key_first($productTabs);
+                $productTabLabels = [
+                    'featured' => 'All Products',
+                    'printer' => 'Printers',
+                    'printers' => 'Printers',
+                    'thin_client' => 'Thin Clients',
+                    'thin_clients' => 'Thin Clients',
+                    'desktop' => 'Desktops',
+                    'desktops' => 'Desktops',
+                    'scanner' => 'Scanners',
+                    'scanners' => 'Scanners',
+                ];
+            @endphp
 
-                        </div>
-                        <div class="mbody">
-                            <div class="mcat">Burgers</div>
-                            <div class="mtit">Classic Smash Burger</div>
-                            <div class="mdesc">Double smashed patty, cheddar, caramelized onions, pickles &amp; special
-                                sauce</div>
-                            <div class="mfoot">
-                                <div>
-                                    <div class="mprice">$14.99</div>
+            <div class="home-product-tabs" role="tablist" aria-label="Product categories" data-aos="fade-up">
+                @foreach ($productTabs as $tabKey => $tab)
+                    <button class="home-product-tab {{ $tabKey === $activeProductTab ? 'is-active' : '' }}"
+                        type="button" role="tab" data-product-tab="{{ $tabKey }}"
+                        aria-selected="{{ $tabKey === $activeProductTab ? 'true' : 'false' }}"
+                        aria-controls="home-products-{{ $tabKey }}">
+                        {{ $productTabLabels[$tabKey] ?? \Illuminate\Support\Str::title(str_replace(['-', '_'], ' ', $tab['label'])) }}
+                    </button>
+                @endforeach
+            </div>
+
+            <div class="home-product-tab-panels">
+                @foreach ($productTabs as $tabKey => $tab)
+                    <div id="home-products-{{ $tabKey }}"
+                        class="home-product-panel {{ $tabKey === $activeProductTab ? 'is-active' : '' }}" role="tabpanel"
+                        data-product-panel="{{ $tabKey }}">
+                        @if ($tab['products']->isNotEmpty())
+                            <div class="swiper home-product-swiper">
+                                <div class="swiper-wrapper">
+                                    @foreach ($tab['products'] as $product)
+                                        @php
+                                            $productType = \Illuminate\Support\Str::slug(
+                                                $product->parent_cat ?: 'printer',
+                                            );
+                                            $productUrl = url("products/{$productType}/details", $product->slug);
+                                            $productImage = collect($product->imagePaths())->first();
+                                            $isAvailable = strtolower((string) $product->stock_status) === 'available';
+                                        @endphp
+                                        <div class="swiper-slide">
+                                            <article class="home-product-card-new">
+                                                <a class="home-product-card-new__image" href="{{ $productUrl }}">
+                                                    @if ($productImage)
+                                                        <img src="{{ asset($productImage) }}" alt="{{ $product->name }}"
+                                                            loading="lazy">
+                                                    @else
+                                                        <span>{{ $product->name }}</span>
+                                                    @endif
+                                                </a>
+                                                <div class="home-product-card-new__body">
+                                                    <div class="home-product-card-new__meta">
+                                                        <span
+                                                            class="home-product-card-new__category">{{ $product->parent_cat }}</span>
+                                                        <span
+                                                            class="home-product-card-new__stock {{ $isAvailable ? 'is-available' : 'is-unavailable' }}">{{ $isAvailable ? 'In Stock' : 'Out of Stock' }}</span>
+                                                    </div>
+                                                    <h3><a href="{{ $productUrl }}">{{ $product->name }}</a></h3>
+                                                    <p>{{ \Illuminate\Support\Str::limit(strip_tags($product->short_description ?: $product->overview_description), 105) }}
+                                                    </p>
+                                                    <div class="home-product-card-new__footer">
+                                                        <strong>{{ is_numeric($product->price) && $product->price > 0 ? '$' . number_format($product->price, 2) : 'Request Quote' }}</strong>
+                                                        <a href="{{ $productUrl }}">View Details <i
+                                                                class="fas fa-arrow-right"></i></a>
+                                                    </div>
+                                                </div>
+                                            </article>
+                                        </div>
+                                    @endforeach
                                 </div>
-
+                                <div class="swiper-pagination"></div>
                             </div>
-                        </div>
+                        @else
+                            <p class="home-products-empty">No products found in this category.</p>
+                        @endif
                     </div>
-                </div>
-
+                @endforeach
             </div>
-            <!-- end #mgrid -->
-            <div class="text-center mt-5"><a href="#" class="btn-theme-primary"><i class=""></i>View All
-                    Items</a></div>
+
+            <div class="text-center mt-5"><a href="{{ url('/products') }}" class="btn-theme-primary">View All
+                    Products <i class="fas fa-arrow-right"></i></a></div>
         </div>
     </section>
 
 
     <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     FIX 4 � MENU DETAIL POPUP MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ============================================================ -->
     <div id="menuPop">
         <div class="mpbox">
             <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
@@ -268,8 +319,8 @@
 
 
     <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         GALLERY � FIX 7 (click opens detail popup)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     GALLERY � FIX 7 (click opens detail popup)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ============================================================ -->
     <section id="gallery">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
@@ -325,7 +376,7 @@
         </div>
     </div>
 
-    <!-- CHEFS -->
+    <!-- dynamic products list -->
     <section id="chefs">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
@@ -333,190 +384,51 @@
                 <h2 class="stitle">Browse Our Product Highlights</h2>
                 <div class="sline"></div>
             </div>
-            <div class="row g-4 mb-5">
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/1.jpg') }}" alt="" />
+            <div class="row g-4 suggested-products-grid">
+                @forelse ($suggestedProducts as $product)
+                    @php
+                        $suggestedType = \Illuminate\Support\Str::slug($product->parent_cat ?: 'printer');
+                        $suggestedUrl = url("products/{$suggestedType}/details", $product->slug);
+                        $suggestedImage = collect($product->imagePaths())->first();
+                        $suggestedAvailable = strtolower((string) $product->stock_status) === 'available';
+                    @endphp
+                    <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="{{ ($loop->index % 3) * 80 }}">
+                        <article class="chcard suggested-product-card">
+                            <a class="chimg suggested-product-card__image" href="{{ $suggestedUrl }}">
+                                @if ($suggestedImage)
+                                    <img src="{{ asset($suggestedImage) }}" alt="{{ $product->name }}" loading="lazy">
+                                @else
+                                    <span>{{ $product->name }}</span>
+                                @endif
+                            </a>
+                            <div class="chbody suggested-product-card__body">
+                                <div class="suggested-product-card__meta">
+                                    <span class="chrole">{{ $product->parent_cat }}</span>
+                                    <span
+                                        class="suggested-product-card__stock {{ $suggestedAvailable ? 'is-available' : 'is-unavailable' }}">
+                                        {{ $suggestedAvailable ? 'In Stock' : 'Out of Stock' }}
+                                    </span>
+                                </div>
+                                <h3 class="chnm"><a href="{{ $suggestedUrl }}">{{ $product->name }}</a></h3>
+                                <p class="chexp">
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($product->short_description ?: $product->overview_description), 115) }}
+                                </p>
+                                <div class="suggested-product-card__footer">
+                                    <strong>
+                                        {{ is_numeric($product->price) && $product->price > 0 ? '$' . number_format($product->price, 2) : 'Request Quote' }}
+                                    </strong>
+                                    <a href="{{ $suggestedUrl }}">View Details <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                @empty
+                    <div class="col-12">
+                        <p class="home-products-empty">Products not found.</p>
+                    </div>
+                @endforelse
+            </div>
 
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Alice Mortal</div>
-                            <div class="chrole">Head Chef</div>
-                            <div class="chexp">12 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/2.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Michael Corn</div>
-                            <div class="chrole">Grill Master</div>
-                            <div class="chexp">8 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/3.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Faz Chowdel</div>
-                            <div class="chrole">Pastry Chef</div>
-                            <div class="chexp">10 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/4.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">William Latnum</div>
-                            <div class="chrole">Pizza Artisan</div>
-                            <div class="chexp">9 years experience</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/1.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Alice Mortal</div>
-                            <div class="chrole">Head Chef</div>
-                            <div class="chexp">12 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/2.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Michael Corn</div>
-                            <div class="chrole">Grill Master</div>
-                            <div class="chexp">8 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/3.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Faz Chowdel</div>
-                            <div class="chrole">Pastry Chef</div>
-                            <div class="chexp">10 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/4.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">William Latnum</div>
-                            <div class="chrole">Pizza Artisan</div>
-                            <div class="chexp">9 years experience</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-4 mb-5">
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/1.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Alice Mortal</div>
-                            <div class="chrole">Head Chef</div>
-                            <div class="chexp">12 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="80">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/2.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Michael Corn</div>
-                            <div class="chrole">Grill Master</div>
-                            <div class="chexp">8 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="160">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/3.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">Faz Chowdel</div>
-                            <div class="chrole">Pastry Chef</div>
-                            <div class="chexp">10 years experience</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="240">
-                    <div class="chcard">
-                        <div class="chimg">
-                            <img src="{{ asset('themes/sarab/img/chefs/4.jpg') }}" alt="" />
-                            <div class="chsoc"><a href="#"><i class="fab fa-instagram"></i></a><a
-                                    href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i
-                                        class="fab fa-twitter"></i></a></div>
-                        </div>
-                        <div class="chbody">
-                            <div class="chnm">William Latnum</div>
-                            <div class="chrole">Pizza Artisan</div>
-                            <div class="chexp">9 years experience</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -535,57 +447,187 @@
                 </h2>
                 <div class="sline"></div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
-                    <div class="blcard">
-                        <div class="blimg">
-                            <img src="{{ asset('themes/sarab/img/blog/1.jpg') }}" alt="" />
-                        </div>
-                        <div class="blbody">
-                            <div class="bltag">Food &amp; Health</div>
-                            <div class="bltit"><a href="#">Healthy Fast Food: A Myth or Beautiful Reality</a></div>
-                            <div class="blmeta"><span>Sarah Grain</span></div>
-                            <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
-                    <div class="blcard">
-                        <div class="blimg">
-                            <img src="{{ asset('themes/sarab/img/blog/2.jpg') }}" alt="" />
-                            <div class="bldatebdg"><span class="bd">28</span><span class="bm">Feb</span></div>
-                        </div>
-                        <div class="blbody">
-                            <div class="bltag">Food Science</div>
-                            <div class="bltit"><a href="#">Is Fast Food Getting Healthier? Here's What We Found</a>
+            @if ($blogPosts->isNotEmpty())
+                <div class="swiper home-blog-swiper">
+                    <div class="swiper-wrapper">
+                @foreach ($blogPosts as $blogPost)
+                    @php
+                        $blogUrl = url('/blogs', $blogPost->slug);
+                        $blogImage = $blogPost->image1Path();
+                        $blogTimestamp = $blogPost->inserted_at ? strtotime($blogPost->inserted_at) : false;
+                    @endphp
+                    <div class="swiper-slide">
+                        <article class="blcard home-dynamic-blog-card">
+                            <a class="blimg home-dynamic-blog-card__image" href="{{ $blogUrl }}">
+                                @if ($blogImage)
+                                    <img src="{{ asset($blogImage) }}" alt="{{ $blogPost->heading }}" loading="lazy">
+                                @else
+                                    <span>{{ $blogPost->heading }}</span>
+                                @endif
+
+                            </a>
+                            <div class="blbody">
+                                <div class="bltag">Technology Insights</div>
+                                <h3 class="bltit"><a href="{{ $blogUrl }}">{{ $blogPost->heading }}</a></h3>
+                                <p class="home-dynamic-blog-card__excerpt">
+                                    {{ \Illuminate\Support\Str::limit(strip_tags($blogPost->content), 125) }}
+                                </p>
+                                <a href="{{ $blogUrl }}" class="blmore">Read More
+                                    <i class="fas fa-arrow-right"></i></a>
                             </div>
-                            <div class="blmeta"><span><i class="fas fa-user"></i>Sarah Grain</span><span><i
-                                        class="fas fa-comment"></i>18 Comments</span></div>
-                            <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        </article>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
-                    <div class="blcard">
-                        <div class="blimg">
-                            <img src="{{ asset('themes/sarab/img/blog/3.jpg') }}" alt="" />
-                            <div class="bldatebdg"><span class="bd">05</span><span class="bm">Jan</span></div>
-                        </div>
-                        <div class="blbody">
-                            <div class="bltag">Recipes</div>
-                            <div class="bltit"><a href="#">Innovative Hot Chickpeas Flake Crackin' Recipe at
-                                    Home</a></div>
-                            <div class="blmeta"><span><i class="fas fa-user"></i>Chef Marcus</span><span><i
-                                        class="fas fa-comment"></i>32 Comments</span></div>
-                            <a href="#" class="blmore">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                @endforeach
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-            </div>
+            @else
+                <p class="home-products-empty">Blogs not found.</p>
+            @endif
         </div>
     </section>
 
-
-
+    {{-- CTA banner section --}}
+    <section class="home-cta-banner-section" aria-label="Explore XTechMart solutions">
+        <div class="swiper home-cta-banner-slider">
+            <div class="swiper-wrapper">
+                @foreach ($footerBanners as $banner)
+                    <div class="swiper-slide">
+                        <a href="{{ $banner['url'] }}" aria-label="{{ $banner['alt'] }}">
+                            <img src="{{ $banner['image'] }}" alt="{{ $banner['alt'] }}" loading="lazy">
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
 @endsection
+
+@push('scripts')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const productSwipers = new Map();
+
+            document.querySelectorAll('.home-product-swiper').forEach(function(slider) {
+                const slideCount = slider.querySelectorAll('.swiper-slide').length;
+                const instance = new Swiper(slider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 18,
+                    loop: slideCount > 3,
+                    speed: 550,
+                    observer: true,
+                    observeParents: true,
+                    watchOverflow: true,
+                    autoplay: slideCount > 1 ? {
+                        delay: 2200,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    } : false,
+                    pagination: {
+                        el: slider.querySelector('.swiper-pagination'),
+                        clickable: true
+                    },
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: 24
+                        }
+                    }
+                });
+
+                productSwipers.set(slider.closest('.home-product-panel').dataset.productPanel, instance);
+            });
+
+            document.querySelectorAll('[data-product-tab]').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const tabKey = button.dataset.productTab;
+
+                    document.querySelectorAll('[data-product-tab]').forEach(function(tab) {
+                        const isActive = tab === button;
+                        tab.classList.toggle('is-active', isActive);
+                        tab.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    });
+
+                    document.querySelectorAll('[data-product-panel]').forEach(function(panel) {
+                        panel.classList.toggle('is-active', panel.dataset.productPanel ===
+                            tabKey);
+                    });
+
+                    const activeSwiper = productSwipers.get(tabKey);
+                    if (activeSwiper) {
+                        requestAnimationFrame(function() {
+                            activeSwiper.update();
+                            activeSwiper.slideToLoop(0, 0);
+                            if (activeSwiper.autoplay) {
+                                activeSwiper.autoplay.start();
+                            }
+                        });
+                    }
+                });
+            });
+
+            const blogSlider = document.querySelector('.home-blog-swiper');
+            if (blogSlider) {
+                const blogSlideCount = blogSlider.querySelectorAll('.swiper-slide').length;
+
+                new Swiper(blogSlider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 18,
+                    loop: blogSlideCount > 3,
+                    speed: 550,
+                    watchOverflow: true,
+                    autoplay: blogSlideCount > 1 ? {
+                        delay: 2400,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    } : false,
+                    pagination: {
+                        el: blogSlider.querySelector('.swiper-pagination'),
+                        clickable: true
+                    },
+                    breakpoints: {
+                        576: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: 24
+                        }
+                    }
+                });
+            }
+
+            const ctaSlider = document.querySelector('.home-cta-banner-slider');
+            if (ctaSlider) {
+                const ctaSlideCount = ctaSlider.querySelectorAll('.swiper-slide').length;
+
+                new Swiper(ctaSlider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 0,
+                    loop: ctaSlideCount > 1,
+                    speed: 550,
+                    effect: 'slide',
+                    autoplay: ctaSlideCount > 1 ? {
+                        delay: 2200,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    } : false,
+                    pagination: {
+                        el: ctaSlider.querySelector('.swiper-pagination'),
+                        clickable: true
+                    }
+                });
+            }
+        });
+    </script>
+@endpush

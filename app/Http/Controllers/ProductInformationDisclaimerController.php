@@ -10,8 +10,8 @@ class ProductInformationDisclaimerController extends Controller
             'title' => 'Product Information Disclaimer',
             'date' => 'July 2026',
             'intro' => [
-                'This Product Information Disclaimer explains the limitations, conditions, and intended use of the product-related information presented on the Zero Tech Mart website.',
-                'Zero Tech Mart operates as a technology, information, and product discovery platform. The website provides information regarding printers, scanners, desktops, thin clients, and other technology-related products for informational and reference purposes.',
+                'This Product Information Disclaimer explains the limitations, conditions, and intended use of the product-related information presented on the XTech Mart website.',
+                'XTech Mart operates as a technology, information, and product discovery platform. The website provides information regarding printers, scanners, desktops, thin clients, and other technology-related products for informational and reference purposes.',
                 'By accessing and using the website, you acknowledge and agree to the terms outlined in this Product Information Disclaimer.',
             ],
             'sections' => [
@@ -30,7 +30,7 @@ class ProductInformationDisclaimerController extends Controller
                 ],
                 [
                     'title' => 'No Guarantee Of Accuracy',
-                    'body' => ['While reasonable efforts are made to maintain accurate and current information, Zero Tech Mart does not guarantee that all product information available on the website is:'],
+                    'body' => ['While reasonable efforts are made to maintain accurate and current information, XTech Mart does not guarantee that all product information available on the website is:'],
                     'items' => ['Complete', 'Accurate', 'Current', 'Error-Free', 'Up-To-Date', 'Suitable For Specific Purposes'],
                     'notes' => [
                         'Manufacturers and suppliers may update product information without notice, and website content may not always immediately reflect such changes.',
@@ -43,7 +43,7 @@ class ProductInformationDisclaimerController extends Controller
                     'items' => ['Dimensions', 'Technical Features', 'Hardware Configurations', 'Connectivity Information', 'Performance Information', 'System Requirements', 'Functional Capabilities'],
                     'secondary_description' => 'Specifications may change without prior notice due to:',
                     'secondary_items' => ['Manufacturer Updates', 'Product Revisions', 'Regional Variations', 'Model Changes', 'Production Modifications'],
-                    'note' => 'Zero Tech Mart does not guarantee that listed specifications remain unchanged after publication.',
+                    'note' => 'XTech Mart does not guarantee that listed specifications remain unchanged after publication.',
                 ],
                 [
                     'title' => 'Product Features',
@@ -71,7 +71,7 @@ class ProductInformationDisclaimerController extends Controller
                     'body' => ['Any compatibility information provided on the website is intended solely for general informational purposes.', 'Compatibility may vary based on:'],
                     'items' => ['Hardware Configurations', 'Software Environments', 'Operating Systems', 'Firmware Versions', 'Network Environments', 'User Requirements'],
                     'notes' => [
-                        'Zero Tech Mart does not guarantee compatibility between any product and a user\'s specific environment or requirements.',
+                        'XTech Mart does not guarantee compatibility between any product and a user\'s specific environment or requirements.',
                         'Users are responsible for independently verifying compatibility before relying upon such information.',
                     ],
                 ],
@@ -79,11 +79,11 @@ class ProductInformationDisclaimerController extends Controller
                     'title' => 'Product Performance',
                     'body' => ['References to product capabilities, performance characteristics, efficiency, productivity, or functionality are based on information available at the time of publication.', 'Actual performance may vary depending on:'],
                     'items' => ['Usage Conditions', 'Hardware Environment', 'Software Environment', 'Configuration Settings', 'Maintenance Practices', 'User Requirements'],
-                    'note' => 'Zero Tech Mart does not guarantee that products will perform in a particular manner or achieve specific results.',
+                    'note' => 'XTech Mart does not guarantee that products will perform in a particular manner or achieve specific results.',
                 ],
                 [
                     'title' => 'Product Documentation',
-                    'body' => ['The website may reference manuals, guides, specifications, technical documents, and other informational materials.', 'Such references are provided solely for informational convenience.', 'Zero Tech Mart does not warrant:'],
+                    'body' => ['The website may reference manuals, guides, specifications, technical documents, and other informational materials.', 'Such references are provided solely for informational convenience.', 'XTech Mart does not warrant:'],
                     'items' => ['Accuracy Of Third-Party Documentation', 'Completeness Of Documentation', 'Continued Availability Of Documentation', 'Current Validity Of Documentation'],
                     'note' => 'Users should consult official documentation sources whenever possible.',
                 ],
@@ -98,20 +98,20 @@ class ProductInformationDisclaimerController extends Controller
                 ],
                 [
                     'title' => 'Third-Party Information',
-                    'body' => ['Certain product information may originate from third-party sources, manufacturers, suppliers, or publicly available materials.', 'Zero Tech Mart does not guarantee:'],
+                    'body' => ['Certain product information may originate from third-party sources, manufacturers, suppliers, or publicly available materials.', 'XTech Mart does not guarantee:'],
                     'items' => ['Accuracy Of Third-Party Information', 'Completeness Of Third-Party Information', 'Current Validity Of Third-Party Information', 'Availability Of Third-Party Content'],
                     'note' => 'Users should independently verify information obtained from external sources.',
                 ],
                 [
                     'title' => 'No Warranty Regarding Product Information',
-                    'body' => ['All product information is provided on an "as is" and "as available" basis.', 'Zero Tech Mart makes no representations or warranties regarding:'],
+                    'body' => ['All product information is provided on an "as is" and "as available" basis.', 'XTech Mart makes no representations or warranties regarding:'],
                     'items' => ['Product Information Accuracy', 'Product Information Completeness', 'Product Information Reliability', 'Product Suitability', 'Product Availability', 'Product Performance'],
                     'note' => 'Users rely upon product information at their own discretion and risk.',
                     'highlight' => true,
                 ],
                 [
                     'title' => 'Limitation Of Liability',
-                    'body' => ['To the fullest extent permitted by applicable law, Zero Tech Mart shall not be liable for any losses, damages, costs, or consequences arising from:'],
+                    'body' => ['To the fullest extent permitted by applicable law, XTech Mart shall not be liable for any losses, damages, costs, or consequences arising from:'],
                     'items' => ['Reliance Upon Product Information', 'Product Information Errors', 'Product Information Omissions', 'Product Availability Changes', 'Product Specification Changes', 'Product Compatibility Issues', 'Product Performance Differences'],
                     'note' => 'Users are solely responsible for evaluating information before making decisions based on website content.',
                 ],
@@ -119,7 +119,7 @@ class ProductInformationDisclaimerController extends Controller
                     'title' => 'Changes To Product Information',
                     'body' => [
                         'Product information may be modified, updated, corrected, removed, or replaced at any time without prior notice.',
-                        'Zero Tech Mart is under no obligation to update previously published information immediately following changes by manufacturers or suppliers.',
+                        'XTech Mart is under no obligation to update previously published information immediately following changes by manufacturers or suppliers.',
                         'Users should regularly verify important information through reliable sources.',
                     ],
                 ],
@@ -127,10 +127,10 @@ class ProductInformationDisclaimerController extends Controller
                     'title' => 'Contact Information',
                     'body' => ['If you have questions regarding this Product Information Disclaimer or product-related content displayed on the website, please contact us using the details below.'],
                     'contact' => [
-                        'Business Name:' => 'Zero Tech Mart',
-                        'Email:' => 'info@zerotechmart.com',
-                        'Address:' => '9655 Ensworth St 216, Las Vegas, NV 89123',
-                        'Contact No:' => '+1 (888)-715-4577',
+                        'Business Name:' => 'XTech Mart',
+                        'Email:' => 'info@xtechmart.com',
+                        'Address:' => '',
+                        'Contact No:' => '',
                     ],
                 ],
                 [

@@ -10,9 +10,9 @@ class PrivacyPolicyController extends Controller
             'title' => 'Privacy Policy',
             'date' => 'July 2026',
             'intro' => [
-                'Zero Tech Mart respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store, disclose, and protect information obtained through our website, forms, communication channels, and related services.',
+                'XTech Mart respects your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, store, disclose, and protect information obtained through our website, forms, communication channels, and related services.',
                 'By accessing or using our website, submitting a quote request, contacting us, or otherwise interacting with our platform, you acknowledge and agree to the practices described in this Privacy Policy.',
-                'Zero Tech Mart operates as a technology information and product discovery platform that provides information about printers, scanners, desktops, thin clients, and related technology products. Users may submit inquiries or quote requests through the website for informational purposes.',
+                'XTech Mart operates as a technology information and product discovery platform that provides information about printers, scanners, desktops, thin clients, and related technology products. Users may submit inquiries or quote requests through the website for informational purposes.',
             ],
             'sections' => [
                 [
@@ -33,7 +33,7 @@ class PrivacyPolicyController extends Controller
                                 'Business Information',
                                 'Mailing Address',
                                 'Country or Region',
-                                'Any information voluntarily submitted through contact forms or quote request forms',
+                                'Any information voluntarily submitted through contact forms or quote request forms.',
                             ],
                             'note' => 'Providing personal information is voluntary; however, certain services or communications may not be available without the information necessary to process a request.',
                         ],
@@ -129,7 +129,7 @@ class PrivacyPolicyController extends Controller
                 [
                     'title' => 'Information Sharing And Disclosure',
                     'body' => [
-                        'Zero Tech Mart does not sell personal information to third parties.',
+                        'XTech Mart does not sell personal information to third parties.',
                         'Information may be shared only when reasonably necessary, including:',
                     ],
                     'items' => [
@@ -160,20 +160,20 @@ class PrivacyPolicyController extends Controller
                         'Resolve Disputes',
                         'Improve Services',
                     ],
-                    'note' => 'When information is no longer required, reasonable efforts will be made to securely delete or anonymize it.',
+                    'note' => 'When information is no longer required, reasonable efforts will be made to delete or anonymize it securely.',
                 ],
                 [
                     'title' => 'Third-Party Websites',
                     'body' => [
                         'The website may contain links to third-party websites for informational purposes.',
-                        'Zero Tech Mart is not responsible for the privacy practices, content, security, or policies of external websites. Users should review the privacy policies of any third-party websites they visit.',
+                        'XTech Mart is not responsible for the privacy practices, content, security, or policies of external websites. Users should review the privacy policies of any third-party websites they visit.',
                     ],
                 ],
                 [
                     'title' => "Children's Privacy",
                     'body' => [
                         'This website is intended for business and professional audiences.',
-                        'We do not knowingly collect personal information from individuals under the age of 13. If such information is discovered, reasonable efforts will be made to remove it promptly.',
+                        'We do not knowingly collect personal information from individuals under the age of 13. If such information is discovered, we will make reasonable efforts to remove it promptly.',
                     ],
                 ],
                 [
@@ -193,7 +193,7 @@ class PrivacyPolicyController extends Controller
                 [
                     'title' => 'Changes To This Privacy Policy',
                     'body' => [
-                        'Zero Tech Mart may update this Privacy Policy from time to time.',
+                        'XTech Mart may update this Privacy Policy from time to time.',
                         'Changes become effective upon publication on the website. Continued use of the website following updates constitutes acceptance of the revised Privacy Policy.',
                     ],
                 ],
@@ -203,10 +203,10 @@ class PrivacyPolicyController extends Controller
                         'If you have questions regarding this Policy, your use of the website, submitted quote requests, or any related matter, please contact us using the information below.',
                     ],
                     'contact' => [
-                        'Business Name:' => 'Zero Tech Mart',
-                        'Email:' => 'info@zerotechmart.com',
-                        'Address:' => '9655 Ensworth St 216, Las Vegas, NV 89123',
-                        'Contact No:' => '+1 (888)-715-4577',
+                        'Business Name:' => 'XTech Mart',
+                        'Email:' => 'info@xtechmart.com',
+                        'Address:' => '',
+                        'Contact No:' => '',
                     ],
                 ],
                 [

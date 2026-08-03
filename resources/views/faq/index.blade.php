@@ -2,7 +2,7 @@
 @section('title', 'Faq')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/faq.css') }}?v=20260725-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/faq.css') }}?v=20260803-1">
 @endpush
 
 @section('content')

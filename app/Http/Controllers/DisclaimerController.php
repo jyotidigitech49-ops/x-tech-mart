@@ -10,9 +10,9 @@ class DisclaimerController extends Controller
             'title' => 'Website Disclaimer',
             'date' => 'July, 2026',
             'intro' => [
-                'The information provided on Zero Tech Mart ("the Website," "we," "our," or "us") is intended for general informational, educational, and business reference purposes only.',
+                'The information provided on XTech Mart ("the Website," "we," "our," or "us") is intended for general informational, educational, and business reference purposes only.',
                 'By accessing and using this website, you acknowledge that you have read, understood, and agreed to the terms of this Disclaimer. If you do not agree with any part of this Disclaimer, you should discontinue use of the website.',
-                'Zero Tech Mart operates as a technology, information, and product discovery platform. The website provides information regarding technology products, including but not limited to printers, scanners, desktops, thin clients, and related business technology solutions.',
+                'XTech Mart operates as a technology, information, and product discovery platform. The website provides information regarding technology products, including but not limited to printers, scanners, desktops, thin clients, and related business technology solutions.',
             ],
             'sections' => [
                 [
@@ -56,7 +56,7 @@ class DisclaimerController extends Controller
                 [
                     'title' => 'Product Information Disclaimer',
                     'body' => [
-                        'Reasonable efforts are made to provide accurate and up-to-date information; however, Zero Tech Mart does not warrant that all information displayed on the website is complete, current, accurate, or error-free.',
+                        'Reasonable efforts are made to provide accurate and up-to-date information; however, XTech Mart does not warrant that all information displayed on the website is complete, current, accurate, or error-free.',
                         'Product information may change without notice, including:',
                     ],
                     'items' => [
@@ -68,10 +68,7 @@ class DisclaimerController extends Controller
                         'Compatibility Information',
                         'Technical Details',
                     ],
-                    'note' => 'Manufacturers and suppliers may update product information at any time.',
-                    'notes' => [
-                        'Users should independently verify all information before relying upon it.',
-                    ],
+                    'note' => 'Manufacturers and suppliers may update product information at any time. Users should independently verify all information before relying upon it.',
                 ],
                 [
                     'title' => 'Product Images Disclaimer',
@@ -161,7 +158,7 @@ class DisclaimerController extends Controller
                     'body' => [
                         'The website may contain links to external websites operated by third parties.',
                         'These links are provided solely for convenience and informational purposes.',
-                        'Zero Tech Mart does not control and is not responsible for:',
+                        'XTech Mart does not control and is not responsible for:',
                     ],
                     'items' => [
                         'Third-Party Content',
@@ -176,7 +173,7 @@ class DisclaimerController extends Controller
                     'title' => 'No Warranties',
                     'body' => [
                         'The website and all content are provided on an "as is" and "as available" basis.',
-                        'To the fullest extent permitted by law, Zero Tech Mart makes no representations or warranties regarding:',
+                        'To the fullest extent permitted by law, XTech Mart makes no representations or warranties regarding:',
                     ],
                     'items' => [
                         'Information Accuracy',
@@ -191,7 +188,7 @@ class DisclaimerController extends Controller
                 ],
                 [
                     'title' => 'Limitation Of Liability',
-                    'body' => ['To the fullest extent permitted by applicable law, Zero Tech Mart shall not be liable for any:'],
+                    'body' => ['To the fullest extent permitted by applicable law, XTech Mart shall not be liable for any:'],
                     'items' => [
                         'Direct Damages',
                         'Indirect Damages',
@@ -216,14 +213,14 @@ class DisclaimerController extends Controller
                 [
                     'title' => 'Website Availability',
                     'body' => [
-                        'While reasonable efforts are made to maintain website accessibility, Zero Tech Mart does not guarantee uninterrupted access to the website.',
+                        'While reasonable efforts are made to maintain website accessibility, XTech Mart does not guarantee uninterrupted access to the website.',
                         'The website may be modified, suspended, restricted, or discontinued at any time without prior notice.',
                     ],
                 ],
                 [
                     'title' => 'Changes To This Disclaimer',
                     'body' => [
-                        'Zero Tech Mart reserves the right to update, modify, or replace this Disclaimer at any time.',
+                        'XTech Mart reserves the right to update, modify, or replace this Disclaimer at any time.',
                         'Changes become effective immediately upon publication on the website.',
                         'Continued use of the website after updates constitutes acceptance of the revised Disclaimer.',
                     ],
@@ -234,10 +231,10 @@ class DisclaimerController extends Controller
                         'If you have questions regarding this Disclaimer or the information provided on the website, please contact us using the details below.',
                     ],
                     'contact' => [
-                        'Business Name:' => 'Zero Tech Mart',
-                        'Email:' => 'info@zerotechmart.com',
-                        'Address:' => '9655 Ensworth St 216, Las Vegas, NV 89123',
-                        'Contact No:' => '+1 (888)-715-4577',
+                        'Business Name:' => 'XTech Mart',
+                        'Email:' => 'info@xtechmart.com',
+                        'Address:' => '',
+                        'Contact No:' => '',
                     ],
                 ],
                 [

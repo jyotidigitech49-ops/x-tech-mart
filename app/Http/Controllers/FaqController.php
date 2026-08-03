@@ -8,44 +8,44 @@ class FaqController extends Controller
     {
         $faqs = [
             [
-                'question' => 'What is XTechMart?',
-                'answer' => 'XTechMart is an independent technology platform that helps users explore printers, scanners, desktops, and thin clients through detailed product information, organized categories, and personalized quote assistance.',
+                'question' => 'What is XTech Mart?',
+                'answer' => 'XTech Mart is an independent technology information and product discovery platform featuring printers, scanners, desktops, and thin clients for home, office, and professional use.',
             ],
             [
-                'question' => 'Does XTechMart sell products directly?',
-                'answer' => 'No. XTechMart is not an online store. The platform provides product information and allows users to request a personalized quote based on their requirements.',
+                'question' => 'Can I purchase products directly from the website?',
+                'answer' => 'No. XTech Mart does not offer direct checkout or online purchasing. Visitors can review product information and submit a quote request for pricing and availability.',
             ],
             [
-                'question' => 'What types of products can I explore?',
-                'answer' => 'XTechMart features a range of technology products, including printers, scanners, desktops, and thin clients, along with their respective categories and product details.',
+                'question' => 'Which product categories are available?',
+                'answer' => 'The website includes printers, scanners, desktops, and thin clients. Printer listings may also appear under OfficeJet, LaserJet, Inkjet, and DeskJet categories.',
             ],
             [
-                'question' => 'How do I request a quote?',
-                'answer' => "Simply select the product you're interested in and use the Request a Quote option. Provide your details, and our team will respond with relevant information and pricing guidance.",
+                'question' => 'How do I request a product quote?',
+                'answer' => 'Open the relevant product page, select the quote option, and provide the requested details. The submitted information helps the team respond according to your product requirements.',
             ],
             [
-                'question' => 'Can I compare different products?',
-                'answer' => 'Yes. Product pages include detailed specifications, features, and descriptions to help you compare available options and make informed decisions.',
+                'question' => 'What information is included on product pages?',
+                'answer' => 'Product pages may include descriptions, specifications, key features, intended applications, connectivity details, and other practical information to support product research.',
             ],
             [
-                'question' => 'Who can benefit from XTechMart?',
-                'answer' => 'The platform is designed for businesses, professionals, educational institutions, and home users seeking reliable technology solutions and product guidance.',
+                'question' => 'How can I choose a suitable product?',
+                'answer' => 'Consider your workload, available space, connectivity needs, preferred features, and intended use. Reviewing several listings can make product comparison more focused and useful.',
             ],
             [
-                'question' => 'Does XTechMart provide product recommendations?',
-                'answer' => 'Yes. Based on your requirements, our team can help guide you toward technology solutions that best suit your workspace, business, or personal needs.',
+                'question' => 'Are product prices displayed on the website?',
+                'answer' => 'Prices may not always appear because product cost and availability can change. A quote request provides a clearer way to ask for current pricing information.',
             ],
             [
-                'question' => 'Are the product specifications regularly updated?',
-                'answer' => 'XTechMart strives to present accurate and up-to-date product information. Specifications and availability may change over time, so users are encouraged to request the latest details when submitting a quote request.',
+                'question' => 'Does XTech Mart provide manufacturer warranties?',
+                'answer' => 'XTech Mart does not issue manufacturer warranties unless clearly stated in writing. Warranty coverage, claims, repairs, and replacements generally remain the manufacturer’s responsibility.',
             ],
             [
-                'question' => 'How can I contact XTechMart?',
-                'answer' => 'You can reach our team through the Contact page or submit an inquiry using the Request a Quote form for product-related questions and assistance.',
+                'question' => 'Are all listed products currently available?',
+                'answer' => 'A product listing does not confirm immediate stock. Availability may vary by model, configuration, and timing, so visitors should request current information before making a decision.',
             ],
             [
-                'question' => 'Why choose XTechMart?',
-                'answer' => 'XTechMart combines thoughtfully organized product collections, detailed technology insights, and personalized quote assistance to simplify product discovery and help users make confident technology decisions.',
+                'question' => 'Can I contact the team for product guidance?',
+                'answer' => 'Yes. Visitors can use the contact or quote form to ask about product details, category options, availability, pricing, or general selection guidance.',
             ],
         ];
 

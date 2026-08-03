@@ -10,16 +10,16 @@ class TermsConditionsController extends Controller
             'title' => 'Terms and Conditions',
             'date' => 'July, 2026',
             'intro' => [
-                'Welcome to Zero Tech Mart. These Terms and Conditions govern your access to and use of our website, content, services, quote request forms, and related resources.',
+                'Welcome to XTech Mart. These Terms and Conditions govern your access to and use of our website, content, services, quote request forms, and related resources.',
                 'By accessing, browsing, or using this website, you acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions. If you do not agree with any part of these Terms, you should discontinue use of the website immediately.',
-                'Zero Tech Mart operates as a technology, information, and product discovery platform. The website provides information regarding printers, scanners, desktops, thin clients, and related technology products. The website may also allow users to submit inquiries and request product-related information.',
+                'XTech Mart operates as a technology, information, and product discovery platform. The website provides information regarding printers, scanners, desktops, thin clients, and related technology products. The website may also allow users to submit inquiries and request product-related information.',
             ],
             'sections' => [
                 [
                     'title' => 'Website Purpose',
                     'body' => [
                         'The information provided on this website is intended for general informational and business purposes only.',
-                        'Zero Tech Mart:',
+                        'XTech Mart:',
                     ],
                     'items' => [
                         'Provides product-related information.',
@@ -71,7 +71,7 @@ class TermsConditionsController extends Controller
                         'Does not obligate either party to complete a transaction.',
                         'Is intended solely to facilitate communication and information exchange.',
                     ],
-                    'note' => 'Zero Tech Mart reserves the right to respond, decline, or not respond to inquiries at its discretion.',
+                    'note' => 'XTech Mart reserves the right to respond, decline, or not respond to inquiries at its discretion.',
                 ],
                 [
                     'title' => 'User Responsibilities',
@@ -137,7 +137,7 @@ class TermsConditionsController extends Controller
                     'title' => 'Third-Party Links',
                     'body' => [
                         'The website may contain links to third-party websites for convenience or informational purposes.',
-                        'Zero Tech Mart does not control and is not responsible for:',
+                        'XTech Mart does not control and is not responsible for:',
                     ],
                     'items' => [
                         'Third-party content.',
@@ -152,7 +152,7 @@ class TermsConditionsController extends Controller
                     'title' => 'Disclaimer Of Warranties',
                     'body' => [
                         'The website and its content are provided on an "as is" and "as available" basis.',
-                        'Zero Tech Mart makes no representations or warranties regarding:',
+                        'XTech Mart makes no representations or warranties regarding:',
                     ],
                     'items' => [
                         'Information accuracy.',
@@ -168,7 +168,7 @@ class TermsConditionsController extends Controller
                 [
                     'title' => 'Limitation Of Liability',
                     'body' => [
-                        'To the fullest extent permitted by law, Zero Tech Mart shall not be liable for:',
+                        'To the fullest extent permitted by law, XTech Mart shall not be liable for:',
                     ],
                     'items' => [
                         'Direct Damages',
@@ -189,14 +189,14 @@ class TermsConditionsController extends Controller
                 [
                     'title' => 'Privacy',
                     'body' => [
-                        'Use of the website is also governed by the Privacy Policy.',
+                        'The Privacy Policy also governs use of the website.',
                         'Users are encouraged to review the Privacy Policy to understand how information is collected, used, and protected.',
                     ],
                 ],
                 [
                     'title' => 'Changes To These Terms',
                     'body' => [
-                        'Zero Tech Mart reserves the right to modify, update, or replace these Terms and Conditions at any time without prior notice.',
+                        'XTech Mart reserves the right to modify, update, or replace these Terms and Conditions at any time without prior notice.',
                         'Changes become effective immediately upon publication on the website.',
                         'Continued use of the website following updates constitutes acceptance of the revised Terms.',
                     ],
@@ -204,7 +204,7 @@ class TermsConditionsController extends Controller
                 [
                     'title' => 'Governing Law',
                     'body' => [
-                        'These Terms and Conditions shall be governed by and interpreted in accordance with the applicable laws of the jurisdiction in which Zero Tech Mart operates, without regard to its conflict of laws principles.',
+                        'These Terms and Conditions shall be governed by and interpreted in accordance with the applicable laws of the jurisdiction in which XTech Mart operates, without regard to its conflict of laws principles.',
                     ],
                 ],
                 [
@@ -213,10 +213,10 @@ class TermsConditionsController extends Controller
                         'If you have questions regarding these Terms and Conditions, please contact us using the details below.',
                     ],
                     'contact' => [
-                        'Business Name:' => 'Zero Tech Mart',
-                        'Email:' => 'info@zerotechmart.com',
-                        'Address:' => '9655 Ensworth St 216, Las Vegas, NV 89123',
-                        'Contact No:' => '+1 (888)-715-4577',
+                        'Business Name:' => 'XTech Mart',
+                        'Email:' => 'info@xtechmart.com',
+                        'Address:' => '',
+                        'Contact No:' => '',
                     ],
                 ],
                 [

@@ -1,93 +1,85 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
-use App\Models\Category;
+
 use App\Models\Blog;
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Support\Str;
 
-use Illuminate\Http\Request;
+class HomeController extends Controller
+{
+    public function index()
+    {
 
-class HomeController extends Controller {
-    public function index() {
-
-        $parentCategories = Product::where( 'status', 'A' )
-
-        ->select( 'parent_cat' )
-
-        ->distinct()
-
-        ->pluck( 'parent_cat' );
+        $parentCategories = Product::where('status', 'A')
+            ->select('parent_cat')
+            ->distinct()
+            ->pluck('parent_cat');
 
         $productTabs = [];
 
         // Featured Tab
 
-        $productTabs[ 'featured' ] = [
+        $productTabs['featured'] = [
 
             'label' => 'Featured',
 
-            'products' => Product::where( 'status', 'A' )
-
-            ->inRandomOrder()
-
-            ->limit( 10 )
-
-            ->get(),
+            'products' => Product::where('status', 'A')
+                ->inRandomOrder()
+                ->limit(10)
+                ->get(),
 
         ];
 
         // Dynamic Tabs
 
-        foreach ( $parentCategories as $parentCat ) {
+        foreach ($parentCategories as $parentCat) {
 
-            $key = Str::slug( $parentCat, '_' );
+            $key = Str::slug($parentCat, '_');
 
-            $productTabs[ $key ] = [
+            $productTabs[$key] = [
 
                 'label' => $parentCat,
 
-                'products' => Product::where( 'status', 'A' )
-
-                ->where( 'parent_cat', $parentCat )
-
-                ->limit( 10 )
-
-                ->get(),
+                'products' => Product::where('status', 'A')
+                    ->where('parent_cat', $parentCat)
+                    ->limit(10)
+                    ->get(),
 
             ];
 
         }
 
         // suggested products
-        $suggestedProducts = Product::where( 'status', 'A' )
-        ->inRandomOrder()
-        ->limit( 15 )
-        ->get();
-
-        //blogs-list-random---
-        $blogPosts = Blog::where( 'status', 'A' )
+        $suggestedProducts = Product::where('status', 'A')
             ->inRandomOrder()
-            ->limit( 6 )
+            ->limit(12)
+            ->get();
+
+        // blogs-list-random---
+        $blogPosts = Blog::where('status', 'A')
+            ->inRandomOrder()
+            ->limit(6)
             ->get();
 
         $homeCategories = Category::query()
-            ->where( 'parent_id', 0 )
-            ->where( 'status', 'A' )
-            ->orderBy( 'sort', 'asc' )
+            ->where('parent_id', 0)
+            ->where('status', 'A')
+            ->orderBy('sort', 'asc')
             ->get()
-            ->each( function ( Category $category ) {
-                $image = trim( str_replace( '\\', '/', (string) $category->image ) );
-                $urlPath = parse_url( $image, PHP_URL_PATH );
-                $filename = basename( $urlPath ?: $image );
+            ->each(function (Category $category) {
+                $image = trim(str_replace('\\', '/', (string) $category->image));
+                $urlPath = parse_url($image, PHP_URL_PATH);
+                $filename = basename($urlPath ?: $image);
 
                 $category->setAttribute(
                     'category_image_url',
                     $filename !== ''
-                        ? asset( 'assets/images/category_type/' . $filename )
+                        ? asset('assets/images/category_type/'.$filename)
                         : null
                 );
-            } );
+            });
 
         $footerBanners = [
             [
@@ -113,13 +105,13 @@ class HomeController extends Controller {
         //     'blogs' => $blogPosts->map(fn (Blog $blog) => $this->blogImageDebugData($blog))->values()->all(),
         // ]);
 
-        return view( 'home.index', compact(
+        return view('home.index', compact(
             'productTabs',
             'suggestedProducts',
             'blogPosts',
             'homeCategories',
             'footerBanners'
-        ) );
+        ));
 
     }
 
@@ -136,7 +128,7 @@ class HomeController extends Controller {
             $path = preg_replace('#^public/#i', '', $path);
 
             if ($path !== '' && ! str_starts_with(strtolower($path), 'assets/')) {
-                $path = 'assets/images/blog/' . $path;
+                $path = 'assets/images/blog/'.$path;
             }
 
             return [$image => $path ? asset($path) : null];

@@ -1,4 +1,17 @@
 /* Shared policy page shell */
+.policy-hero,
+.policy-document {
+    --ztm-primary: #0064e0;
+    --ztm-primary-dark: #071a44;
+    --ztm-accent: #8ec5ff;
+    --ztm-accent-soft: #eaf3ff;
+    --ztm-highlight: #f4f8fd;
+    --ztm-text: #071a44;
+    --ztm-muted: #687386;
+    --ztm-border: #dfe7f3;
+    --ztm-surface: #ffffff;
+}
+
 .policy-hero{position:relative;display:flex;min-height:360px;margin-top:-2px;align-items:center;justify-content:center;overflow:hidden;background-color:var(--ztm-accent,#6cb4b8);background-position:center;background-repeat:no-repeat;background-size:contain}
 .policy-hero>div:first-child{position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,35,45,.8),rgba(41,79,104,.58))}
 .policy-hero>div:last-child{position:relative;z-index:1;max-width:1000px;padding:46px 20px;color:#fff;text-align:center}
@@ -40,3 +53,95 @@
 
 @media(max-width:991px){.policy-document{grid-template-columns:1fr!important;padding:60px 20px 75px!important}.policy-nav{position:static;order:2}.policy-document__content{order:1}.policy-nav__links{grid-template-columns:repeat(2,minmax(0,1fr))}.policy-nav__help{display:none}}
 @media(max-width:575px){.policy-hero{min-height:300px}.policy-hero h1{margin-bottom:18px;font-size:42px}.policy-hero [class$="__breadcrumb"]{gap:9px;font-size:14px}.policy-document{padding:42px 15px 60px!important}.policy-document__content{padding:28px 20px!important;border-radius:16px}.policy-document__content>[class$="__section"]{padding-left:22px}.policy-nav__links{grid-template-columns:1fr}}
+
+/* Home theme color alignment */
+.policy-hero {
+    background-color: #0064e0;
+}
+
+.policy-hero > div:first-child {
+    background: linear-gradient(110deg, rgba(7, 26, 68, 0.82), rgba(0, 100, 224, 0.58));
+}
+
+.policy-hero [class$="__breadcrumb"] a:hover,
+.policy-hero [class$="__breadcrumb"] span:last-child {
+    color: #8ec5ff;
+}
+
+.policy-document {
+    background:
+        radial-gradient(circle at 7% 4%, rgba(0, 100, 224, 0.1), transparent 22%),
+        linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%) !important;
+}
+
+.policy-document__content {
+    border-color: #dfe7f3;
+    box-shadow: 0 16px 42px rgba(7, 26, 68, 0.08);
+}
+
+.policy-document__content > [class$="__date"] {
+    background: #eaf3ff;
+    color: #0064e0 !important;
+}
+
+.policy-document__content > [class$="__section"]::before {
+    background: #0064e0;
+    box-shadow: 0 0 0 1px #0064e0;
+}
+
+.policy-document__content [class$="__group"] {
+    border-color: #dfe7f3;
+    background: #f8fbff;
+}
+
+.policy-document__content [class$="__contact"] {
+    border-left-color: #0064e0;
+    background: #eaf3ff;
+}
+
+.policy-nav {
+    border-color: #dfe7f3;
+    box-shadow: 0 16px 38px rgba(7, 26, 68, 0.09);
+}
+
+.policy-nav__heading {
+    background: linear-gradient(145deg, #f4f8fd, #eaf3ff);
+}
+
+.policy-nav__icon {
+    background: #eaf3ff;
+    color: #0064e0;
+}
+
+.policy-nav__heading h2,
+.policy-nav__links a,
+.policy-nav__help strong {
+    color: #071a44;
+}
+
+.policy-nav__links a > span {
+    color: #8a96aa;
+}
+
+.policy-nav__links a > i {
+    color: #8eb9eb;
+}
+
+.policy-nav__links a:hover,
+.policy-nav__links a.is-active {
+    background: #eaf3ff;
+    color: #0064e0;
+}
+
+.policy-nav__links a.is-active > span,
+.policy-nav__links a.is-active > i {
+    color: #0064e0;
+}
+
+.policy-nav__help {
+    background: #f4f8fd;
+}
+
+.policy-nav__help a {
+    color: #0064e0;
+}
