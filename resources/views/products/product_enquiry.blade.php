@@ -2,7 +2,7 @@
 @section('title', 'Product Enquiry')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/product-enquiry.css') }}?v=20260722-6">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/product-enquiry.css') }}?v=20260804-3">
 @endpush
 
 @section('content')

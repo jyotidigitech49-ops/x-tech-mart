@@ -301,7 +301,7 @@ body {
 .submit-btn { background: linear-gradient(90deg, var(--ztm-primary, #3e6b89), var(--ztm-accent, #6cb4b8)); font-size: 13px; }
 .submit-btn:hover { background: linear-gradient(90deg, var(--ztm-primary-dark, #294f68), var(--ztm-primary, #3e6b89)); }
 
-/* Exact ZeroTechMart palette normalization */
+/* Exact XTechMart palette normalization */
 .product-enquiry-section {
     background:
         radial-gradient(circle at 50% 0%, rgba(108, 180, 184, .09), transparent 31%),
@@ -1023,4 +1023,156 @@ body {
     .product-enquiry-section .row.justify-content-center > .col-lg-7 { padding: 24px 20px; }
     .enquiry-submit-bar { align-items: stretch; flex-direction: column; }
     .submit-btn { width: 100%; }
+}
+
+/* XTechMart blue theme: colors only */
+.product-enquiry-section {
+    --ztm-primary: #0064e0;
+    --ztm-primary-dark: #071a44;
+    --ztm-accent: #0064e0;
+    --ztm-accent-soft: #eaf3ff;
+    --ztm-highlight: #f4f8fd;
+    --ztm-neutral: #f4f8fd;
+    --ztm-surface: #ffffff;
+    --ztm-text: #071a44;
+    --ztm-muted: #687386;
+    --ztm-border: #dfe7f3;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 100, 224, .07), transparent 30%), #f4f8fd;
+}
+
+.enquiry-page-heading > span,
+.enquiry-heading-icon,
+.summary-row strong i,
+.enquiry-privacy-note > span {
+    color: #0064e0;
+}
+
+.enquiry-page-heading > span {
+    border-color: #bfd5ef;
+    background: #eaf3ff;
+}
+
+.enquiry-page-heading > span::before {
+    border-color: #0064e0;
+}
+
+.enquiry-page-heading h1,
+.section-heading,
+.summary-product h5,
+.summary-row strong,
+.why-box h4,
+.form-label,
+.form-control {
+    color: #071a44;
+}
+
+.enquiry-page-heading p,
+.product-enquiry-section .row.justify-content-center > .col-lg-7 .form-description,
+.enquiry-privacy-note p {
+    color: #687386;
+}
+
+.product-enquiry-section .row.justify-content-center > .col-lg-5,
+.product-enquiry-section .row.justify-content-center > .col-lg-7,
+.summary-product,
+.summary-row,
+.form-control {
+    border-color: #dfe7f3;
+}
+
+.enquiry-heading-icon,
+.summary-row strong i,
+.enquiry-privacy-note > span {
+    background: #eaf3ff;
+}
+
+.enquiry-heading-icon--filled,
+.why-box h4 span,
+.why-box ul li::before,
+.submit-btn {
+    background: #0064e0;
+    color: #ffffff;
+}
+
+.enquiry-heading-icon--filled,
+.submit-btn {
+    box-shadow: 0 9px 20px rgba(0, 100, 224, .22);
+}
+
+.summary-row span,
+.blue-text,
+.why-box ul li {
+    color: #43506a !important;
+}
+
+.why-box {
+    border-color: #d5e5f8;
+    background: linear-gradient(145deg, #f8fbff, #eaf3ff);
+}
+
+.form-control:focus {
+    border-color: #0064e0;
+    box-shadow: 0 0 0 3px rgba(0, 100, 224, .11);
+}
+
+.submit-btn:hover {
+    background: #000000;
+}
+
+/* Compact enquiry benefits: bold text with small dots */
+.product-enquiry-section .why-box ul {
+    gap: 10px;
+}
+
+.product-enquiry-section .why-box ul li {
+    min-height: 0;
+    padding-left: 15px;
+    color: #071a44 !important;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.product-enquiry-section .why-box ul li::before {
+    top: 7px;
+    width: 5px;
+    height: 5px;
+    border: 0;
+    border-radius: 50%;
+    background: #0064e0;
+    box-shadow: none;
+    color: transparent;
+    content: "";
+}
+
+/* Replace oversized circular icons with compact dots beside bold labels */
+.product-enquiry-section .section-heading .enquiry-heading-icon,
+.product-enquiry-section .summary-row strong i,
+.product-enquiry-section .why-box h4 span,
+.product-enquiry-section .enquiry-privacy-note > span {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    min-height: 7px;
+    flex: 0 0 7px;
+    border: 0;
+    border-radius: 50%;
+    background: #0064e0;
+    box-shadow: none;
+    color: transparent;
+    font-size: 0;
+}
+
+.product-enquiry-section .section-heading .enquiry-heading-icon i,
+.product-enquiry-section .summary-row strong i::before,
+.product-enquiry-section .why-box h4 span i,
+.product-enquiry-section .enquiry-privacy-note > span i {
+    display: none;
+}
+
+.product-enquiry-section .section-heading,
+.product-enquiry-section .summary-row strong,
+.product-enquiry-section .why-box h4,
+.product-enquiry-section .enquiry-privacy-note p {
+    font-weight: 700;
 }

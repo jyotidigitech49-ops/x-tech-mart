@@ -3,19 +3,21 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/aboutus.css') }}?v=20260803-5">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/aboutus.css') }}?v=20260804-6">
 @endpush
 
 @section('content')
 
     {{-- Page Banner --}}
-    <section class="about-page-banner" aria-label="About XTechMart">
-        <img src="{{ asset('assets/images/banner/about-page-hero.png') }}" alt="About XTechMart and our technology solutions">
-        <div class="about-page-banner__actions">
-            <a class="about-page-banner__button about-page-banner__button--primary"
-                href="{{ url('/products') }}">Discover</a>
-            <a class="about-page-banner__button about-page-banner__button--outline"
-                href="{{ url('/contact-us') }}">Connect</a>
+    <section class="about-page-banner" style="background-image: url('{{ $bannerImage }}');" aria-label="About Us">
+        <div class="about-page-banner__overlay"></div>
+        <div class="about-page-banner__content">
+            <h1>About Us</h1>
+            <nav class="about-page-banner__breadcrumb" aria-label="Breadcrumb">
+                <a href="{{ url('/') }}">HOME</a>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">ABOUT US</span>
+            </nav>
         </div>
     </section>
 
@@ -24,18 +26,8 @@
         <div class="container">
             <div class="about-why-layout">
                 <div class="about-why-gallery" aria-label="XTechMart technology solutions">
-                    <img class="about-why-gallery__image about-why-gallery__image--wide"
-                        src="{{ asset('assets/images/banner/about-technology-collection.png') }}"
-                        alt="Technology products for a modern workspace" loading="lazy">
-                    <img class="about-why-gallery__image about-why-gallery__image--tall"
-                        src="{{ asset('assets/images/banner/about-office-printer.png') }}" alt="Modern office printer"
-                        loading="lazy">
-                    <img class="about-why-gallery__image about-why-gallery__image--small"
-                        src="{{ asset('assets/images/banner/about-compact-printer.png') }}" alt="Compact workplace printer"
-                        loading="lazy">
-                    <img class="about-why-gallery__image about-why-gallery__image--large"
-                        src="{{ asset('assets/images/banner/why-choose-zerotechmart.png') }}"
-                        alt="Technology solution in a modern office" loading="lazy">
+                    <img class="about-why-gallery__image" src="{{ asset('assets/images/banner/choose.png') }}"
+                        alt="Why choose XTechMart" loading="lazy">
                 </div>
 
                 <div class="about-why-content">
@@ -73,21 +65,21 @@
         <div class="container">
             <div class="about-stats-panel">
                 <article class="about-stat-item">
-                    <i class="far fa-star" aria-hidden="true"></i>
+                    <img src="{{ asset('assets/images/icon-img/Categories.png') }}" alt="" aria-hidden="true">
                     <div><strong>04</strong><span>Core Categories</span></div>
                 </article>
                 <article class="about-stat-item">
-                    <i class="fas fa-cube" aria-hidden="true"></i>
+                    <img src="{{ asset('assets/images/icon-img/Printer.png') }}" alt="" aria-hidden="true">
                     <div><strong>08</strong><span>Product Sections
                         </span></div>
                 </article>
                 <article class="about-stat-item">
-                    <i class="far fa-heart" aria-hidden="true"></i>
+                    <img src="{{ asset('assets/images/icon-img/light.png') }}" alt="" aria-hidden="true">
                     <div><strong>01</strong><span>Simple Quote Process
                         </span></div>
                 </article>
                 <article class="about-stat-item">
-                    <i class="far fa-check-circle" aria-hidden="true"></i>
+                    <img src="{{ asset('assets/images/icon-img/FAQs.png') }}" alt="" aria-hidden="true">
                     <div><strong>100%</strong><span>Product-Focused Experience</span></div>
                 </article>
             </div>
@@ -95,43 +87,10 @@
     </section>
 
     {{-- About Our Collection --}}
-    <section class="about-story-section">
+    <section class="about-story-banner-section" aria-label="About our technology collection">
         <div class="container">
-            <div class="about-story-layout">
-                <div class="about-story-visual">
-                    <span class="about-dot-pattern about-dot-pattern--story" aria-hidden="true"></span>
-                    <div class="about-story-image about-story-image--main">
-                        <img src="{{ asset('assets/images/banner/about-technology-collection.png') }}"
-                            alt="Desktop, printer, and scanner collection in a modern office" loading="lazy">
-                    </div>
-                    <div class="about-story-image about-story-image--small">
-                        <img src="{{ asset('assets/images/banner/about-compact-printer.png') }}"
-                            alt="Compact printer in a modern workspace" loading="lazy">
-                    </div>
-                    <div class="about-story-image about-story-image--front">
-                        <img src="{{ asset('assets/images/banner/about-office-printer.png') }}"
-                            alt="Office multifunction printer" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="about-story-content">
-                    {{-- <span class="about-section-eyebrow">About Our Platform</span> --}}
-                    <h2>Helping You Discover Technology With Confidence
-                    </h2>
-                    <p>{{ $collection['description'] }}</p>
-                    <ul class="about-story-points">
-                        <li>Curated technology collections
-                        </li>
-                        <li>Detailed product information</li>
-                        <li>Simplified product comparisons</li>
-                        <li>Personalized quote assistance
-                        </li>
-                        <li>Business-focused solutions</li>
-                        <li>Dependable customer guidance</li>
-                    </ul>
-                    <a class="about-primary-btn" href="{{ url('/products') }}">Explore<i class="icon-arrow-right"></i></a>
-                </div>
-            </div>
+            <img src="{{ asset('assets/images/banner/about-banner.png') }}" alt="About XTechMart technology collection"
+                loading="lazy">
         </div>
     </section>
 
@@ -140,33 +99,49 @@
         <div class="container">
             <div class="about-faq-heading">
                 <span>FAQ</span>
-                <h2 id="about-faq-title">Your Concerns, Answered</h2>
+                <h2 id="about-faq-title">Clarity for Every Question</h2>
             </div>
 
             <div class="about-faq-grid">
                 <article class="about-faq-item">
-                    <h3>How do I find the right technology product?</h3>
-                    <p>Browse our organized categories and detailed product information to compare suitable options.</p>
+                    <h3>What is XTech Mart?
+                    </h3>
+                    <p>XTech Mart is an independent technology information and product discovery platform featuring
+                        printers, scanners, desktops, and thin clients for home, office, and professional use.
+                    </p>
                 </article>
                 <article class="about-faq-item">
-                    <h3>Can I request a personalized quotation?</h3>
-                    <p>Yes. Share your requirements with us and our team will prepare a quotation for your needs.</p>
+                    <h3>Can I purchase products directly from the website?
+                    </h3>
+                    <p>No. XTech Mart does not offer direct checkout or online purchasing. Visitors can review product
+                        information and submit a quote request for pricing and availability.
+                    </p>
                 </article>
                 <article class="about-faq-item">
-                    <h3>Does XTechMart support business requirements?</h3>
-                    <p>Yes. We help businesses explore technology for workplaces, teams, and growing operations.</p>
+                    <h3>Which product categories are available?
+                    </h3>
+                    <p>The website includes printers, scanners, desktops, and thin clients. Printer listings may also appear
+                        under OfficeJet, LaserJet, Inkjet, and DeskJet categories.</p>
                 </article>
                 <article class="about-faq-item">
-                    <h3>How can I get product guidance?</h3>
-                    <p>Contact our specialists for clear information, comparisons, and relevant recommendations.</p>
+                    <h3>How do I request a product quote?
+                    </h3>
+                    <p>Open the relevant product page, select the quote option, and provide the requested details. The
+                        submitted information helps the team respond according to your product requirements.</p>
                 </article>
                 <article class="about-faq-item">
-                    <h3>Are product specifications available?</h3>
-                    <p>Each listing provides key specifications and useful details to support informed decisions.</p>
+                    <h3> What information is included on product pages?
+                    </h3>
+                    <p>Product pages may include descriptions, specifications, key features, intended applications,
+                        connectivity details, and other practical information to support product research.
+                    </p>
                 </article>
                 <article class="about-faq-item">
-                    <h3>How quickly will your team respond?</h3>
-                    <p>We aim to respond promptly with the information and assistance needed for your enquiry.</p>
+                    <h3> How can I choose a suitable product?
+                    </h3>
+                    <p>Consider your workload, available space, connectivity needs, preferred features, and intended use.
+                        Reviewing several listings can make product comparison more focused and useful.
+                    </p>
                 </article>
             </div>
         </div>
@@ -177,19 +152,19 @@
         <div class="about-cta-slider">
             <div class="about-cta-slide">
                 <a href="{{ url('/contact-us') }}" aria-label="Contact us for personalized technology guidance">
-                    <img src="{{ asset('assets/images/banner/smarter-technology-decisions.webp') }}"
+                    <img src="{{ asset('assets/images/banner/smarter-technology-decisions.png') }}"
                         alt="Turn better choices into smarter technology decisions">
                 </a>
             </div>
             <div class="about-cta-slide">
                 <a href="{{ url('/products') }}" aria-label="Start exploring technology products">
-                    <img src="{{ asset('assets/images/banner/technology-product-guidance.webp') }}"
+                    <img src="{{ asset('assets/images/banner/business-technology-solutions.png') }}"
                         alt="Your next technology solution starts with the right information">
                 </a>
             </div>
             <div class="about-cta-slide">
                 <a href="{{ url('/products') }}" aria-label="Explore business technology products">
-                    <img src="{{ asset('assets/images/banner/business-technology-solutions.webp') }}"
+                    <img src="{{ asset('assets/images/banner/technology-product-guidance.png') }}"
                         alt="Discover technology that moves your business forward">
                 </a>
             </div>

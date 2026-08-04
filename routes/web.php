@@ -21,10 +21,6 @@ use App\Http\Controllers\TermsConditionsController;
 use App\Http\Controllers\WarrantyManufacturerInformationController;
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/welcome', function () {
-    return view('old-ui.welcome');
-});
-
 // cache clear route
 Route::get('/clear-cache', function () {
     $exitCode = Artisan::call('cache:clear');

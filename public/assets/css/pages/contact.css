@@ -10,7 +10,7 @@
     background-color: var(--ztm-accent, #6cb4b8);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
 }
 
 .contact-banner__overlay {
@@ -49,12 +49,12 @@
 
 .contact-banner__breadcrumb a,
 .contact-banner__breadcrumb span {
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.92);
 }
 
-.contact-banner__breadcrumb a:hover,
+.contact-banner__breadcrumb span[aria-hidden="true"],
 .contact-banner__breadcrumb span:last-child {
-    color: var(--ztm-accent, #6cb4b8);
+    color: #5ba8ff;
 }
 
 /* Contact details and enquiry form */
@@ -567,10 +567,6 @@
 }
 
 @media (max-width: 767px) {
-    .contact-banner {
-        min-height: 285px;
-    }
-
     .contact-area {
         padding: 58px 0 66px;
     }
@@ -612,7 +608,8 @@
 
 @media (max-width: 575px) {
     .contact-banner {
-        min-height: 250px;
+        min-height: 260px;
+        background-size: 100% 100%;
     }
 
     .contact-banner__content h1 {
@@ -678,31 +675,6 @@
    New theme contact page
    All new contact layout and responsive edits stay here.
    ========================================================== */
-
-.contact-banner {
-    min-height: clamp(250px, 31vw, 360px);
-    background-color: #004ce0;
-    background-size: cover;
-}
-
-.contact-banner__overlay {
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.68), rgba(0, 76, 224, 0.46));
-}
-
-.contact-banner__content h1 {
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.contact-banner__breadcrumb a,
-.contact-banner__breadcrumb span {
-    color: #ffffff;
-}
-
-.contact-banner__breadcrumb a:hover,
-.contact-banner__breadcrumb span:last-child {
-    color: #ffffff;
-}
 
 #contact-section {
     position: relative;
@@ -963,10 +935,6 @@
 }
 
 @media (max-width: 767.98px) {
-    .contact-banner {
-        min-height: 260px;
-    }
-
     .contact-banner__content h1 {
         margin-bottom: 17px;
         font-size: clamp(2.35rem, 11vw, 3.2rem);
@@ -1003,10 +971,6 @@
 }
 
 @media (max-width: 575.98px) {
-    .contact-banner {
-        min-height: 225px;
-    }
-
     #contact-section {
         padding: 44px 0 48px;
     }

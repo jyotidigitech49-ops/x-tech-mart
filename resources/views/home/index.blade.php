@@ -1,65 +1,47 @@
 @extends('layouts.app')
-@section('title', 'Sarab - Fast Food & Restaurant')
+@section('title', 'XTechMart - Technology Products and Solutions')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/home-dynamic-products.css') }}?v=20260803-5">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/home-dynamic-products.css') }}?v=20260804-6">
 @endpush
 
 @section('content')
 
-    {{-- hero-section --}}
-    <section id="hero">
-        <div class="hs hs1"></div>
-        <div class="hs hs2"></div>
-        <div class="hbgtxt">FOOD</div>
-        <div class="container">
-            <div class="row align-items-center g-5" style="min-height:88vh;">
-                <div class="col-lg-6">
-                    <div class="hbadge">
-                        <div class="hbi"><i class="fas fa-star"></i></div>
-                        <span>#1 Rated Fast Food Restaurant in New York</span>
-                    </div>
-                    <h1 class="htitle">Delicious <span class="hl">Fast Food</span><br />for Every Moment</h1>
-                    <p class="hdesc">Experience bold flavors crafted from premium ingredients. From crispy burgers to
-                        gourmet pizzas - every bite is an adventure worth savoring.</p>
-                    <div class="d-flex flex-wrap gap-3 mb-2">
-                        <a href="#menu" class="btn-theme-primary"><i class="fas fa-utensils"></i>Explore Menu</a>
-                        <!-- FIX 2: Magnific popup video trigger -->
-                        <a href="https://www.youtube.com/watch?v=RXv_uIN6e-Y" class="magnific_popup btn-play popup-youtube">
-                            <div class="pico"><i class="fas fa-play"></i></div>
-                            <span>Watch Our Story</span>
-                        </a>
-                    </div>
-                    <div class="hstats d-flex gap-3 flex-wrap mt-4">
-                        <div class="hstat"><span class="snum">850<em>+</em></span><small>Happy Customers</small></div>
-                        <div class="sdiv"></div>
-                        <div class="hstat"><span class="snum">120<em>+</em></span><small>Menu Items</small></div>
-                        <div class="sdiv"></div>
-                        <div class="hstat"><span class="snum">15<em>+</em></span><small>Expert Chefs</small></div>
-                        <div class="sdiv"></div>
-                        <div class="hstat"><span class="snum">12<em>yr</em></span><small>Experience</small></div>
-                    </div>
+    {{-- hero banner slider --}}
+    <section class="home-hero-banner-section" aria-label="XTechMart product solutions">
+        <div class="swiper home-hero-banner-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="{{ url('/products/printer') }}" aria-label="Explore printer solutions">
+                        <picture>
+                            <img src="{{ asset('assets/images/slider/printer-solutions.png') }}" alt="Printer solutions">
+                        </picture>
+                    </a>
                 </div>
-                <div class="col-lg-6">
-                    <div style="position:relative;text-align:center;">
-                        <div class="hcircle">
-                            <img src="{{ asset('themes/sarab/img/banner-img.jpg') }}" alt="Burger" />
-                        </div>
-                        <div class="fcard fc1">
-                            <div class="fcoi r"><i class="fas fa-fire"></i></div>
-                            <div><span class="fcnum">Hot Deal</span><span class="fcsm">30% off today</span></div>
-                        </div>
-                        <div class="fcard fc2">
-                            <div class="fcoi y"><i class="fas fa-star"></i></div>
-                            <div><span class="fcnum">4.9/5</span><span class="fcsm">2k+ reviews</span></div>
-                        </div>
-                        <div class="fcard fc3">
-                            <div class="fcoi g"><i class="fas fa-clock"></i></div>
-                            <div><span class="fcnum">20 min</span><span class="fcsm">Fast delivery</span></div>
-                        </div>
-                    </div>
+                <div class="swiper-slide">
+                    <a href="{{ url('/products/desktops') }}" aria-label="Explore desktop solutions">
+                        <picture>
+                            <img src="{{ asset('assets/images/slider/desktop-solutions.png') }}" alt="Desktop solutions">
+                        </picture>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ url('/products/thin-client') }}" aria-label="Explore thin client solutions">
+                        <picture>
+                            <img src="{{ asset('assets/images/slider/thin-client-solutions.png') }}"
+                                alt="Thin client solutions">
+                        </picture>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="{{ url('/products/scanner') }}" aria-label="Explore scanner solutions">
+                        <picture>
+                            <img src="{{ asset('assets/images/slider/scanner-solutions.png') }}" alt="Scanner solutions">
+                        </picture>
+                    </a>
                 </div>
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
     <!-- CATEGORY -->
@@ -116,9 +98,10 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-5" data-aos="fade-right">
                     <div class="astack">
-                        <div class="amain"><img src="{{ asset('themes/sarab/img/about1.jpg') }}" alt="Restaurant" />
+                        <div class="amain">
+                            <img src="{{ asset('assets/images/banner/our-story.png') }}"
+                                alt="XTech Mart technology story" />
                         </div>
-                        <div class="asm"><img src="{{ asset('themes/sarab/img/about2.jpg') }}" alt="" /></div>
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left">
@@ -262,8 +245,8 @@
 
 
     <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     FIX 4 � MENU DETAIL POPUP MODAL
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
     <div id="menuPop">
         <div class="mpbox">
             <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
@@ -288,39 +271,12 @@
     </div>
     <!-- SPECIAL OFFER -->
     <section id="special">
-        <div class="spbg"></div>
-        <div class="container" style="position:relative;z-index:2;">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="sptag"><i class="fas fa-bolt me-1"></i>Limited Time Offer</div>
-                    <h2 class="sptitle">Get 30% Off<br />Our Signature<br /><span>Burger</span> Meal</h2>
-                    <p class="spdesc">Don't miss our weekend special - grab our award-winning signature burger combo with
-                        loaded fries and a premium shake at an unbeatable price.</p>
-                    <div class="cdwrap">
-                        <div class="cditem"><span class="cdnum" id="cdH">08</span><span
-                                class="cdlbl">Hours</span></div>
-                        <div class="cditem"><span class="cdnum" id="cdM">45</span><span
-                                class="cdlbl">Minutes</span></div>
-                        <div class="cditem"><span class="cdnum" id="cdS">30</span><span
-                                class="cdlbl">Seconds</span></div>
-                    </div>
-                    <a href="#menu" class="btn-theme-primary"><i class="fas fa-shopping-cart"></i>Grab the Deal</a>
-                </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="spimgw">
-                        <div class="spglow"></div>
-                        <div class="sppbdg"><span class="old">$24.99</span><span class="np">$17.49</span></div>
-                        <img src="{{ asset('themes/sarab/img/off-img.jpg') }}" alt="Special Burger" />
-                    </div>
-                </div>
-            </div>
-        </div>
+        <img class="special-offer-banner" src="{{ asset('assets/images/banner/offer-banner.png') }}"
+            alt="XTech Mart special offer" />
     </section>
 
 
-    <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     GALLERY � FIX 7 (click opens detail popup)
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ============================================================ -->
+    {{-- GALLERY POPUP --}}
     <section id="gallery">
         <div class="container">
             <div class="text-center mb-5" data-aos="fade-up">
@@ -330,32 +286,40 @@
                 <div class="sline"></div>
             </div>
             <div class="ggrid" data-aos="fade-up">
-                <div class="gitem" data-gi="0" data-gimg="img/portfolio/work1.jpg" data-gtitle="Gourmet Burgers"
-                    data-gdesc="Our award-winning smash burgers, hand-crafted with 100% premium beef, aged cheddar and house-made sauces.">
-                    <img src="{{ asset('themes/sarab/img/portfolio/work1.jpg') }}" alt="Burgers" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Gourmet Burgers</span></div>
+                <div class="gitem" data-gi="0"
+                    data-gimg="{{ asset('assets/images/banner/gallery-ink-tank-printer.png') }}"
+                    data-gtitle="Ink Tank Printer"
+                    data-gdesc="Explore an ink tank printer designed for clear everyday documents and efficient colour output.">
+                    <img src="{{ asset('assets/images/banner/gallery-ink-tank-printer.png') }}" alt="Ink tank printer" />
+                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Ink Tank Printer</span></div>
                 </div>
-                <div class="gitem" data-gi="1" data-gimg="img/portfolio/work2.jpg" data-gtitle="Wood-Fired Pizza"
-                    data-gdesc="Authentic Neapolitan-style pizzas fired at 900deg F in our wood-burning stone oven for the perfect char.">
-                    <img src="{{ asset('themes/sarab/img/portfolio/work2.jpg') }}" alt="Pizza" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Wood-Fired Pizza</span></div>
+                <div class="gitem" data-gi="1"
+                    data-gimg="{{ asset('assets/images/banner/gallery-office-printer.png') }}"
+                    data-gtitle="Office Printer"
+                    data-gdesc="Discover a compact office printer suited to routine documents, photos, and organized workspaces.">
+                    <img src="{{ asset('assets/images/banner/gallery-office-printer.png') }}" alt="Office printer" />
+                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Office Printer</span></div>
                 </div>
-                <div class="gitem" data-gi="2" data-gimg="img/portfolio/work3.jpg"
-                    data-gtitle="Crispy Fried Chicken"
-                    data-gdesc="Double-brined, hand-battered chicken fried to golden perfection using our 15-spice secret blend.">
-                    <img src="{{ asset('themes/sarab/img/portfolio/work3.jpg') }}" alt="Chicken" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Crispy Fried Chicken</span></div>
+                <div class="gitem" data-gi="2"
+                    data-gimg="{{ asset('assets/images/banner/gallery-desktop-workspace.png') }}"
+                    data-gtitle="Desktop Workspace"
+                    data-gdesc="Browse desktop solutions created for productive communication and focused professional work.">
+                    <img src="{{ asset('assets/images/banner/gallery-desktop-workspace.png') }}"
+                        alt="Desktop workspace" />
+                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Desktop Workspace</span></div>
                 </div>
-                <div class="gitem" data-gi="3" data-gimg="img/portfolio/work4.jpg" data-gtitle="Sweet Desserts"
-                    data-gdesc="Handcrafted desserts - from molten lava cakes to artisan ice cream sundaes and seasonal pastries.">
-                    <img src="{{ asset('themes/sarab/img/portfolio/work4.jpg') }}" alt="Desserts" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Sweet Desserts</span></div>
+                <div class="gitem" data-gi="3"
+                    data-gimg="{{ asset('assets/images/banner/gallery-document-scanner.png') }}"
+                    data-gtitle="Document Scanner"
+                    data-gdesc="Review document scanning technology for organized capture, access, and information management.">
+                    <img src="{{ asset('assets/images/banner/gallery-document-scanner.png') }}" alt="Document scanner" />
+                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Document Scanner</span></div>
                 </div>
-                <div class="gitem" data-gi="4" data-gimg="img/portfolio/work5.jpg"
-                    data-gtitle="Fresh Wraps &amp; Rolls"
-                    data-gdesc="Loaded fresh wraps packed with grilled proteins, crunchy vegetables and our house-made sauces.">
-                    <img src="{{ asset('themes/sarab/img/portfolio/work5.jpg') }}" alt="Wraps" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Fresh Wraps &amp; Rolls</span></div>
+                <div class="gitem" data-gi="4"
+                    data-gimg="{{ asset('assets/images/banner/gallery-thin-clients.png') }}" data-gtitle="Thin Clients"
+                    data-gdesc="Explore compact thin clients built for streamlined, connected, and centrally managed workspaces.">
+                    <img src="{{ asset('assets/images/banner/gallery-thin-clients.png') }}" alt="Thin clients" />
+                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Thin Clients</span></div>
                 </div>
             </div>
         </div>
@@ -450,34 +414,36 @@
             @if ($blogPosts->isNotEmpty())
                 <div class="swiper home-blog-swiper">
                     <div class="swiper-wrapper">
-                @foreach ($blogPosts as $blogPost)
-                    @php
-                        $blogUrl = url('/blogs', $blogPost->slug);
-                        $blogImage = $blogPost->image1Path();
-                        $blogTimestamp = $blogPost->inserted_at ? strtotime($blogPost->inserted_at) : false;
-                    @endphp
-                    <div class="swiper-slide">
-                        <article class="blcard home-dynamic-blog-card">
-                            <a class="blimg home-dynamic-blog-card__image" href="{{ $blogUrl }}">
-                                @if ($blogImage)
-                                    <img src="{{ asset($blogImage) }}" alt="{{ $blogPost->heading }}" loading="lazy">
-                                @else
-                                    <span>{{ $blogPost->heading }}</span>
-                                @endif
+                        @foreach ($blogPosts as $blogPost)
+                            @php
+                                $blogUrl = url('/blogs', $blogPost->slug);
+                                $blogImage = $blogPost->image1Path();
+                                $blogTimestamp = $blogPost->inserted_at ? strtotime($blogPost->inserted_at) : false;
+                            @endphp
+                            <div class="swiper-slide">
+                                <article class="blcard home-dynamic-blog-card">
+                                    <a class="blimg home-dynamic-blog-card__image" href="{{ $blogUrl }}">
+                                        @if ($blogImage)
+                                            <img src="{{ asset($blogImage) }}" alt="{{ $blogPost->heading }}"
+                                                loading="lazy">
+                                        @else
+                                            <span>{{ $blogPost->heading }}</span>
+                                        @endif
 
-                            </a>
-                            <div class="blbody">
-                                <div class="bltag">Technology Insights</div>
-                                <h3 class="bltit"><a href="{{ $blogUrl }}">{{ $blogPost->heading }}</a></h3>
-                                <p class="home-dynamic-blog-card__excerpt">
-                                    {{ \Illuminate\Support\Str::limit(strip_tags($blogPost->content), 125) }}
-                                </p>
-                                <a href="{{ $blogUrl }}" class="blmore">Read More
-                                    <i class="fas fa-arrow-right"></i></a>
+                                    </a>
+                                    <div class="blbody">
+                                        <div class="bltag">Technology Insights</div>
+                                        <h3 class="bltit"><a href="{{ $blogUrl }}">{{ $blogPost->heading }}</a>
+                                        </h3>
+                                        <p class="home-dynamic-blog-card__excerpt">
+                                            {{ \Illuminate\Support\Str::limit(strip_tags($blogPost->content), 125) }}
+                                        </p>
+                                        <a href="{{ $blogUrl }}" class="blmore">Read More
+                                            <i class="fas fa-arrow-right"></i></a>
+                                    </div>
+                                </article>
                             </div>
-                        </article>
-                    </div>
-                @endforeach
+                        @endforeach
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -508,6 +474,30 @@
 @push('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            const heroSlider = document.querySelector('.home-hero-banner-slider');
+            if (heroSlider) {
+                const heroSlideCount = heroSlider.querySelectorAll('.swiper-slide').length;
+
+                new Swiper(heroSlider, {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 0,
+                    loop: heroSlideCount > 1,
+                    speed: 500,
+                    effect: 'slide',
+                    watchOverflow: true,
+                    autoplay: heroSlideCount > 1 ? {
+                        delay: 1800,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true
+                    } : false,
+                    pagination: {
+                        el: heroSlider.querySelector('.swiper-pagination'),
+                        clickable: true
+                    }
+                });
+            }
+
             const productSwipers = new Map();
 
             document.querySelectorAll('.home-product-swiper').forEach(function(slider) {

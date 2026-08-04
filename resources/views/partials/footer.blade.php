@@ -78,7 +78,7 @@
                     <div class="fciico"><i class="fas fa-envelope"></i></div>
                     <div class="fciinfo">
                         <strong>Email</strong>
-                        <a href="mailto:info@zerotechmart.com">info@zerotechmart.com</a>
+                        <a href="mailto:info@xtechmart.com">info@xtechmart.com</a>
                     </div>
                 </div>
                 <div class="fci">
@@ -119,7 +119,7 @@
     <script>
         function redirectToCertificate() {
             window.open(
-                'https://decoder.link/sslchecker/zerotechmart.com/443',
+                'https://decoder.link/sslchecker/xtechmart.com/443',
                 '_blank',
                 'noopener,noreferrer'
             );
@@ -127,7 +127,7 @@
 
         function openCenteredPopup() {
             const url =
-                'https://transparencyreport.google.com/safe-browsing/search?url=https%3A%2F%2Fzerotechmart.com%2F&hl=en';
+                'https://transparencyreport.google.com/safe-browsing/search?url=https%3A%2F%2Fxtechmart.com%2F&hl=en';
             const popupWidth = 800;
             const popupHeight = 600;
             const left = (window.screen.width - popupWidth) / 2;

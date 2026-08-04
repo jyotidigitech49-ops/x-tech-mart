@@ -36,10 +36,13 @@ class AboutController extends Controller
               Every listing is structured to make comparisons more focused, while quote assistance provides a direct path to current pricing, availability, and additional product details.',
         ];
 
+        $bannerImage = asset('assets/images/common-banner/comm-banner.png');
+
         return view('about.aboutus', compact(
             'features',
             'collection',
-            'whyChoose'
+            'whyChoose',
+            'bannerImage'
         ));
     }
 }

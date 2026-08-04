@@ -83,17 +83,17 @@ class HomeController extends Controller
 
         $footerBanners = [
             [
-                'image' => asset('assets/images/banner/business-technology-solutions.jpg'),
+                'image' => asset('assets/images/banner/business-technology-solutions.png'),
                 'url' => url('/products'),
                 'alt' => 'Discover technology that moves your business forward',
             ],
             [
-                'image' => asset('assets/images/banner/smarter-technology-decisions.jpg'),
+                'image' => asset('assets/images/banner/smarter-technology-decisions.png'),
                 'url' => url('/contact-us'),
                 'alt' => 'Turn better choices into smarter technology decisions',
             ],
             [
-                'image' => asset('assets/images/banner/technology-product-guidance.jpg'),
+                'image' => asset('assets/images/banner/technology-product-guidance.png'),
                 'url' => url('/products'),
                 'alt' => 'Find the right information for your next technology solution',
             ],

@@ -2,7 +2,7 @@
 @section('title', 'Products')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260728-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260804-5">
 @endpush
 
 @section('content')
@@ -37,7 +37,7 @@
                     <p>{{ $isAllProductsPage ? 'Explore all technology product types with simpler navigation.' : 'Explore ' . $typeName . ' categories with simpler and smarter product navigation.' }}
                     </p>
                     <a class="product-category-overview-link" href="{{ url('/products') }}">
-                        View Products <i class="icon-arrow-right"></i>
+                        View Products
                     </a>
                 </div>
 
@@ -75,7 +75,6 @@
                                 <p>{{ $category->description }}</p>
                                 <a class="printer-category-link" href="{{ $categoryUrl }}">
                                     Explore {{ \Illuminate\Support\Str::replaceLast(' Printer', '', $category->name) }}
-                                    <i class="icon-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
@@ -139,8 +138,13 @@
                                     </div>
 
                                     <div class="product-content-wrap-2 theme-product-card__content">
-                                        <div class="printer-product-category">
-                                            {{ $product->category_name ?? $product->parent_cat }}
+                                        <div class="theme-product-card__meta">
+                                            <div class="printer-product-category">
+                                                {{ $product->category_name ?? $product->parent_cat }}
+                                            </div>
+                                            <span class="printer-stock-badge {{ $product->stock_status === 'available' ? '' : 'is-unavailable' }}">
+                                                {{ $product->stock_status === 'available' ? 'In Stock' : 'Out of Stock' }}
+                                            </span>
                                         </div>
 
                                         <h3>
@@ -150,17 +154,18 @@
                                             </a>
                                         </h3>
 
+                                        <p class="theme-product-card__description">
+                                            {{ \Illuminate\Support\Str::limit(strip_tags($product->short_description ?: $product->overview_description), 105) }}
+                                        </p>
+
                                         <div class="product-price-2 printer-product-price-stock">
-                                            <span>${{ number_format($product->price, 2) }}</span>
-                                            <span class="printer-stock-badge {{ $product->stock_status === 'available' ? '' : 'is-unavailable' }}">
-                                                {{ $product->stock_status === 'available' ? 'In Stock' : 'Out of Stock' }}
-                                            </span>
+                                            <span>{{ is_numeric($product->price) && $product->price > 0 ? '$' . number_format($product->price, 2) : 'Request Quote' }}</span>
+                                            <a class="theme-product-card__link"
+                                                href="{{ url("products/{$productDetailsTypeUrl}/details", $product->slug) }}">
+                                                <i class="icon-arrow-right-circle"></i>
+                                                View Details
+                                            </a>
                                         </div>
-                                        <a class="theme-product-card__link"
-                                            href="{{ url("products/{$productDetailsTypeUrl}/details", $product->slug) }}">
-                                            <i class="icon-arrow-right-circle"></i>
-                                            View Details
-                                        </a>
                                     </div>
                                 </article>
                             </div>

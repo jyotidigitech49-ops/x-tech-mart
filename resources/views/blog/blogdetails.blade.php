@@ -2,7 +2,7 @@
 @section('title', $blogDetails['heading'] ?? 'Blog Details')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/blogdetails.css') }}?v=20260728-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/blogdetails.css') }}?v=20260804-2">
 @endpush
 
 @section('content')
@@ -10,11 +10,11 @@
         <div class="blog-details-banner__overlay"></div>
         <div class="blog-details-banner__content">
             <h1>{{ $blogDetails['heading'] }}</h1>
-            <div class="blog-details-banner__breadcrumb">
+            <nav class="blog-details-banner__breadcrumb" aria-label="Breadcrumb">
                 <a href="{{ url('/') }}">HOME</a>
-                <span>//</span>
-                <span>{{ $blogDetails['heading'] }}</span>
-            </div>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">{{ $blogDetails['heading'] }}</span>
+            </nav>
         </div>
     </section>
 

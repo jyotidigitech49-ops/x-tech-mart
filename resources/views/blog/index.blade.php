@@ -2,7 +2,7 @@
 @section('title', 'Blogs')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/blog-list.css') }}?v=20260728-3">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/blog-list.css') }}?v=20260804-2">
 @endpush
 
 @section('content')
@@ -11,11 +11,11 @@
         <div class="blog-list-banner__overlay"></div>
         <div class="blog-list-banner__content">
             <h1>Blogs</h1>
-            <div class="blog-list-banner__breadcrumb">
+            <nav class="blog-list-banner__breadcrumb" aria-label="Breadcrumb">
                 <a href="{{ url('/') }}">HOME</a>
-                <span>//</span>
-                <span>BLOGS</span>
-            </div>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">BLOGS</span>
+            </nav>
         </div>
     </section>
 

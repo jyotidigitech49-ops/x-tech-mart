@@ -2,10 +2,24 @@
     box-shadow: none;
 }
 
+.blog-list-banner,
+.blog-list-area {
+    --ztm-primary: #0064e0;
+    --ztm-primary-dark: #071a44;
+    --ztm-accent: #0064e0;
+    --ztm-accent-soft: #eaf3ff;
+    --ztm-highlight: #f4f8fd;
+    --ztm-neutral: #f4f8fd;
+    --ztm-surface: #ffffff;
+    --ztm-text: #071a44;
+    --ztm-muted: #687386;
+    --ztm-border: #dfe7f3;
+}
+
 /* Blog page banner */
 .blog-list-banner {
     position: relative;
-    min-height: 405px;
+    min-height: 360px;
     margin-top: -2px;
     display: flex;
     align-items: center;
@@ -15,13 +29,13 @@
     background-image: url("../../images/faq/faq-hero.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 }
 
 .blog-list-banner__overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.40);
+    background: rgba(0, 0, 0, 0.48);
 }
 
 .blog-list-banner__content {
@@ -52,17 +66,22 @@
 
 .blog-list-banner__breadcrumb a,
 .blog-list-banner__breadcrumb span {
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.92);
 }
 
+.blog-list-banner__breadcrumb a:hover {
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.blog-list-banner__breadcrumb span[aria-hidden="true"],
 .blog-list-banner__breadcrumb span:last-child {
-    color: var(--ztm-accent, #6cb4b8);
+    color: #5ba8ff;
 }
 
 /* Blog listing */
 .blog-list-area {
     padding: 90px 0 96px;
-    background: linear-gradient(180deg, #f7fafb 0%, var(--ztm-highlight, #e9f4f1) 100%);
+    background: linear-gradient(180deg, #f4f8fd 0%, #ffffff 100%);
 }
 
 .blog-list-area>.container {
@@ -92,7 +111,7 @@
 .blog-list-heading::after {
     position: absolute;
     height: 1px;
-    background: rgba(217, 238, 238, 0.2);
+    background: rgba(234, 243, 255, 0.24);
     content: "";
 }
 
@@ -351,10 +370,6 @@
 }
 
 @media (max-width: 991px) {
-    .blog-list-banner {
-        min-height: 330px;
-    }
-
     .blog-list-card {
         grid-template-rows: 235px minmax(0, 1fr);
         min-height: 510px;
@@ -393,10 +408,6 @@
         height: 96px;
     }
 
-    .blog-list-banner {
-        min-height: 270px;
-    }
-
     .blog-list-banner__content h1 {
         margin-bottom: 18px;
         font-size: 42px;
@@ -410,7 +421,8 @@
 
 @media (max-width: 575px) {
     .blog-list-banner {
-        min-height: 235px;
+        min-height: 260px;
+        background-size: 100% 100%;
     }
 
     .blog-list-heading {

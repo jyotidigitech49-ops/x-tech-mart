@@ -2,8 +2,8 @@
 @section('title', 'Search Products')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260728-1">
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/search-results.css') }}?v=20260725-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260804-5">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/search-results.css') }}?v=20260804-1">
 @endpush
 
 @section('content')
@@ -20,7 +20,7 @@
     @endphp
 
     <section class="search-hero-area"
-        style="background-image: linear-gradient(90deg, rgba(41, 79, 104, 0.96) 0%, rgba(62, 107, 137, 0.88) 50%, rgba(34, 49, 63, 0.5) 100%), url('{{ $bannerImage }}');">
+        style="background-image: linear-gradient(90deg, rgba(7, 26, 68, 0.97) 0%, rgba(0, 100, 224, 0.9) 52%, rgba(7, 26, 68, 0.52) 100%), url('{{ $bannerImage }}');">
         <div class="container">
             <div class="search-hero-content">
                 <span class="search-hero-label">Product Search</span>
@@ -77,8 +77,13 @@
                                     </div>
 
                                     <div class="product-content-wrap-2 theme-product-card__content">
-                                        <div class="printer-product-category">
-                                            {{ $product->category_name ?? $product->parent_cat }}
+                                        <div class="theme-product-card__meta">
+                                            <div class="printer-product-category">
+                                                {{ $product->category_name ?? $product->parent_cat }}
+                                            </div>
+                                            <span class="printer-stock-badge {{ $product->stock_status === 'available' ? '' : 'is-unavailable' }}">
+                                                {{ $product->stock_status === 'available' ? 'In Stock' : 'Out of Stock' }}
+                                            </span>
                                         </div>
 
                                         <h3>
@@ -87,17 +92,18 @@
                                             </a>
                                         </h3>
 
+                                        <p class="theme-product-card__description">
+                                            {{ \Illuminate\Support\Str::limit(strip_tags($product->short_description ?: $product->overview_description), 105) }}
+                                        </p>
+
                                         <div class="product-price-2 printer-product-price-stock">
-                                            <span>${{ number_format($product->price, 2) }}</span>
-                                            <span class="printer-stock-badge {{ $product->stock_status === 'available' ? '' : 'is-unavailable' }}">
-                                                {{ $product->stock_status === 'available' ? 'In Stock' : 'Out of Stock' }}
-                                            </span>
+                                            <span>{{ is_numeric($product->price) && $product->price > 0 ? '$' . number_format($product->price, 2) : 'Request Quote' }}</span>
+                                            <a class="theme-product-card__link"
+                                                href="{{ url("products/{$productTypeUrl}/details", $product->slug) }}">
+                                                <i class="icon-arrow-right-circle"></i>
+                                                View Details
+                                            </a>
                                         </div>
-                                        <a class="theme-product-card__link"
-                                            href="{{ url("products/{$productTypeUrl}/details", $product->slug) }}">
-                                            <i class="icon-arrow-right-circle"></i>
-                                            View Details
-                                        </a>
                                     </div>
                                 </article>
                             </div>

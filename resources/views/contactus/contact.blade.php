@@ -2,7 +2,7 @@
 @section('title', 'Contact Us')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/contact.css') }}?v=20260730-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/contact.css') }}?v=20260804-1">
 @endpush
 
 @section('content')
@@ -13,8 +13,8 @@
             <h1>Contact Us</h1>
             <div class="contact-banner__breadcrumb">
                 <a href="{{ url('/') }}">HOME</a>
-                <span>//</span>
-                <span>CONTACT US</span>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">CONTACT US</span>
             </div>
         </div>
     </section>
@@ -36,16 +36,16 @@
                         <p class="ctsub">We typically respond within 2 hours during business hours.</p>
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="ctinfo"><strong>Address</strong><span>42 Flavor Street, Manhattan,<br />New York,
-                                    NY 10001</span></div>
+                            <div class="ctinfo"><strong>Address</strong><span>9655 Ensworth St, Unit 216,<br />Las Vegas,
+                                    NV 89123</span></div>
                         </div>
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-phone-alt"></i></div>
-                            <div class="ctinfo"><strong>Phone</strong><span>+1 (800) 123-4567</span></div>
+                            <div class="ctinfo"><strong>Phone</strong><span>+1 (888)-715-4577</span></div>
                         </div>
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-envelope"></i></div>
-                            <div class="ctinfo"><strong>Email</strong><span>hello@sarabfood.com</span></div>
+                            <div class="ctinfo"><strong>Email</strong><span>info@xtechmart.com</span></div>
                         </div>
 
                     </div>
