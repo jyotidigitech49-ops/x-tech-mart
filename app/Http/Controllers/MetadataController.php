@@ -16,12 +16,16 @@ class MetadataController extends Controller
             ?? $this->productMetadata($request)
             ?? $this->pageMetadata($request);
 
+        $title = $this->cleanMetaValue($metadata?->meta_title);
+        $description = $this->cleanMetaValue($metadata?->meta_description);
+
         return [
-            'title' => $metadata?->meta_title,
-            'description' => $metadata?->meta_description,
-            'canonical' => $request->url(),
+            'title' => $title,
+            'description' => $description,
+            'canonical' => $this->canonicalUrl($request),
             'type' => $this->pageType($request),
             'image' => asset('assets/images/products_banners/pr01.png'),
+            'robots' => $request->isMethod('GET') ? 'index, follow' : 'noindex, nofollow',
         ];
     }
 
@@ -110,6 +114,10 @@ class MetadataController extends Controller
             $keys[] = 'home';
         }
 
+        if ($request->query('type')) {
+            $keys[] = $request->query('type');
+        }
+
         if ($route?->parameter('url')) {
             $keys[] = $route->parameter('url');
         }
@@ -148,6 +156,23 @@ class MetadataController extends Controller
             ->unique()
             ->values()
             ->all();
+    }
+
+    private function cleanMetaValue(?string $value): ?string
+    {
+        $value = trim(strip_tags((string) $value));
+
+        return $value !== '' ? $value : null;
+    }
+
+    private function canonicalUrl(Request $request): string
+    {
+        $canonical = $request->url();
+        $type = trim((string) $request->query('type'));
+
+        return $type !== ''
+            ? $canonical . '?' . http_build_query(['type' => $type])
+            : $canonical;
     }
 
     private function pageType(Request $request): string
