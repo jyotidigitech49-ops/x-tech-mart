@@ -2,21 +2,18 @@
 @section('title', 'Website Sitemap')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/sitemap.css') }}?v=20260803-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/sitemap.css') }}?v=20260805-1">
 @endpush
 
 @section('content')
     <section class="sitemap-hero" style="background-image: url('{{ $bannerImage }}');">
         <div class="sitemap-hero__overlay"></div>
-        <div class="sitemap-hero__glow"></div>
         <div class="sitemap-hero__content">
-            <span class="sitemap-hero__eyebrow">Find your way</span>
             <h1>Website Sitemap</h1>
-            <p>Every useful corner of XTechMart, organized in one simple place.</p>
             <div class="sitemap-hero__breadcrumb">
                 <a href="{{ url('/') }}">HOME</a>
-                <span>//</span>
-                <span>SITEMAP</span>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">SITEMAP</span>
             </div>
         </div>
     </section>

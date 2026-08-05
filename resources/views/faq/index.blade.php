@@ -2,7 +2,7 @@
 @section('title', 'Faq')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/faq.css') }}?v=20260803-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/faq.css') }}?v=20260805-1">
 @endpush
 
 @section('content')
@@ -12,8 +12,8 @@
             <h1>Faqs</h1>
             <div class="faq-hero__breadcrumb">
                 <a href="{{ url('/') }}">HOME</a>
-                <span>//</span>
-                <span>FAQS</span>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">FAQS</span>
             </div>
         </div>
     </section>

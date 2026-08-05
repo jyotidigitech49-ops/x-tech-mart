@@ -2,7 +2,7 @@
 @section('title', 'Products')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260804-5">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260805-2">
 @endpush
 
 @section('content')
@@ -13,18 +13,7 @@
         $typeName = $isAllProductsPage ? $productType->name ?? 'All Products' : $productType->name ?? 'Printer';
     @endphp
 
-    {{-- Slider Area --}}
-    <div class="slider-area product-hero-slider-area">
-        <div class="hero-slider-active-1 nav-style-1 dot-style-2 dot-style-2-position-2 dot-style-2-active-black">
-            @foreach (($heroBanners ?? []) as $banner)
-                <div class="single-hero-slider single-animation-wrap product-hero-slide">
-                    <a href="{{ $banner['url'] }}" class="product-hero-banner-link" aria-label="{{ $typeName }} banner">
-                        <img src="{{ $banner['image'] }}" alt="{{ $typeName }} banner {{ $loop->iteration }}">
-                    </a>
-                </div>
-            @endforeach
-        </div>
-    </div>
+    @include('products._hero_slider')
 
     {{-- product-printer-category-area --}}
 

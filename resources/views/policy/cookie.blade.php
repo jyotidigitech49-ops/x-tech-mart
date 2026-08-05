@@ -2,8 +2,8 @@
 @section('title', $cookiePolicy['title'])
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/cookie-policy.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/policy-layout.css') }}?v=20260803-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/cookie-policy.css') }}?v=20260805-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/policy-layout.css') }}?v=20260805-2">
 @endpush
 
 @section('content')
@@ -13,8 +13,8 @@
             <h1>{{ $cookiePolicy['title'] }}</h1>
             <div class="cookie-banner__breadcrumb">
                 <a href="{{ url('/') }}">HOME</a>
-                <span>//</span>
-                <span>COOKIE POLICY</span>
+                <span aria-hidden="true">//</span>
+                <span aria-current="page">COOKIE POLICY</span>
             </div>
         </div>
     </section>

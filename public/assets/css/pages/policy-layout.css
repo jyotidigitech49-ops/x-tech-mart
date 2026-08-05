@@ -1,7 +1,7 @@
 /* Shared policy page shell */
 .policy-hero,
 .policy-document {
-    --ztm-primary: #0064e0;
+    --ztm-primary: #004ce0;
     --ztm-primary-dark: #071a44;
     --ztm-accent: #8ec5ff;
     --ztm-accent-soft: #eaf3ff;
@@ -12,13 +12,14 @@
     --ztm-surface: #ffffff;
 }
 
-.policy-hero{position:relative;display:flex;min-height:360px;margin-top:-2px;align-items:center;justify-content:center;overflow:hidden;background-color:var(--ztm-accent,#6cb4b8);background-position:center;background-repeat:no-repeat;background-size:contain}
-.policy-hero>div:first-child{position:absolute;inset:0;background:linear-gradient(110deg,rgba(20,35,45,.8),rgba(41,79,104,.58))}
-.policy-hero>div:last-child{position:relative;z-index:1;max-width:1000px;padding:46px 20px;color:#fff;text-align:center}
+.policy-hero{position:relative;display:flex;min-height:360px;margin-top:-2px;align-items:center;justify-content:center;overflow:hidden;background-color:var(--ztm-accent,#6cb4b8);background-position:center;background-repeat:no-repeat;background-size:100% 100%}
+.policy-hero>div:first-child{position:absolute;inset:0;background:rgba(0,0,0,.48)}
+.policy-hero>div:last-child{position:relative;z-index:2;max-width:1000px;padding:42px 20px;color:#fff;text-align:center}
 .policy-hero h1{margin:0 0 23px;color:#fff;font-size:60px;font-weight:400;letter-spacing:normal;line-height:1.08;overflow-wrap:anywhere}
 .policy-hero [class$="__breadcrumb"]{display:flex;align-items:center;justify-content:center;gap:12px;font-size:17px;font-weight:500;letter-spacing:normal;line-height:1.2}
-.policy-hero [class$="__breadcrumb"] a,.policy-hero [class$="__breadcrumb"] span{color:#fff}
-.policy-hero [class$="__breadcrumb"] a:hover,.policy-hero [class$="__breadcrumb"] span:last-child{color:var(--ztm-accent,#6cb4b8)}
+.policy-hero [class$="__breadcrumb"] a,.policy-hero [class$="__breadcrumb"] span{color:rgba(255,255,255,.92)}
+.policy-hero [class$="__breadcrumb"] a:hover,.policy-hero [class$="__breadcrumb"] a:focus-visible{color:rgba(255,255,255,.92)}
+.policy-hero [class$="__breadcrumb"] span:last-child{color:#5ba8ff}
 
 .policy-document{display:grid!important;width:100%!important;max-width:none!important;grid-template-columns:300px minmax(0,1fr)!important;gap:38px!important;align-items:start!important;padding:82px max(20px,calc((100% - 1320px)/2)) 100px!important;background:radial-gradient(circle at 7% 4%,rgba(108,180,184,.12),transparent 22%),linear-gradient(180deg,#f7fafb 0%,#fff 100%)!important}
 .policy-document__content{width:100%!important;max-width:none!important;margin:0!important;padding:42px 46px!important;border:1px solid var(--ztm-border,#dce5e8);border-radius:22px;background:var(--ztm-surface,#fff);box-shadow:0 16px 42px rgba(34,49,63,.075)}
@@ -52,20 +53,19 @@
 .policy-nav__help strong{color:var(--ztm-text,#22313f);font-size:13px;font-weight:600}.policy-nav__help p{margin:4px 0 9px;color:var(--ztm-muted,#657485);font-size:11.5px;font-weight:400;line-height:1.55}.policy-nav__help a{color:var(--ztm-primary,#3e6b89);font-size:11.5px;font-weight:600}
 
 @media(max-width:991px){.policy-document{grid-template-columns:1fr!important;padding:60px 20px 75px!important}.policy-nav{position:static;order:2}.policy-document__content{order:1}.policy-nav__links{grid-template-columns:repeat(2,minmax(0,1fr))}.policy-nav__help{display:none}}
-@media(max-width:575px){.policy-hero{min-height:300px}.policy-hero h1{margin-bottom:18px;font-size:42px}.policy-hero [class$="__breadcrumb"]{gap:9px;font-size:14px}.policy-document{padding:42px 15px 60px!important}.policy-document__content{padding:28px 20px!important;border-radius:16px}.policy-document__content>[class$="__section"]{padding-left:22px}.policy-nav__links{grid-template-columns:1fr}}
+@media(max-width:575px){.policy-hero{min-height:260px;background-size:100% 100%}.policy-hero h1{margin-bottom:18px;font-size:42px}.policy-hero [class$="__breadcrumb"]{gap:9px;font-size:14px}.policy-document{padding:42px 15px 60px!important}.policy-document__content{padding:28px 20px!important;border-radius:16px}.policy-document__content>[class$="__section"]{padding-left:22px}.policy-nav__links{grid-template-columns:1fr}}
 
 /* Home theme color alignment */
 .policy-hero {
-    background-color: #0064e0;
+    background-color: var(--ztm-accent, #6cb4b8);
 }
 
 .policy-hero > div:first-child {
-    background: linear-gradient(110deg, rgba(7, 26, 68, 0.82), rgba(0, 100, 224, 0.58));
+    background: rgba(0, 0, 0, 0.48);
 }
 
-.policy-hero [class$="__breadcrumb"] a:hover,
 .policy-hero [class$="__breadcrumb"] span:last-child {
-    color: #8ec5ff;
+    color: #5ba8ff;
 }
 
 .policy-document {
