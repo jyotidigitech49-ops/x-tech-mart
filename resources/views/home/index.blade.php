@@ -251,8 +251,8 @@
 
 
     <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             FIX 4 � MENU DETAIL POPUP MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ============================================================ -->
     <div id="menuPop">
         <div class="mpbox">
             <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
@@ -277,8 +277,9 @@
     </div>
     <!-- SPECIAL OFFER -->
     <section id="special">
-        <img class="special-offer-banner" src="{{ asset('assets/images/banner/offer-banner.png') }}"
-            alt="XTech Mart special offer" />
+        <a href="{{ url('/products/printer') }}"> <img class="special-offer-banner"
+                src="{{ asset('assets/images/banner/offer-banner.png') }}" alt="XTech Mart special offer" /></a>
+
     </section>
 
 
