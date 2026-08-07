@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="fci">
-                    <div class="fciico"><i class="fas fa-phone-alt"></i></div>
+                    <div class="fciico"><i class="fas fa-phone-alt fa-flip-horizontal"></i></div>
                     <div class="fciinfo">
                         <strong>Contact Number</strong>
                         <a href="tel:+18887154577">+1 (888)-715-4577</a>

@@ -2,7 +2,7 @@
 @section('title', 'XTechMart - Technology Products and Solutions')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/home-dynamic-products.css') }}?v=20260804-6">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/home-dynamic-products.css') }}?v=20260807-2">
 @endpush
 
 @section('content')
@@ -51,7 +51,7 @@
                 <span class="slbl">CURATED FOR MODERN WORK
                 </span>
                 <h2 class="stitle">Explore Technology Categories</h2>
-                <div class="sline"></div>
+                <div class="sline home-sline"></div>
                 <p class="sdesc mx-auto" style="max-width:520px;">Navigate focused collections of printers, thin clients,
                     desktops, and scanners selected for evolving workplace needs.
                 </p>
@@ -110,7 +110,7 @@
                     <h2 class="stitle text-start">Technology Exploration
                         with Greater Perspective
                     </h2>
-                    <div class="sline lft"></div>
+                    <div class="sline home-sline lft"></div>
                     <p class="sdesc mb-4">XTech Mart brings printers, scanners, desktops, and thin clients into one
                         thoughtfully organized platform. Clear product information and structured categories help
                         individuals and businesses explore suitable technology without navigating a direct-purchase process.
@@ -118,8 +118,7 @@
                     <div class="mb-4">
                         <div class="fti">
                             <div class="ftico r">
-                                <img src="{{ asset('assets/images/icon-img/Range.png') }}"
-                                    alt="Focused Product Range">
+                                <img src="{{ asset('assets/images/icon-img/Range.png') }}" alt="Focused Product Range">
                             </div>
                             <div>
                                 <h6>Focused Product Range</h6>
@@ -129,8 +128,7 @@
                         </div>
                         <div class="fti">
                             <div class="ftico y">
-                                <img src="{{ asset('assets/images/icon-img/Insight.png') }}"
-                                    alt="Clearer Product Insight">
+                                <img src="{{ asset('assets/images/icon-img/Insight.png') }}" alt="Clearer Product Insight">
                             </div>
                             <div>
                                 <h6>Clearer Product Insight</h6>
@@ -139,8 +137,7 @@
                         </div>
                         <div class="fti">
                             <div class="ftico g">
-                                <img src="{{ asset('assets/images/icon-img/Quote.png') }}"
-                                    alt="Personalized Quote Access">
+                                <img src="{{ asset('assets/images/icon-img/Quote.png') }}" alt="Personalized Quote Access">
                             </div>
                             <div>
                                 <h6>Personalized Quote Access</h6>
@@ -162,7 +159,7 @@
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="slbl">SELECTED WITH PURPOSE</span>
                 <h2 class="stitle">Technology Shaped for the Work Ahead</h2>
-                <div class="sline"></div>
+                <div class="sline home-sline"></div>
             </div>
             <!-- FIX 3 � filter buttons -->
             @php
@@ -254,8 +251,8 @@
 
 
     <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         FIX 4 � MENU DETAIL POPUP MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ============================================================ -->
     <div id="menuPop">
         <div class="mpbox">
             <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
@@ -292,7 +289,7 @@
                 <span class="slbl">PRODUCT SPOTLIGHT
                 </span>
                 <h2 class="stitle">See Every Product in Focus</h2>
-                <div class="sline"></div>
+                <div class="sline home-sline"></div>
             </div>
             <div class="ggrid" data-aos="fade-up">
                 <div class="gitem" data-gi="0"
@@ -355,7 +352,7 @@
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="slbl">FEATURED COLLECTION </span>
                 <h2 class="stitle">Browse Our Product Highlights</h2>
-                <div class="sline"></div>
+                <div class="sline home-sline"></div>
             </div>
             <div class="row g-4 suggested-products-grid">
                 @forelse ($suggestedProducts as $product)
@@ -418,7 +415,7 @@
                 </span>
                 <h2 class="stitle">Explore Our Technology Blogs
                 </h2>
-                <div class="sline"></div>
+                <div class="sline home-sline"></div>
             </div>
             @if ($blogPosts->isNotEmpty())
                 <div class="swiper home-blog-swiper">

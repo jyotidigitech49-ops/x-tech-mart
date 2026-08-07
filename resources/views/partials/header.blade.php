@@ -2,7 +2,7 @@
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}" aria-label="XTechMart home">
             <img class="xtech-header__logo" src="{{ asset('assets/images/ztm-logo.png') }}"
-                width="207" height="46" alt="XTechMart">
+                width="225" height="50" alt="XTechMart">
         </a>
 
         <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"

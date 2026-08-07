@@ -194,8 +194,10 @@ img {
 section {
   padding: 88px 0;
 }
+.slb,
 .slbl {
-  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
   font-size: 1.35rem;
   color: #000;
   display: block;
@@ -1123,7 +1125,8 @@ section {
   flex-shrink: 0;
 }
 .tlyear {
-  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
   color: #000;
   font-size: 1.15rem;
   margin-bottom: 3px;

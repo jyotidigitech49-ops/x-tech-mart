@@ -40,7 +40,7 @@
                                     NV 89123</span></div>
                         </div>
                         <div class="ctitem">
-                            <div class="cticon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="cticon"><i class="fas fa-phone-alt fa-flip-horizontal"></i></div>
                             <div class="ctinfo"><strong>Phone</strong><span>+1 (888)-715-4577</span></div>
                         </div>
                         <div class="ctitem">

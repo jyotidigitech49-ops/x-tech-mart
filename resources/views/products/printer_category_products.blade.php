@@ -2,7 +2,7 @@
 @section('title', 'Products')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260805-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/products-printer.css') }}?v=20260807-1">
 @endpush
 
 @section('content')

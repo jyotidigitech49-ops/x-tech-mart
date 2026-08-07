@@ -1227,11 +1227,19 @@
 }
 
 .theme-product-card .printer-product-category {
-    padding: 0;
+    display: inline-flex;
+    width: auto;
+    height: auto;
+    min-height: 24px;
+    padding: 4px 0 3px;
+    align-items: center;
+    overflow: visible;
     background: transparent;
     color: #0064e0;
     font-size: 11px;
+    line-height: 1.5;
     letter-spacing: 0.08em;
+    text-overflow: clip;
 }
 
 .theme-product-card .theme-product-card__content h3 {
