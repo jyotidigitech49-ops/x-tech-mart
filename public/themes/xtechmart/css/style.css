@@ -801,6 +801,11 @@ section {
   font-size: 1.15rem;
   transition: 0.3s;
 }
+.ftico img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 .ftico.r {
   background: rgba(0, 76, 224, 0.1);
   color: var(--primary);

@@ -117,7 +117,10 @@
                     </p>
                     <div class="mb-4">
                         <div class="fti">
-                            <div class="ftico r"><i class="fas fa-leaf"></i></div>
+                            <div class="ftico r">
+                                <img src="{{ asset('assets/images/icon-img/Range.png') }}"
+                                    alt="Focused Product Range">
+                            </div>
                             <div>
                                 <h6>Focused Product Range</h6>
                                 <p>We source locally and sustainably. Every ingredient is hand-picked daily for maximum
@@ -125,14 +128,20 @@
                             </div>
                         </div>
                         <div class="fti">
-                            <div class="ftico y"><i class="fas fa-award"></i></div>
+                            <div class="ftico y">
+                                <img src="{{ asset('assets/images/icon-img/Insight.png') }}"
+                                    alt="Clearer Product Insight">
+                            </div>
                             <div>
                                 <h6>Clearer Product Insight</h6>
                                 <p>Relevant features and specifications arranged for easier research and comparison.</p>
                             </div>
                         </div>
                         <div class="fti">
-                            <div class="ftico g"><i class="fas fa-shipping-fast"></i></div>
+                            <div class="ftico g">
+                                <img src="{{ asset('assets/images/icon-img/Quote.png') }}"
+                                    alt="Personalized Quote Access">
+                            </div>
                             <div>
                                 <h6>Personalized Quote Access</h6>
                                 <p>A direct way to request pricing, availability, and additional product details.</p>
