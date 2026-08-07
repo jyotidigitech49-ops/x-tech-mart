@@ -3,7 +3,7 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/pages/warranty-manufacturer-information.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/policy-layout.css') }}?v=20260805-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/policy-layout.css') }}?v=20260807-2">
 @endpush
 
 @section('content')

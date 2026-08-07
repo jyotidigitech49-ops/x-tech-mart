@@ -3,7 +3,7 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/aboutus.css') }}?v=20260804-6">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/aboutus.css') }}?v=20260807-2">
 @endpush
 
 @section('content')

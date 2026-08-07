@@ -2,7 +2,7 @@
 @section('title', 'Blogs')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/blog-list.css') }}?v=20260804-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/blog-list.css') }}?v=20260807-2">
 @endpush
 
 @section('content')

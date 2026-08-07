@@ -25,7 +25,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: var(--ztm-accent, #6cb4b8);
+    background-color: var(--ztm-accent, #0064e0);
     background-image: url("../../images/faq/faq-hero.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -229,12 +229,12 @@
     left: 0;
     height: 4px;
     border-radius: 999px 999px 0 0;
-    background: var(--ztm-accent, #6cb4b8);
+    background: var(--ztm-accent, #0064e0);
     content: "";
 }
 
 .blog-list-card:hover {
-    border-color: var(--ztm-accent, #6cb4b8);
+    border-color: var(--ztm-accent, #0064e0);
     box-shadow: 0 20px 46px rgba(34, 49, 63, 0.14);
     transform: translateY(-5px);
 }

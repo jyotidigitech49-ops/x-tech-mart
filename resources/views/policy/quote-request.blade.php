@@ -2,8 +2,8 @@
 @section('title', $quotePolicy['title'])
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/quote-request-policy.css') }}?v=20260723-7">
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/policy-layout.css') }}?v=20260805-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/quote-request-policy.css') }}?v=20260807-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/policy-layout.css') }}?v=20260807-2">
 @endpush
 
 @section('content')

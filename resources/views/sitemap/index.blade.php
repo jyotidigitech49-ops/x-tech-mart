@@ -2,7 +2,7 @@
 @section('title', 'Website Sitemap')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/sitemap.css') }}?v=20260805-1">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/sitemap.css') }}?v=20260807-2">
 @endpush
 
 @section('content')

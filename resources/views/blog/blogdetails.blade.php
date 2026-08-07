@@ -2,7 +2,7 @@
 @section('title', $blogDetails['heading'] ?? 'Blog Details')
 
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/blogdetails.css') }}?v=20260804-2">
+    <link rel="stylesheet" href="{{ asset('assets/css/pages/blogdetails.css') }}?v=20260807-2">
 @endpush
 
 @section('content')

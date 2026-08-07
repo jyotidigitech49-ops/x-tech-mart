@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: var(--ztm-accent, #6cb4b8);
+    background-color: var(--ztm-accent, #0064e0);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -91,7 +91,7 @@
     width: 26px;
     height: 2px;
     border-radius: 99px;
-    background: var(--ztm-accent, #6cb4b8);
+    background: var(--ztm-accent, #0064e0);
 }
 
 .about-story-content h2 {
@@ -128,7 +128,7 @@
     z-index: 0;
     width: 158px;
     height: 158px;
-    background-image: radial-gradient(circle, var(--ztm-accent, #6cb4b8) 2.5px, transparent 3px);
+    background-image: radial-gradient(circle, var(--ztm-accent, #0064e0) 2.5px, transparent 3px);
     background-size: 20px 20px;
 }
 
@@ -454,8 +454,8 @@
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: var(--ztm-accent, #6cb4b8);
-    box-shadow: 0 0 0 4px rgba(108, 180, 184, 0.16);
+    background: var(--ztm-accent, #0064e0);
+    box-shadow: 0 0 0 4px rgba(0, 100, 224, 0.16);
 }
 
 /* Frequently Asked Questions */
