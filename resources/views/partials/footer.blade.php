@@ -72,7 +72,8 @@
                 <div class="ftit">Contact Info</div>
                 <div class="fci">
                     <div class="fciico"><i class="fas fa-map-marker-alt"></i></div>
-                    <div class="fciinfo"><strong>Address</strong>9655 Ensworth St 216, Las Vegas, NV 89123</div>
+                    <div class="fciinfo"><strong>Address</strong>20 Hammond Pond Pkwy403, Chestnut Hill, MA 02467
+                    </div>
                 </div>
                 <div class="fci">
                     <div class="fciico"><i class="fas fa-envelope"></i></div>
@@ -85,7 +86,7 @@
                     <div class="fciico"><i class="fas fa-phone-alt fa-flip-horizontal"></i></div>
                     <div class="fciinfo">
                         <strong>Contact Number</strong>
-                        <a href="tel:+18887154577">+1 (888)-715-4577</a>
+                        <a href="tel:+18887154577"></a>
                     </div>
                 </div>
             </div>

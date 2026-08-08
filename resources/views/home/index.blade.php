@@ -251,8 +251,8 @@
 
 
     <!-- ============================================================
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             FIX 4 � MENU DETAIL POPUP MODAL
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ============================================================ -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     FIX 4 � MENU DETAIL POPUP MODAL
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ============================================================ -->
     <div id="menuPop">
         <div class="mpbox">
             <button class="mpclose" id="mpClose"><i class="fas fa-times"></i></button>
@@ -298,14 +298,14 @@
                     data-gtitle="Ink Tank Printer"
                     data-gdesc="Explore an ink tank printer designed for clear everyday documents and efficient colour output.">
                     <img src="{{ asset('assets/images/banner/gallery-ink-tank-printer.png') }}" alt="Ink tank printer" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Ink Tank Printer</span></div>
+                    <div class="gover"><span><i class=""></i> Ink Tank Printer</span></div>
                 </div>
                 <div class="gitem" data-gi="1"
                     data-gimg="{{ asset('assets/images/banner/gallery-office-printer.png') }}"
                     data-gtitle="Office Printer"
                     data-gdesc="Discover a compact office printer suited to routine documents, photos, and organized workspaces.">
                     <img src="{{ asset('assets/images/banner/gallery-office-printer.png') }}" alt="Office printer" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Office Printer</span></div>
+                    <div class="gover"><span><i class=""></i> Office Printer</span></div>
                 </div>
                 <div class="gitem" data-gi="2"
                     data-gimg="{{ asset('assets/images/banner/gallery-desktop-workspace.png') }}"
@@ -313,20 +313,20 @@
                     data-gdesc="Browse desktop solutions created for productive communication and focused professional work.">
                     <img src="{{ asset('assets/images/banner/gallery-desktop-workspace.png') }}"
                         alt="Desktop workspace" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Desktop Workspace</span></div>
+                    <div class="gover"><span><i class=""></i> Desktop Workspace</span></div>
                 </div>
                 <div class="gitem" data-gi="3"
                     data-gimg="{{ asset('assets/images/banner/gallery-document-scanner.png') }}"
                     data-gtitle="Document Scanner"
                     data-gdesc="Review document scanning technology for organized capture, access, and information management.">
                     <img src="{{ asset('assets/images/banner/gallery-document-scanner.png') }}" alt="Document scanner" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Document Scanner</span></div>
+                    <div class="gover"><span><i class=""></i> Document Scanner</span></div>
                 </div>
                 <div class="gitem" data-gi="4"
                     data-gimg="{{ asset('assets/images/banner/gallery-thin-clients.png') }}" data-gtitle="Thin Clients"
                     data-gdesc="Explore compact thin clients built for streamlined, connected, and centrally managed workspaces.">
                     <img src="{{ asset('assets/images/banner/gallery-thin-clients.png') }}" alt="Thin clients" />
-                    <div class="gover"><span><i class="fas fa-expand-alt"></i> Thin Clients</span></div>
+                    <div class="gover"><span><i class=""></i> Thin Clients</span></div>
                 </div>
             </div>
         </div>

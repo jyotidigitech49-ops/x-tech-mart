@@ -36,12 +36,13 @@
                         <p class="ctsub">We typically respond within 2 hours during business hours.</p>
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-map-marker-alt"></i></div>
-                            <div class="ctinfo"><strong>Address</strong><span>9655 Ensworth St, Unit 216,<br />Las Vegas,
-                                    NV 89123</span></div>
+                            <div class="ctinfo"><strong>Address</strong><span>20 Hammond Pond Pkwy403, Chestnut Hill, MA
+                                    02467
+                            </div>
                         </div>
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-phone-alt fa-flip-horizontal"></i></div>
-                            <div class="ctinfo"><strong>Phone</strong><span>+1 (888)-715-4577</span></div>
+                            <div class="ctinfo"><strong>Phone</strong><span></span></div>
                         </div>
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-envelope"></i></div>
@@ -122,7 +123,7 @@
             <div class="contact-map-card">
                 <div class="contact-map-frame">
                     <iframe class="map-size" title="XTechMart location"
-                        src="https://www.google.com/maps?q=9655%20Ensworth%20St%2C%20Unit%20216%2C%20Las%20Vegas%2C%20NV%2089123&z=17&output=embed"
+                        src="https://www.google.com/maps?q=20%20Hammond%20Pond%20Pkwy%2C%20Unit%20403%2C%20Chestnut%20Hill%2C%20MA%2002467&z=17&output=embed"
                         loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
                     </iframe>
                 </div>

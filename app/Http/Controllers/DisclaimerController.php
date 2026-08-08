@@ -233,7 +233,7 @@ class DisclaimerController extends Controller
                     'contact' => [
                         'Business Name:' => 'XTech Mart',
                         'Email:' => 'info@xtechmart.com',
-                        'Address:' => '',
+                        'Address:' => '20 Hammond Pond Pkwy403, Chestnut Hill, MA 02467',
                         'Contact No:' => '',
                     ],
                 ],
