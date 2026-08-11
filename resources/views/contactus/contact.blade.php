@@ -40,10 +40,10 @@
                                     02467
                             </div>
                         </div>
-                        <div class="ctitem">
+                        {{-- <div class="ctitem">
                             <div class="cticon"><i class="fas fa-phone-alt fa-flip-horizontal"></i></div>
                             <div class="ctinfo"><strong>Phone</strong><span></span></div>
-                        </div>
+                        </div> --}}
                         <div class="ctitem">
                             <div class="cticon"><i class="fas fa-envelope"></i></div>
                             <div class="ctinfo"><strong>Email</strong><span>info@xtechmart.com</span></div>

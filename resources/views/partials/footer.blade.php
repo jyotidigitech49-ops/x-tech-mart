@@ -82,13 +82,13 @@
                         <a href="mailto:info@xtechmart.com">info@xtechmart.com</a>
                     </div>
                 </div>
-                <div class="fci">
+                {{-- <div class="fci">
                     <div class="fciico"><i class="fas fa-phone-alt fa-flip-horizontal"></i></div>
                     <div class="fciinfo">
                         <strong>Contact Number</strong>
                         <a href="tel:+18887154577"></a>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 

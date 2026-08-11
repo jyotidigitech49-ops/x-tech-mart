@@ -122,7 +122,7 @@ class WarrantyManufacturerInformationController extends Controller
                         'Business Name:' => 'XTech Mart',
                         'Email:' => 'info@xtechmart.com',
                         'Address:' => '20 Hammond Pond Pkwy403, Chestnut Hill, MA 02467',
-                        'Contact No:' => '',
+                        // 'Contact No:' => '',
                     ],
                 ],
                 [
